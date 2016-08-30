@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+  <link rel="stylesheet" href="../book.css" charset="ISO-8859-1" type="text/css" />
+  <title>Managing Coverage Sessions</title>
+</head>
+
+<body>
+
+<h2>Managing Coverage Sessions</h2>
+
+<p>
+  A <i>coverage session</i> is the code coverage information of particular
+  program run. It contains the list of considered Java classes along with the
+  recorded coverage details.
+</p>
+
+<h3>Session Lifecycle</h3>
+
+<p>
+  A coverage session is automatically created at the end of each
+  <a href="launching.html">coverage launch</a> or whenever an intermediate
+  execution data has been trigger by the user. Alternatively, sessions can be
+  <a href="importexport.html">imported</a> from external launches. The
+  <a href="coverageview.html">coverage view</a> allows removing sessions.
+</p>
+
+<p>
+  All coverage sessions are deleted when the workbench is closed.
+</p>
+
+<h3>The Active Session</h3>
+
+<p>
+  Even if there can be multiple coverage sessions, only one session can be the
+  <i>active</i> coverage session. The active session can be selected from a
+  drop-down list in the <a href="coverageview.html">coverage view</a> and defines
+  the input of this view as well as the
+  <a href="annotations.html">Java source highlighting</a>.
+</p>
+
+<h3>Merging Sessions</h3>
+
+<p>
+  If the overall test set consists of multiple test launches, they will result in
+  multiple different coverage session. For analysis it may make sense to combine
+  these sessions to a single session. If there is more than one session the
+  <a href="coverageview.html">coverage view</a> provides the <i>Merge Sessions</i>
+  command. This command allows selecting a subset from the existing sessions
+  and combining it to a single coverage session.
+</p>
+
+</body>
+</html>

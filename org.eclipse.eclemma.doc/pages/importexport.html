@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+  <link rel="stylesheet" href="../book.css" charset="ISO-8859-1" type="text/css" />
+  <title>Session Import and Export</title>
+</head>
+
+<body>
+
+<h2>Session Import and Export</h2>
+
+<p>
+  While EclEmma is primarily designed for test runs and analysis within the
+  Eclipse workbench, it provides import and export functionality.
+</p>
+
+<h3>Session Import</h3>
+
+<p>
+  If your program is launched outside the Eclipse debugging environment, you
+  might import JaCoCo execution data from these launches. This allows to study
+  the coverage results directly in your source code. The <i>Coverage Session</i>
+  import wizard can be activated form the <i>File &rarr; Import...</i> menu or
+  from the <i>Coverage</i> view's context menu.
+</p>
+
+<p>
+  The wizard dialog requires you to specify the source of the execution data on
+  its first page. There are three possible sources:
+</p>
+
+<ul>
+  <li>Local <code>*.exec</code> file location.</li>
+  <li>Remote <code>*.exec</code> file URL.</li>
+  <li>IP address and port of a
+      <a href="http://www.eclemma.org/jacoco/trunk/doc/agent.html">JaCoCo agent</a>
+      attached to a running process. You can also specify whether the execution
+      data should be reset in the target VM when dumping the data.</li>
+</ul>
+
+<p>
+  If you keep a reference to the original execution data source (check the
+  corresponding import option) you can simply re-import the data as often as you
+  want. For this use the <i>Refresh</i> option from the context menu of the
+  <i>Coverage</i> view or simply hit the <code>F5</code> key.
+</p>
+
+<p>
+  On the second page you can specify session name and the scope, which are the
+  source folders and libraries that should be considered.
+</p>
+
+<p>
+  <b>Warning:</b> Imported execution data must be based on the exact same
+  class files that are also used within the Eclipse IDE. If the external launch
+  was based on different class files (e.g. created with different compiler) no
+  coverage will be shown.
+</p>
+
+<h3>Session Export</h3>
+
+<p>
+  The session export wizard allows to export coverage sessions in one of these
+  formats:
+</p>
+
+<ul>
+  <li><b>HTML:</b> A detailed and browseable report as a set of HTML
+  files.</li>
+  <li><b>Zipped HTML:</b> Same as above but zipped into a single file.</li>
+  <li><b>XML:</b> Coverage data as a single, structured XML file.</li>
+  <li><b>CSV:</b> Coverage data on class level granularity as comma-separated
+  values.</li>
+  <li><b>Execution data file:</b> Native JaCoCo execution data format.</li>
+</ul>
+
+<p>
+  The <i>Coverage Report</i> export wizard can be activated form the
+  <i>File &rarr; Export...</i> menu or from the <i>Coverage</i> view's context
+  menu. There must be at least one coverage session available to use the export
+  wizard.
+</p>
+
+<p>
+  Select one of the existing sessions and the export format.
+</p>
+
+</body>
+</html>

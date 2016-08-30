@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+  <link rel="stylesheet" href="../book.css" charset="ISO-8859-1" type="text/css" />
+  <title>Using the Coverage View</title>
+</head>
+
+<body>
+
+<h2>Using the Coverage View</h2>
+
+<p>
+  The <i>Coverage</i> view automatically appears when a new
+  <a href="sessions.html">coverage session</a> is
+  added or can manually opened from the <em>Window &rarr; Show View</em> menu
+  in the <em>Java</em> category. It shows coverage summaries for the active
+  session.
+</p>
+
+<p>
+  <img src="images/coverageview.png" alt="Coverage View"/>
+</p>
+
+<p>
+  The <i>Coverage</i> view shows all analyzed Java elements within the common
+  Java hierarchy. Individual columns contain the following numbers for the
+  active session, always summarizing the child elements of the respective Java
+  element:
+</p>
+
+<ul>
+  <li>Coverage ratio</li>
+  <li>Items covered</li>
+  <li>Items not covered</li>
+  <li>Total items</li>
+</ul>
+
+<p>
+  The elements may be sorted in ascending or descending order by clicking the
+  respective column header. Double-clicking an element opens its declaration in
+  an editor with <a href="annotations.html">highlighted</a> source code. You can
+  select between different metrics, see last section for details.
+</p>
+
+<h3>Toolbar and Drop-Down Menu</h3>
+
+<p>
+  <img src="images/coverageviewtools.png" alt="Coverage View Tools"/>
+</p>
+
+<p>
+  The coverage view's toolbar offers the following actions:
+</p>
+
+<ul>
+  <li><b>Coverage Last Launched</b>: Re-run the currently selected coverage
+  session.</li>
+  <li><b>Dump Execution Data</b>: Dump execution data from a running process and
+  create a new session from the data. Only active when at least one process is
+  running in <i>Coverage</i> mode.</li>
+  <li><b>Remove Active Session</b>: Remove the currently selected coverage
+  session.</li>
+  <li><b>Remove All Sessions</b>: Remove all coverage sessions.</li>
+  <li><b>Merge Sessions</b>: Merges multiple sessions into a single one.</li>
+  <li><b>Select Session</b>: Select <a href="sessions.html">session</a> from the
+  drop down-menu and make it the active session.</li>
+  <li><b>Collapse All</b>: Collapse all expanded tree nodes.</li>
+  <li><b>Link with Current Selection</b>: If this toggle is checked the coverage
+  view automatically reveals the Java element currently selected in other views
+  or editors.</li>
+</ul>
+
+<p>
+  Some of the actions are deactivated if there is no session or only a single
+  session. More settings are available form the coverage view's drop-down menu:
+</p>
+
+<p>
+  <img src="images/coverageviewmenu.png" alt="Coverage View Drop-Down Menu"/>
+</p>
+
+<ul>
+  <li><b>Show Elements</b>: Select Java elements shown as root entries
+  in the coverage tree: Projects, package fragment roots (source folders or
+  libraries), package fragments or types.</li>
+  <li><b>Counter Mode</b>: Different counter modes can be selected from the
+  view's drop-down menu: bytecode instructions, branches, lines, methods,
+  types and cyclomatic complexity. Please see
+  <a class="extern" href="http://www.eclemma.org/jacoco/trunk/doc/counters.html">JaCoCo documentation</a>
+  for detailed counter definitions.</li>
+  <li><b>Hide Unused Elements</b>: Filter all elements from the coverage view
+  that have not been executed at all during the coverage session.</li>
+</ul>
+
+<h3>Filtering</h3>
+
+<p>
+  If you're working on a particular unit you can filter out all classes which
+  have not been loaded during the test run. This filtering can be enabled with
+  the <i>Hide Unused Types</i> menu entry in the <i>Coverage</i> view's
+  drop-down menu.
+</p>
+
+<p>
+  <b>Tip:</b> Combine the <i>Hide Unused Types</i> option with types as root
+  entries. This will give you a plain list of all classes loaded for your test
+  case.
+</p>
+
+</body>
+</html>

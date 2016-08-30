@@ -1,0 +1,10 @@
+language: java
+jdk: oraclejdk8
+
+# Skip "install" stage:
+install: true
+
+# Use container-based infrastructure:
+sudo: false
+
+script: bash .travis.sh

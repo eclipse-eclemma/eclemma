@@ -1,0 +1,5 @@
+# Enable trace output for performance (time/memory)
+org.eclipse.eclemma.core/debug/performance=true
+
+# Enable trace output for coverage analysis
+org.eclipse.eclemma.core/debug/analysis=true

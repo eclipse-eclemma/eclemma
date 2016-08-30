@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+  <link rel="stylesheet" href="../book.css" charset="ISO-8859-1" type="text/css" />
+  <title>Launching in Coverage Mode</title>
+</head>
+
+<body>
+
+<h2>Launching in Coverage Mode</h2>
+
+<p>
+  Eclipse allows running Java programs directly from the workbench. Programs
+  can be launched in different so called <i>launch modes</i>. In a standard
+  Eclipse installation you can launch your programs either in <i>Run</i>
+  or in <i>Debug</i> mode. EclEmma adds a new launch mode <i>Coverage</i> which
+  is available from the <i>Run</i> menu and the toolbar:
+</p>
+
+<p>
+  <img src="images/launchtoolbar.gif" alt="Launching Toolbar" width="112" height="27" />
+</p>
+
+<p>
+  <b>Note:</b> If the <i>Coverage</i> drop-down toolbar button is not visible
+  in your current workbench perspective, open the <i>Customize Perspective...</i>
+  dialog and enable the <i>Coverage</i> command group on the <i>Commands</i> tab.
+</p>
+
+<p>
+  Currently the following launch types are supported:
+</p>
+
+<ul>
+  <li>Local Java application</li>
+  <li>Eclipse/RCP application</li>
+  <li>Equinox OSGi framework</li>
+  <li>JUnit test</li>
+  <li>TestNG test</li>
+  <li>JUnit plug-in test</li>
+  <li>JUnit RAP test</li>
+  <li>SWTBot test</li>
+  <li>Scala application</li>
+</ul>
+
+<p>
+  Existing launch configurations can be launched directly in <i>Coverage</i>
+  mode using default settings. As with the <i>Run</i> and <i>Debug</i> mode
+  you might also select a Java element and launch it directly from the
+  <i>Coverage As</i> context menu. If required some settings can be modified
+  in the coverage launch dialog:
+</p>
+
+<p>
+  <img src="images/launchdialog.png" alt="Launch Dialog"/>
+</p>
+
+<p>
+  In the <i>Coverage</i> tab the Java class path entries for code coverage
+  analysis can be selected. At least one entry must be selected to run an
+  application in <i>Coverage</i> mode. The rules which class path entries are
+  selected by default can be adjusted in the
+  <a href="preferences.html">code coverage preferences</a>.
+</p>
+
+<h3>Coverage Data Collection</h3>
+
+<p>
+  Coverage data is collected and presented automatically when the application
+  terminates on its own. If the Java VM is killed externally, e.g. with the
+  Eclipse <i>Terminate</i> action, coverage results can not be shown. In
+  addition intermediate coverage data dumps can also be requested from any
+  process running in <i>Coverage</i> mode. Such dumps can be triggered from the
+  toolbar of the <a href="coverageview.html"><i>Coverage</i> view</a>.
+</p>
+
+</body>
+</html>

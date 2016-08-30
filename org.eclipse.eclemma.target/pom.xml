@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Copyright (c) 2006, 2016 Mountainminds GmbH & Co. KG and Contributors
+   All rights reserved. This program and the accompanying materials
+   are made available under the terms of the Eclipse Public License v1.0
+   which accompanies this distribution, and is available at
+   http://www.eclipse.org/legal/epl-v10.html
+
+   Contributors:
+      Evgeny Mandrikov - initial API and implementation
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.eclipse.eclemma</groupId>
+    <artifactId>org.eclipse.eclemma.build</artifactId>
+    <version>2.3.4-SNAPSHOT</version>
+    <relativePath>../org.eclipse.eclemma.build</relativePath>
+  </parent>
+
+  <artifactId>org.eclipse.eclemma.target</artifactId>
+  <packaging>pom</packaging>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-artifacts</id>
+            <phase>package</phase>
+            <goals>
+              <goal>attach-artifact</goal>
+            </goals>
+            <configuration>
+              <artifacts>
+                <artifact>
+                  <file>eclemma-e3.5.target</file>
+                  <type>target</type>
+                  <classifier>eclemma-e3.5</classifier>
+                </artifact>
+                <artifact>
+                  <file>eclemma-e3.6.target</file>
+                  <type>target</type>
+                  <classifier>eclemma-e3.6</classifier>
+                </artifact>
+                <artifact>
+                  <file>eclemma-e3.7.target</file>
+                  <type>target</type>
+                  <classifier>eclemma-e3.7</classifier>
+                </artifact>
+                <artifact>
+                  <file>eclemma-e3.8.target</file>
+                  <type>target</type>
+                  <classifier>eclemma-e3.8</classifier>
+                </artifact>
+              </artifacts>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

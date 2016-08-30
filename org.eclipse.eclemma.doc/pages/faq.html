@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+  <link rel="stylesheet" href="../book.css" charset="ISO-8859-1" type="text/css" />
+  <title>FAQ</title>
+</head>
+<body>
+
+<h1>Frequently Asked Questions</h1>
+
+<h3>Usage</h3>
+<ul>
+  <li><a href="#usage01">How can I remove the coverage coloring from the Java editors again?</a></li>
+  <li><a href="#usage03">How can I run {whateverapplication} with EclEmma?</a></li>
+  <li><a href="#usage04">Does EclEmma support automated Ant or Maven builds?</a></li>
+  <li><a href="#usage05">How do I change the source code highlighting?</a></li>
+  <li><a href="#usage07">Do I need source code to use EclEmma?</a></li>
+  <li><a href="#usage08">Why is this line yellow?</a></li>
+  <li><a href="#usage09">How can I exclude test classes from analysis?</a></li>
+</ul>
+
+<h3>Troubleshooting</h3>
+<ul>
+  <li><a href="#trouble01">Why do I get the error message "No coverage data has been collected during this coverage session"?</a></li>
+  <li><a href="#trouble02">Code with exceptions shows no coverage. Why?</a></li>
+  <li><a href="#trouble03">My application does not run with EclEmma!</a></li>
+  <li><a href="#trouble04">My Eclipse workbench window has no toolbar button for coverage launches!</a></li>
+  <li><a href="#trouble05">Why are JUnit4 test cases with expected exceptions shown as not covered?</a></li>
+  <li><a href="#trouble06">The <i>Coverage</i> view stays empty and there is no source highlighting. Why?</a></li>
+</ul>
+
+
+<h2>Usage</h2>
+
+<h3><a name="usage01"></a>How can I remove the coverage coloring from the Java editors again?</h3>
+<p>
+  If you remove the coverage session, also the coverage coloring will disappear.
+  For this, hit <i>Remove Session</i> or <i>Remove All Sessions</i> in the
+  <i>Coverage</i> view's toolbar.
+</p>
+
+<h3><a name="usage03"></a>How can I run {whateverapplication} with EclEmma?</h3>
+<p>
+  EclEmma is designed for Java programs launched within Eclipse. Java
+  applications that run in a different environment may be directly analyzed with
+  <a class="extern" href="http://www.eclemma.org/jacoco">JaCoCo</a> using for
+  example the Ant or Maven integrations. There are different supported launch
+  types, other plug-ins may define additional launch types which are not
+  supported by EclEmma. Check user  documentation for currently supported launch types.
+</p>
+
+<h3><a name="usage04"></a>Does EclEmma support automated Ant or Maven builds?</h3>
+<p>
+  EclEmma is a Eclipse integration of the
+  <a class="extern" href="http://www.eclemma.org/jacoco">JaCoCo</a> code
+  coverage tool. JaCoCo comes with a set of
+  <a class="extern" href="http://www.eclemma.org/jacoco/trunk/doc/ant.html">Ant tasks</a>
+  and <a class="extern" href="http://www.eclemma.org/jacoco/trunk/doc/maven.html">Maven goals</a>
+  for automated builds.
+</p>
+
+<h3><a name="usage05"></a>How do I change the source code highlighting?</h3>
+<p>
+  The source code highlighting can be changed in the Eclipse <i>Preference</i>
+  dialog at <i>General &rarr; Appearance &rarr; Editors &rarr; Text Editors
+  &rarr; Annotations</i>. You can modify the highlighting style and color or use
+  the vertical rulers instead.
+</p>
+
+<h3><a name="usage07"></a>Do I need source code to use EclEmma?</h3>
+<p>
+  No, you can also get coverage information for e.g. third-party JARs. Just
+  make them part of your class path settings in Eclipse and select them on the
+  <i>Coverage</i> tab in the coverage launch dialog. If the library was compiled
+  with debug information, line coverage will be shown in the
+  <i>Coverage</i> view. In case the source is properly attached to the library
+  syntax highlighting will happen in the editors the same way as with you source
+  code.
+</p>
+
+<h3><a name="usage08"></a>Why is this line yellow?</h3>
+<p>
+  EclEmma annotates all lines which are partly covered in yellow. Partly covered
+  means that not all instructions and branches associated with this line have
+  been executed during the coverage session. In some cases it is not obvious why
+  the Java compiler creates extra byte code for a particular line of source code.
+  Such <a class="extern" href="https://github.com/jacoco/jacoco/wiki/FilteringOptions">situations</a>
+  might be filtered by future versions of JaCoCo/EclEmma.
+</p>
+
+<h3><a name="usage09"></a>How can I exclude test classes from analysis?</h3>
+<p>
+  The analysis scope for coverage sessions can be defined in the
+  <i>Coverage</i> launch dialog on source folder (or library) granularity. As
+  test code is typically kept in separate source folders or projects this allows
+  to exclude your test classes from coverage analysis.
+</p>
+
+
+<h2>Troubleshooting</h2>
+
+<h3><a name="trouble01"></a>Why do I get the error message "No coverage data has been collected during this coverage session"?</h3>
+<p>
+  This happens when the Java process did not terminate properly, e.g. has been
+  manually killed with the <i>Terminate</i> button. Make sure your Java program
+  terminates on its own. Alternatively you can dump coverage data for the
+  running process before you terminate it. For this select the button <i>Dump
+  Execution Data</i> from the <i>Coverage</i> view's toolbar.
+</p>
+
+<p>
+</p>
+
+<h3><a name="trouble02"></a>Code with exceptions shows no coverage. Why?</h3>
+<p>
+  The underlying JaCoCo code coverage library works with so called <i>probes</i>.
+  Probes are inserted into the control flow at certain positions. Code is
+  considered as executed when a subsequent probe has been executed. In case of
+  exceptions such a sequence of instructions is aborted somewhere in the middle
+  and not marked as executed.
+</p>
+
+<h3><a name="trouble03"></a>My application does not run with EclEmma!</h3>
+<p>
+  Does your application properly execute within Eclipse in normal <i>run</i>
+  mode? Please verify! If not, your app will most likely not execute in
+  <i>coverage</i> mode either. In this case first create a proper launch
+  configuration in Eclipse; then execute in <i>coverage</i> mode.
+</p>
+
+<h3><a name="trouble04">My Eclipse workbench window has no toolbar button for coverage launches!</a></h3>
+<p>
+  Even if EclEmma is installed properly, it will show its action sets only in
+  some predefined perspectives related to Java tasks. If you want to use the
+  coverage toolbar in other perspectives like <i>Resource</i> select
+  <i>Customize Perspective...</i> from the toolbar's context menu and check the
+  <i>Java Code Coverage</i> option on the <i>Command Groups Availability</i> tab.
+</p>
+
+<h3><a name="trouble05">Why are JUnit4 test cases with expected exceptions shown as not covered?</a></h3>
+<p>
+  JUnit4 test cases with expected exceptions are shown as not covered even
+  though they were executed. The reason for this is that underlying JaCoCo code
+  coverage library only considers code as executed when certain probes are
+  executed. For successful test cases marked with <code>@Test{expected=...}</code>
+  this is not the case. See also <a href="#trouble02">"Code with exceptions
+  shows no coverage. Why?"</a>.
+</p>
+
+<h3><a name="trouble06">The <i>Coverage</i> view stays empty and there is no source highlighting. Why?</a></h3>
+<p>
+  In Eclipse preferences there is an option <i>Launch in debug mode when
+  workspace contains breakpoints</i> under <i>Run/Debug</i> &rarr;
+  <i>Launching</i>. If this option is enabled and there are breakpoints in your
+  workspace <i>coverage</i> mode will not work, because it is automatically
+  replaced with <i>debug</i> mode. Set this option to <i>Never</i> if you want
+  to run code coverage analysis.
+</p>
+
+</body>
+</html>
