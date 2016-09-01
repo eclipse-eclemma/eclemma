@@ -50,6 +50,10 @@
     </developer>
   </developers>
 
+  <prerequisites>
+    <maven>3.0.3</maven>
+  </prerequisites>
+
   <modules>
     <module>../org.eclipse.eclemma.target</module>
     <module>../org.eclipse.eclemma.asm</module>
@@ -119,11 +123,6 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-toolchains-plugin</artifactId>
           <version>1.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jarsigner-plugin</artifactId>
-          <version>1.3</version>
         </plugin>
         <!-- Mojo plugins -->
         <plugin>
@@ -334,21 +333,45 @@
 
     <profile>
       <id>sign</id>
-      <activation>
-        <property>
-          <name>jarsigner.alias</name>
-        </property>
-      </activation>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>cbi-releases@repo.eclipse.org</id>
+          <url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>
+        </pluginRepository>
+      </pluginRepositories>
       <build>
         <plugins>
+          <!--
+          Note that plugins bound to same phase will be executed in the same
+          order as they are listed, so that metadata generated after signing
+          -->
           <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jarsigner-plugin</artifactId>
+            <groupId>org.eclipse.cbi.maven.plugins</groupId>
+            <artifactId>eclipse-jarsigner-plugin</artifactId>
+            <version>1.1.3</version>
             <executions>
               <execution>
                 <id>sign</id>
+                <phase>package</phase>
                 <goals>
                   <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>tycho-p2-plugin</artifactId>
+            <version>${tycho.version}</version>
+            <configuration>
+              <defaultP2Metadata>false</defaultP2Metadata>
+            </configuration>
+            <executions>
+              <execution>
+                <id>attach-p2-metadata</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>p2-metadata</goal>
                 </goals>
               </execution>
             </executions>
