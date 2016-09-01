@@ -23,4 +23,45 @@
   <artifactId>EclEmma</artifactId>
   <packaging>eclipse-repository</packaging>
 
+  <properties>
+    <publish-path>/home/data/httpd/download.eclipse.org/eclemma/updates-master</publish-path>
+  </properties>
+
+  <profiles>
+    <profile>
+      <id>publish</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>publish</id>
+                <phase>install</phase>
+                <goals>
+                  <goal>run</goal>
+                </goals>
+                <configuration>
+                  <target>
+                     <delete>
+                       <fileset dir="${publish-path}">
+                         <include name="**" />
+                       </fileset>
+                     </delete>
+                     <copy includeemptydirs="false" todir="${publish-path}">
+                       <fileset dir="target/repository">
+                         <include name="**" />
+                       </fileset>
+                     </copy>
+                   </target>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
 </project>
