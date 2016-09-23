@@ -56,7 +56,6 @@
 
   <modules>
     <module>../org.eclipse.eclemma.target</module>
-    <module>../org.eclipse.eclemma.asm</module>
     <module>../org.eclipse.eclemma.core</module>
     <module>../org.eclipse.eclemma.core.test</module>
     <module>../org.eclipse.eclemma.debug.ui.compatibility</module>
@@ -71,7 +70,7 @@
 
     <tycho.version>0.22.0</tycho.version>
 
-    <orbit-repository-url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository/</orbit-repository-url>
+    <orbit-repository-url>http://download.eclipse.org/tools/orbit/downloads/drops/S20160916162009/repository/</orbit-repository-url>
 
     <jacoco.version>0.7.7.201606060606</jacoco.version>
     <tycho.testArgLine>-Xmx800m</tycho.testArgLine>
