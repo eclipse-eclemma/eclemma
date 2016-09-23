@@ -71,7 +71,7 @@
 
     <tycho.version>0.22.0</tycho.version>
 
-    <orbit-repository-url>http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository/</orbit-repository-url>
+    <orbit-repository-url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository/</orbit-repository-url>
 
     <jacoco.version>0.7.7.201606060606</jacoco.version>
     <tycho.testArgLine>-Xmx800m</tycho.testArgLine>

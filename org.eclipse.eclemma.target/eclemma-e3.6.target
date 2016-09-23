@@ -9,8 +9,8 @@
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="false" type="InstallableUnit">
 <unit id="org.objectweb.asm" version="3.3.1.v201105211655"/>
-<unit id="org.junit" version="4.8.2.v4_8_2_v20110321-1705"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository"/>
+<unit id="org.junit" version="4.12.0.v201504281640"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository"/>
 </location>
 </locations>
 </target>
