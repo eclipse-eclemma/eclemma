@@ -38,21 +38,6 @@
             <configuration>
               <artifacts>
                 <artifact>
-                  <file>eclemma-e3.5.target</file>
-                  <type>target</type>
-                  <classifier>eclemma-e3.5</classifier>
-                </artifact>
-                <artifact>
-                  <file>eclemma-e3.6.target</file>
-                  <type>target</type>
-                  <classifier>eclemma-e3.6</classifier>
-                </artifact>
-                <artifact>
-                  <file>eclemma-e3.7.target</file>
-                  <type>target</type>
-                  <classifier>eclemma-e3.7</classifier>
-                </artifact>
-                <artifact>
                   <file>eclemma-e3.8.target</file>
                   <type>target</type>
                   <classifier>eclemma-e3.8</classifier>

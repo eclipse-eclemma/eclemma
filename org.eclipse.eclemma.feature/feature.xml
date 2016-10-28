@@ -108,9 +108,9 @@ This Agreement is governed by the laws of the State of New York and the intellec
    </url>
 
    <requires>
-      <import feature="org.eclipse.jdt" version="3.5.0" match="greaterOrEqual"/>
-      <import feature="org.eclipse.rcp" version="3.5.0" match="greaterOrEqual"/>
-      <import feature="org.eclipse.platform" version="3.5.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.jdt" version="3.8.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.rcp" version="3.8.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.platform" version="3.8.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
@@ -129,13 +129,6 @@ This Agreement is governed by the laws of the State of New York and the intellec
 
    <plugin
          id="org.eclipse.eclemma.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.eclemma.debug.ui.compatibility"
          download-size="0"
          install-size="0"
          version="0.0.0"

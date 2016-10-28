@@ -16,8 +16,7 @@ Require-Bundle: org.eclipse.eclemma.core,
  org.eclipse.ui,
  org.eclipse.ui.forms,
  org.eclipse.ui.ide,
- org.eclipse.ui.workbench.texteditor,
- org.eclipse.eclemma.debug.ui.compatibility
+ org.eclipse.ui.workbench.texteditor
 Bundle-Activator: org.eclipse.eclemma.internal.ui.EclEmmaUIPlugin
 Export-Package: org.eclipse.eclemma.internal.ui;x-internal:=true,
  org.eclipse.eclemma.internal.ui.actions;x-internal:=true,

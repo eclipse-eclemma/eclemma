@@ -58,7 +58,6 @@
     <module>../org.eclipse.eclemma.target</module>
     <module>../org.eclipse.eclemma.core</module>
     <module>../org.eclipse.eclemma.core.test</module>
-    <module>../org.eclipse.eclemma.debug.ui.compatibility</module>
     <module>../org.eclipse.eclemma.ui</module>
     <module>../org.eclipse.eclemma.doc</module>
     <module>../org.eclipse.eclemma.feature</module>
@@ -188,49 +187,10 @@
 
   <profiles>
     <profile>
-      <id>e3.5</id>
-      <activation>
-        <property>
-          <name>!target-profile</name>
-        </property>
-      </activation>
-      <properties>
-        <target-platform>eclemma-e3.5</target-platform>
-        <platform-repository-url>http://download.eclipse.org/releases/galileo/</platform-repository-url>
-      </properties>
-    </profile>
-    <profile>
-      <id>e3.6</id>
-      <activation>
-        <property>
-          <name>target-profile</name>
-          <value>e3.6</value>
-         </property>
-      </activation>
-      <properties>
-        <target-platform>eclemma-e3.6</target-platform>
-        <platform-repository-url>http://download.eclipse.org/releases/helios/</platform-repository-url>
-      </properties>
-    </profile>
-    <profile>
-      <id>e3.7</id>
-      <activation>
-        <property>
-          <name>target-profile</name>
-          <value>e3.7</value>
-         </property>
-      </activation>
-      <properties>
-        <target-platform>eclemma-e3.7</target-platform>
-        <platform-repository-url>http://download.eclipse.org/releases/indigo/</platform-repository-url>
-      </properties>
-    </profile>
-    <profile>
       <id>e3.8</id>
       <activation>
         <property>
-          <name>target-profile</name>
-          <value>e3.8</value>
+          <name>!target-profile</name>
          </property>
       </activation>
       <properties>
