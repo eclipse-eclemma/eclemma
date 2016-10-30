@@ -42,6 +42,31 @@
                   <type>target</type>
                   <classifier>eclemma-e3.8</classifier>
                 </artifact>
+                <artifact>
+                  <file>eclemma-e4.3.target</file>
+                  <type>target</type>
+                  <classifier>eclemma-e4.3</classifier>
+                </artifact>
+                <artifact>
+                  <file>eclemma-e4.4.target</file>
+                  <type>target</type>
+                  <classifier>eclemma-e4.4</classifier>
+                </artifact>
+                <artifact>
+                  <file>eclemma-e4.5.target</file>
+                  <type>target</type>
+                  <classifier>eclemma-e4.5</classifier>
+                </artifact>
+                <artifact>
+                  <file>eclemma-e4.6.target</file>
+                  <type>target</type>
+                  <classifier>eclemma-e4.6</classifier>
+                </artifact>
+                <artifact>
+                  <file>eclemma-e4.7.target</file>
+                  <type>target</type>
+                  <classifier>eclemma-e4.7</classifier>
+                </artifact>
               </artifacts>
             </configuration>
           </execution>
