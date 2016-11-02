@@ -1,0 +1,20 @@
+update.matchExp = providedCapabilities.exists(pc | pc.namespace \=\= 'org.eclipse.equinox.p2.iu' && (pc.name \=\= 'com.mountainminds.eclemma.feature.feature.group' || pc.name \=\= 'org.eclipse.eclemma.feature.feature.group' && pc.version < '$version$'))
+
+units.1.id=com.mountainminds.eclemma.core
+units.1.version=$version$
+units.1.singleton=true
+
+units.1.properties.0.name=org.eclipse.equinox.p2.name
+units.1.properties.0.value=Old EclEmma version (com.mountainminds.eclemma) cannot be installed together with new (org.eclipse.eclemma). Uninstall currently installed version and try the install again.
+
+# to not overwrite the main artifact, the additional IU should have classifier (https://bugs.eclipse.org/bugs/show_bug.cgi?id=430728)
+units.1.properties.1.name=maven-classifier
+units.1.properties.1.value=p2inf
+
+units.1.provides.0.namespace=osgi.bundle
+units.1.provides.0.name=com.mountainminds.eclemma.core
+units.1.provides.0.version=$version$
+
+requires.0.namespace=osgi.bundle
+requires.0.name=com.mountainminds.eclemma.core
+requires.0.range=[$version$, $version$]
