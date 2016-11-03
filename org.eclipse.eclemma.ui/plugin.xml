@@ -758,7 +758,10 @@
                id="org.eclipse.eclemma.ui.contextualLaunch.coverage.submenu">
          </action>
          <enablement>
-            <test property="org.eclipse.debug.ui.launchable" value="coverage"/>
+            <test
+                  forcePluginActivation="true"
+                  property="org.eclipse.debug.ui.launchable"
+                  value="coverage"/>
          </enablement>
       </objectContribution>
    </extension>
