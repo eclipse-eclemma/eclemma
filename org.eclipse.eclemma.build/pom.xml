@@ -68,6 +68,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <tycho.version>0.22.0</tycho.version>
+    <tycho.scmUrl>scm:git:https://github.com/eclipse/eclemma.git</tycho.scmUrl>
 
     <orbit-repository-url>http://download.eclipse.org/tools/orbit/downloads/drops/S20160916162009/repository/</orbit-repository-url>
 
@@ -162,7 +163,17 @@
             <addMavenDescriptor>false</addMavenDescriptor>
           </archive>
           <archiveSite>true</archiveSite>
+          <sourceReferences>
+            <generate>true</generate>
+          </sourceReferences>
         </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.eclipse.tycho.extras</groupId>
+            <artifactId>tycho-sourceref-jgit</artifactId>
+            <version>${tycho.version}</version>
+          </dependency>
+        </dependencies>
       </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
