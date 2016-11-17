@@ -674,6 +674,7 @@
    <extension
          point="org.eclipse.ui.importWizards">
       <wizard
+            category="org.eclipse.debug.ui"
             class="org.eclipse.eclemma.internal.ui.wizards.SessionImportWizard"
             icon="$nl$/icons/full/etool16/session_import.gif"
             id="org.eclipse.eclemma.ui.sessionImportWizard"
@@ -684,7 +685,7 @@
    <extension
          point="org.eclipse.ui.exportWizards">
       <wizard
-            category="org.eclipse.jdt.ui.Java"
+            category="org.eclipse.debug.ui"
             class="org.eclipse.eclemma.internal.ui.wizards.SessionExportWizard"
             icon="$nl$/icons/full/etool16/session_export.gif"
             id="org.eclipse.eclemma.ui.sessionExportWizard"
