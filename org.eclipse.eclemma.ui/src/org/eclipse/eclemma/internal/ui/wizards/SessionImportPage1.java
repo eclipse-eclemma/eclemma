@@ -12,10 +12,10 @@
 package org.eclipse.eclemma.internal.ui.wizards;
 
 import static org.eclipse.eclemma.internal.ui.UIMessages.BrowseAction_label;
-import static org.eclipse.eclemma.internal.ui.UIMessages.ImportReportPage1NoExecutionDataAddress_message;
-import static org.eclipse.eclemma.internal.ui.UIMessages.ImportReportPage1NoExecutionDataFile_message;
-import static org.eclipse.eclemma.internal.ui.UIMessages.ImportReportPage1NoExecutionDataPort_message;
-import static org.eclipse.eclemma.internal.ui.UIMessages.ImportReportPage1NoExecutionDataUrl_message;
+import static org.eclipse.eclemma.internal.ui.UIMessages.ImportSessionPage1NoExecutionDataAddress_message;
+import static org.eclipse.eclemma.internal.ui.UIMessages.ImportSessionPage1NoExecutionDataFile_message;
+import static org.eclipse.eclemma.internal.ui.UIMessages.ImportSessionPage1NoExecutionDataPort_message;
+import static org.eclipse.eclemma.internal.ui.UIMessages.ImportSessionPage1NoExecutionDataUrl_message;
 import static org.eclipse.eclemma.internal.ui.UIMessages.ImportSessionPage1BrowseDialog_title;
 import static org.eclipse.eclemma.internal.ui.UIMessages.ImportSessionPage1Copy_label;
 import static org.eclipse.eclemma.internal.ui.UIMessages.ImportSessionPage1ExecutionDataAddress_label;
@@ -236,14 +236,14 @@ public class SessionImportPage1 extends WizardPage {
     if (fileradio.getSelection()) {
       File execfile = new File(filecombo.getText());
       if (!execfile.exists() || !execfile.isFile()) {
-        setErrorMessage(ImportReportPage1NoExecutionDataFile_message);
+        setErrorMessage(ImportSessionPage1NoExecutionDataFile_message);
         setPageComplete(false);
         return;
       }
       try {
         dataSource = new URLExecutionDataSource(execfile.toURL());
       } catch (MalformedURLException e) {
-        setErrorMessage(ImportReportPage1NoExecutionDataFile_message);
+        setErrorMessage(ImportSessionPage1NoExecutionDataFile_message);
         setPageComplete(false);
         return;
       }
@@ -252,7 +252,7 @@ public class SessionImportPage1 extends WizardPage {
       try {
         dataSource = new URLExecutionDataSource(new URL(urlcombo.getText()));
       } catch (MalformedURLException e) {
-        setErrorMessage(ImportReportPage1NoExecutionDataUrl_message);
+        setErrorMessage(ImportSessionPage1NoExecutionDataUrl_message);
         setPageComplete(false);
         return;
       }
@@ -260,7 +260,7 @@ public class SessionImportPage1 extends WizardPage {
     if (agentradio.getSelection()) {
       final String address = addresstext.getText();
       if (address.length() == 0) {
-        setErrorMessage(ImportReportPage1NoExecutionDataAddress_message);
+        setErrorMessage(ImportSessionPage1NoExecutionDataAddress_message);
         setPageComplete(false);
         return;
       }
@@ -269,7 +269,7 @@ public class SessionImportPage1 extends WizardPage {
         dataSource = new AgentExecutionDataSource(address, port,
             resetcheck.getSelection());
       } catch (NumberFormatException e) {
-        setErrorMessage(ImportReportPage1NoExecutionDataPort_message);
+        setErrorMessage(ImportSessionPage1NoExecutionDataPort_message);
         setPageComplete(false);
         return;
       }

@@ -65,8 +65,8 @@ public class SessionExportPage1 extends WizardPage {
 
   public SessionExportPage1() {
     super(ID);
-    setTitle(UIMessages.ExportReportPage1_title);
-    setDescription(UIMessages.ExportReportPage1_description);
+    setTitle(UIMessages.ExportSessionPage1_title);
+    setDescription(UIMessages.ExportSessionPage1_description);
   }
 
   public void createControl(Composite parent) {
@@ -74,7 +74,7 @@ public class SessionExportPage1 extends WizardPage {
     parent = new Composite(parent, SWT.NONE);
     parent.setLayout(new GridLayout());
     new Label(parent, SWT.NONE)
-        .setText(UIMessages.ExportReportPage1Sessions_label);
+        .setText(UIMessages.ExportSessionPage1Sessions_label);
     sessionstable = new TableViewer(parent, SWT.BORDER);
     sessionstable.setLabelProvider(new WorkbenchLabelProvider());
     sessionstable.setContentProvider(new ArrayContentProvider());
@@ -88,7 +88,7 @@ public class SessionExportPage1 extends WizardPage {
     gd.heightHint = convertHeightInCharsToPixels(8);
     sessionstable.getControl().setLayoutData(gd);
     Group group = new Group(parent, SWT.NONE);
-    group.setText(UIMessages.ExportReportPage1DestinationGroup_label);
+    group.setText(UIMessages.ExportSessionPage1DestinationGroup_label);
     group.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
     createExportOptionsGroup(group);
     setControl(parent);
@@ -99,7 +99,7 @@ public class SessionExportPage1 extends WizardPage {
   private void createExportOptionsGroup(Composite parent) {
     parent.setLayout(new GridLayout(3, false));
     new Label(parent, SWT.NONE)
-        .setText(UIMessages.ExportReportPage1Format_label);
+        .setText(UIMessages.ExportSessionPage1Format_label);
     formatcombo = new ComboViewer(parent, SWT.READ_ONLY);
     formatcombo.setContentProvider(new ArrayContentProvider());
     formatcombo.setLabelProvider(new LabelProvider() {
@@ -124,7 +124,7 @@ public class SessionExportPage1 extends WizardPage {
     gd.horizontalSpan = 2;
     formatcombo.getControl().setLayoutData(gd);
     new Label(parent, SWT.NONE)
-        .setText(UIMessages.ExportReportPage1Destination_label);
+        .setText(UIMessages.ExportSessionPage1Destination_label);
     destinationcombo = new Combo(parent, SWT.BORDER);
     destinationcombo.addModifyListener(new ModifyListener() {
       public void modifyText(ModifyEvent e) {
@@ -151,7 +151,7 @@ public class SessionExportPage1 extends WizardPage {
 
   private void openFileDialog() {
     FileDialog fd = new FileDialog(getShell(), SWT.SAVE);
-    fd.setText(UIMessages.ExportReportPage1BrowseDialog_title);
+    fd.setText(UIMessages.ExportSessionPage1BrowseDialog_title);
     fd.setFileName(destinationcombo.getText());
     String ext = getExportFormat().getFileExtension();
     fd.setFilterExtensions(new String[] { "*." + ext, "*.*" }); //$NON-NLS-1$ //$NON-NLS-2$
@@ -163,7 +163,7 @@ public class SessionExportPage1 extends WizardPage {
 
   private void openFolderDialog() {
     final DirectoryDialog fd = new DirectoryDialog(getShell(), SWT.NONE);
-    fd.setText(UIMessages.ExportReportPage1BrowseDialog_title);
+    fd.setText(UIMessages.ExportSessionPage1BrowseDialog_title);
     fd.setFilterPath(destinationcombo.getText());
     final String folder = fd.open();
     if (folder != null) {
@@ -174,13 +174,13 @@ public class SessionExportPage1 extends WizardPage {
   private void update() {
     // make sure we have a session to export
     if (getSelectedSession() == null) {
-      setErrorMessage(UIMessages.ExportReportPage1NoSession_message);
+      setErrorMessage(UIMessages.ExportSessionPage1NoSession_message);
       setPageComplete(false);
       return;
     }
     // a destination file must be spezified
     if (getDestination().length() == 0) {
-      setMessage(UIMessages.ExportReportPage1MissingDestination_message);
+      setMessage(UIMessages.ExportSessionPage1MissingDestination_message);
       setPageComplete(false);
       return;
     }
@@ -191,7 +191,7 @@ public class SessionExportPage1 extends WizardPage {
       String exte = format.getFileExtension();
       if (!exte.equalsIgnoreCase(exta)) {
         setMessage(
-            NLS.bind(UIMessages.ExportReportPage1WrongExtension_message, exte),
+            NLS.bind(UIMessages.ExportSessionPage1WrongExtension_message, exte),
             WARNING);
         setPageComplete(true);
         return;
