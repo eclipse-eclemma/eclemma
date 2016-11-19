@@ -13,8 +13,11 @@
 <unit id="org.objectweb.asm" version="5.1.0.v20160914-0701"/>
 <unit id="org.objectweb.asm.commons" version="5.1.0.v20160914-0701"/>
 <unit id="org.objectweb.asm.tree" version="5.1.0.v20160914-0701"/>
+<unit id="org.jacoco.agent" version="0.7.7.v20161114-2147"/>
+<unit id="org.jacoco.core" version="0.7.7.v20161109-1949"/>
+<unit id="org.jacoco.report" version="0.7.7.v20161109-1949"/>
 <unit id="org.junit" version="4.12.0.v201504281640"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20160916162009/repository"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/I20161118141606/repository"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="false" type="InstallableUnit">
 <unit id="org.eclipse.license.feature.group" version="0.0.0"/>
