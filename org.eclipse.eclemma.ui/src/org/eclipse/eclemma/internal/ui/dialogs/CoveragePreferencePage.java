@@ -11,6 +11,10 @@
  ******************************************************************************/
 package org.eclipse.eclemma.internal.ui.dialogs;
 
+import org.eclipse.eclemma.internal.ui.ContextHelp;
+import org.eclipse.eclemma.internal.ui.EclEmmaUIPlugin;
+import org.eclipse.eclemma.internal.ui.UIMessages;
+import org.eclipse.eclemma.internal.ui.UIPreferences;
 import org.eclipse.jface.layout.GridDataFactory;
 import org.eclipse.jface.layout.GridLayoutFactory;
 import org.eclipse.jface.preference.BooleanFieldEditor;
@@ -29,23 +33,17 @@ import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.eclipse.ui.dialogs.PreferenceLinkArea;
 import org.eclipse.ui.preferences.IWorkbenchPreferenceContainer;
 
-import org.eclipse.eclemma.internal.ui.ContextHelp;
-import org.eclipse.eclemma.internal.ui.EclEmmaUIPlugin;
-import org.eclipse.eclemma.internal.ui.UIMessages;
-import org.eclipse.eclemma.internal.ui.UIPreferences;
-
 /**
  * Implementation of the "Code Coverage" preferences page.
  */
-public class CoveragePreferencePage extends FieldEditorPreferencePage implements
-    IWorkbenchPreferencePage {
+public class CoveragePreferencePage extends FieldEditorPreferencePage
+    implements IWorkbenchPreferencePage {
 
   private static final String DECORATORS_PAGE = "org.eclipse.ui.preferencePages.Decorators"; //$NON-NLS-1$
   private static final String ANNOTATIONS_PAGE = "org.eclipse.ui.editors.preferencePages.Annotations"; //$NON-NLS-1$
 
   public CoveragePreferencePage() {
     super();
-    setDescription(UIMessages.CoveragePreferences_description);
     setPreferenceStore(EclEmmaUIPlugin.getInstance().getPreferenceStore());
   }
 

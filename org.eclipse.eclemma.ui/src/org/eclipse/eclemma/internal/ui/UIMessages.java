@@ -129,7 +129,6 @@ public class UIMessages extends NLS {
 
   public static String CoverageDecoratorSuffix_label;
 
-  public static String CoveragePreferences_description;
   public static String CoverageSessionManagement_titel;
   public static String CoveragePreferencesShowCoverageView_label;
   public static String CoveragePreferencesActivateNewSessions_label;
