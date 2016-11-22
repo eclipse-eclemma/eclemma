@@ -16,14 +16,16 @@ import java.util.Collections;
 import org.eclipse.core.commands.Command;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.core.commands.ParameterizedCommand;
 import org.eclipse.core.commands.common.CommandException;
-import org.eclipse.ui.IWorkbenchCommandConstants;
-import org.eclipse.ui.commands.ICommandService;
-import org.eclipse.ui.handlers.HandlerUtil;
-
 import org.eclipse.eclemma.core.CoverageTools;
 import org.eclipse.eclemma.internal.ui.EclEmmaUIPlugin;
 import org.eclipse.eclemma.internal.ui.wizards.SessionImportWizard;
+import org.eclipse.ui.IWorkbenchCommandConstants;
+import org.eclipse.ui.IWorkbenchSite;
+import org.eclipse.ui.commands.ICommandService;
+import org.eclipse.ui.handlers.HandlerUtil;
+import org.eclipse.ui.handlers.IHandlerService;
 
 /**
  * Handler to import a JaCoCo coverage session.
@@ -38,18 +40,26 @@ public class ImportSessionHandler extends AbstractSessionManagerHandler {
   }
 
   public Object execute(ExecutionEvent event) throws ExecutionException {
-    final ICommandService cs = (ICommandService) HandlerUtil.getActiveSite(
-        event).getService(ICommandService.class);
+
+    final IWorkbenchSite site = HandlerUtil.getActiveSite(event);
+    final ICommandService cs = (ICommandService) site
+        .getService(ICommandService.class);
+    final IHandlerService hs = (IHandlerService) site
+        .getService(IHandlerService.class);
     final Command command = cs
         .getCommand(IWorkbenchCommandConstants.FILE_IMPORT);
-    final ExecutionEvent importEvent = new ExecutionEvent(command,
-        Collections.singletonMap("importWizardId", SessionImportWizard.ID), //$NON-NLS-1$
-        event.getTrigger(), event.getApplicationContext());
+
     try {
-      command.executeWithChecks(importEvent);
+      hs.executeCommand(ParameterizedCommand.generateCommand(command,
+          Collections.singletonMap(
+              IWorkbenchCommandConstants.FILE_IMPORT_PARM_WIZARDID,
+              SessionImportWizard.ID)),
+          null);
     } catch (CommandException e) {
       EclEmmaUIPlugin.log(e);
     }
+
     return null;
   }
+
 }
