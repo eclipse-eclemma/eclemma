@@ -30,7 +30,7 @@ public class ExportImportTest {
     bot.menu("File").menu("Import...").click();
     bot.shell("Import").activate();
 
-    SWTBotTreeItem treeItem = bot.tree().getTreeItem("Other").expand();
+    SWTBotTreeItem treeItem = bot.tree().getTreeItem("Run/Debug").expand();
     treeItem.getNode("Coverage Session").select();
     bot.button("Next >").click();
 
@@ -42,8 +42,8 @@ public class ExportImportTest {
     bot.menu("File").menu("Export...").click();
     bot.shell("Export").activate();
 
-    SWTBotTreeItem treeItem = bot.tree().getTreeItem("Java").expand();
-    treeItem.getNode("Coverage Report").select();
+    SWTBotTreeItem treeItem = bot.tree().getTreeItem("Run/Debug").expand();
+    treeItem.getNode("Coverage Session").select();
     bot.button("Next >").click();
 
     bot.text(" No coverage session available for export.");

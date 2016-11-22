@@ -50,7 +50,7 @@ public class SessionExportWizard extends Wizard implements IExportWizard {
       wizardsettings = pluginsettings.addNewSection(SETTINGSID);
     }
     setDialogSettings(wizardsettings);
-    setWindowTitle(UIMessages.ExportReport_title);
+    setWindowTitle(UIMessages.ExportSession_title);
     setDefaultPageImageDescriptor(EclEmmaUIPlugin
         .getImageDescriptor(EclEmmaUIPlugin.WIZBAN_EXPORT_SESSION));
     setNeedsProgressMonitor(true);
@@ -91,8 +91,8 @@ public class SessionExportWizard extends Wizard implements IExportWizard {
     } catch (InvocationTargetException ite) {
       final Throwable ex = ite.getTargetException();
       EclEmmaUIPlugin.log(ex);
-      final String title = UIMessages.ExportReportErrorDialog_title;
-      String msg = UIMessages.ExportReportErrorDialog_message;
+      final String title = UIMessages.ExportSessionErrorDialog_title;
+      String msg = UIMessages.ExportSessionErrorDialog_message;
       msg = NLS.bind(msg, session.getDescription());
       final IStatus status = EclEmmaUIPlugin.errorStatus(
           String.valueOf(ex.getMessage()), ex);

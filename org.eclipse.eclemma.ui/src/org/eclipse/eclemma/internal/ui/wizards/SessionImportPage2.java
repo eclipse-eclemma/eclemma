@@ -152,12 +152,12 @@ public class SessionImportPage2 extends WizardPage {
 
   private void update() {
     if (getSessionDescription().length() == 0) {
-      setErrorMessage(UIMessages.ImportReportPage1NoDescription_message);
+      setErrorMessage(UIMessages.ImportSessionPage1NoDescription_message);
       setPageComplete(false);
       return;
     }
     if (getScope().isEmpty()) {
-      setErrorMessage(UIMessages.ImportReportPage1NoClassFiles_message);
+      setErrorMessage(UIMessages.ImportSessionPage1NoClassFiles_message);
       setPageComplete(false);
       return;
     }

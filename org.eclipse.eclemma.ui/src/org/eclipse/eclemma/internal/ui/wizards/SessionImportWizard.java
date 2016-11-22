@@ -95,8 +95,8 @@ public class SessionImportWizard extends Wizard implements IImportWizard {
     } catch (InvocationTargetException ite) {
       Throwable ex = ite.getTargetException();
       EclEmmaUIPlugin.log(ex);
-      final String title = UIMessages.ImportReportErrorDialog_title;
-      final String msg = UIMessages.ImportReportErrorDialog_message;
+      final String title = UIMessages.ImportSessionErrorDialog_title;
+      final String msg = UIMessages.ImportSessionErrorDialog_message;
       final IStatus status = EclEmmaUIPlugin.errorStatus(
           String.valueOf(ex.getMessage()), ex);
       ErrorDialog.openError(getShell(), title, msg, status);
