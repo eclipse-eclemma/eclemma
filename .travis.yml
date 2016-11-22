@@ -7,4 +7,12 @@ install: true
 # Use container-based infrastructure:
 sudo: false
 
+env:
+  - PLATFORM=e3.8
+    JDK=1.7
+  - PLATFORM=e4.6
+    JDK=1.8
+  - PLATFORM=e4.7
+    JDK=1.8
+
 script: bash .travis.sh
