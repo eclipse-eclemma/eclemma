@@ -59,6 +59,7 @@
     <module>../org.eclipse.eclemma.core</module>
     <module>../org.eclipse.eclemma.core.test</module>
     <module>../org.eclipse.eclemma.ui</module>
+    <module>../org.eclipse.eclemma.ui.test</module>
     <module>../org.eclipse.eclemma.doc</module>
     <module>../org.eclipse.eclemma.feature</module>
     <module>../org.eclipse.eclemma.site</module>
