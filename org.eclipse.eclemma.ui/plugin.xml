@@ -1036,4 +1036,23 @@
          </command>
       </menuContribution>
    </extension>
+   <extension
+         point="org.eclipse.mylyn.tasks.bugs.support">
+      <product
+            description="Java Code Coverage"
+            icon="eclemma32.gif"
+            id="org.eclipse.eclemma"
+            name="EclEmma"
+            providerId="org.eclipse"
+            url="http://www.eclemma.org/">
+      </product>
+      <mapping
+            namespace="org.eclipse.eclemma"
+            productId="org.eclipse.eclemma">
+         <property
+               name="product"
+               value="Eclemma">
+         </property>
+      </mapping>
+   </extension>
 </plugin>
