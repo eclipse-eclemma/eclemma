@@ -37,11 +37,11 @@
 		<topic label="Managing Coverage Sessions" href="pages/sessions.html"/>
 	</context>
 	<context id="session_export_context">
-		<description>Export a code coverage session as HTML report or EMMA data file.</description>
+		<description>Export code coverage sessions in different formats.</description>
 		<topic label="Session Import and Export" href="pages/importexport.html"/>
 	</context>
 	<context id="session_import_context">
-		<description>Import code coverage data for analysis within the IDE.</description>
+		<description>Import code coverage sessions executed externally for analysis within the IDE.</description>
 		<topic label="Session Import and Export" href="pages/importexport.html"/>
 	</context>
 </contexts>
