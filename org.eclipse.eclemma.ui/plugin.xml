@@ -12,9 +12,9 @@
    <extension
          point="org.eclipse.debug.ui.launchGroups">
       <launchGroup
-            bannerImage="$nl$/icons/full/wizban/run_coverage.gif"
+            bannerImage="$nl$/icons/full/wizban/run_coverage.png"
             id="org.eclipse.eclemma.ui.launchGroup.coverage"
-            image="$nl$/icons/full/elcl16/runcoverage.gif"
+            image="$nl$/icons/full/elcl16/runcoverage.png"
             label="%CoverageLaunchGroup.label"
             mode="coverage"
             title="%CoverageLaunchGroup.title"/>
@@ -32,7 +32,7 @@
          point="org.eclipse.debug.ui.launchShortcuts">
       <shortcut
             label="%JavaApplicationShortcut.label"
-            icon="$nl$/icons/full/etool16/java_launch.gif"
+            icon="$nl$/icons/full/etool16/java_launch.png"
             modes="coverage"
             class="org.eclipse.eclemma.ui.launching.CoverageLaunchShortcut:org.eclipse.jdt.debug.ui.localJavaShortcut"
             id="org.eclipse.eclemma.ui.localJavaShortcut">
@@ -46,7 +46,7 @@
       </shortcut>
       <shortcut
             label="%JUnitTestShortcut.label"
-            icon="$nl$/icons/full/etool16/junit_launch.gif"
+            icon="$nl$/icons/full/etool16/junit_launch.png"
             class="org.eclipse.eclemma.ui.launching.CoverageLaunchShortcut:org.eclipse.jdt.junit.junitShortcut"
             modes="coverage"
             id="org.eclipse.eclemma.ui.junitShortcut">
@@ -110,7 +110,7 @@
       </shortcut>
       <shortcut
             label="%JUnitPluginTestShortcut.label"
-            icon="$nl$/icons/full/etool16/junitplugin_launch.gif"
+            icon="$nl$/icons/full/etool16/junitplugin_launch.png"
             modes="coverage"
             class="org.eclipse.eclemma.ui.launching.CoverageLaunchShortcut:org.eclipse.pde.ui.junitWorkbenchShortcut"
             id="org.eclipse.eclemma.ui.junitPluginShortcut">
@@ -124,7 +124,7 @@
       </shortcut>
       <shortcut
             label="%JUnitRAPTestShortcut.label "
-            icon="$nl$/icons/full/etool16/junitplugin_launch.gif"
+            icon="$nl$/icons/full/etool16/junitplugin_launch.png"
             modes="coverage"
             class="org.eclipse.eclemma.ui.launching.CoverageLaunchShortcut:org.eclipse.rap.ui.launch.RAPJUnitLaunchShortcut"
             id="org.eclipse.eclemma.ui.RAPJUnitLaunchShortcut">
@@ -189,9 +189,9 @@
          </menu>
          <action
                class="org.eclipse.eclemma.internal.ui.actions.CoverageToolbarAction"
-               disabledIcon="$nl$/icons/full/dlcl16/runcoverage.gif"
-               hoverIcon="$nl$/icons/full/elcl16/runcoverage.gif"
-               icon="$nl$/icons/full/elcl16/runcoverage.gif"
+               disabledIcon="$nl$/icons/full/dlcl16/runcoverage.png"
+               hoverIcon="$nl$/icons/full/elcl16/runcoverage.png"
+               icon="$nl$/icons/full/elcl16/runcoverage.png"
                id="org.eclipse.eclemma.ui.actions.CoverageDropDownAction"
                label="%CoverageDropDownAction.label"
                style="pulldown"
@@ -217,9 +217,9 @@
          <action
                class="org.eclipse.eclemma.internal.ui.actions.CoverageLastAction"
                definitionId="org.eclipse.eclemma.ui.commands.CoverageLast"
-               disabledIcon="$nl$/icons/full/dlcl16/relaunch.gif"
-               hoverIcon="$nl$/icons/full/elcl16/relaunch.gif"
-               icon="$nl$/icons/full/elcl16/relaunch.gif"
+               disabledIcon="$nl$/icons/full/dlcl16/relaunch.png"
+               hoverIcon="$nl$/icons/full/elcl16/relaunch.png"
+               icon="$nl$/icons/full/elcl16/relaunch.png"
                id="org.eclipse.eclemma.ui.actions.CoverageLast"
                label="%CoverageLastAction.label"
                menubarPath="org.eclipse.ui.run/relaunchGroup"/>
@@ -491,7 +491,7 @@
             allowMultiple="false"
             category="org.eclipse.jdt.ui.java"
             class="org.eclipse.eclemma.internal.ui.coverageview.CoverageView"
-            icon="$nl$/icons/full/eview16/coverage.gif"
+            icon="$nl$/icons/full/eview16/coverage.png"
             id="org.eclipse.eclemma.ui.CoverageView"
             name="%coverageView.title"/>
    </extension>
@@ -676,7 +676,7 @@
       <wizard
             category="org.eclipse.debug.ui"
             class="org.eclipse.eclemma.internal.ui.wizards.SessionImportWizard"
-            icon="$nl$/icons/full/etool16/session_import.gif"
+            icon="$nl$/icons/full/etool16/session_import.png"
             id="org.eclipse.eclemma.ui.sessionImportWizard"
             name="%importSession.title">
          <description>%importSession.description</description>
@@ -687,7 +687,7 @@
       <wizard
             category="org.eclipse.debug.ui"
             class="org.eclipse.eclemma.internal.ui.wizards.SessionExportWizard"
-            icon="$nl$/icons/full/etool16/session_export.gif"
+            icon="$nl$/icons/full/etool16/session_export.png"
             id="org.eclipse.eclemma.ui.sessionExportWizard"
             name="%exportSession.title">
          <description>%exportSession.description</description>
@@ -771,7 +771,7 @@
       <editor
             class="org.eclipse.eclemma.internal.ui.editors.ExecutionDataEditor"
             extensions="exec"
-            icon="icons/full/eview16/exec.gif"
+            icon="icons/full/eview16/exec.png"
             id="org.eclipse.eclemma.ui.editors.executiondata"
             name="%executionDataEditor.label">
          <contentTypeBinding
@@ -785,7 +785,7 @@
             locationURI="menu:org.eclipse.eclemma.ui.CoverageView">
          <command
                commandId="org.eclipse.eclemma.ui.selectRootElements"
-               icon="icons/full/elcl16/showprojects.gif"
+               icon="icons/full/elcl16/showprojects.png"
                label="%SelectProjectsMenu.label"
                style="radio">
             <parameter
@@ -795,7 +795,7 @@
          </command>
          <command
                commandId="org.eclipse.eclemma.ui.selectRootElements"
-               icon="icons/full/elcl16/showpackageroots.gif"
+               icon="icons/full/elcl16/showpackageroots.png"
                label="%SelectPackageRootsMenu.label"
                style="radio">
             <parameter
@@ -805,7 +805,7 @@
          </command>
          <command
                commandId="org.eclipse.eclemma.ui.selectRootElements"
-               icon="icons/full/elcl16/showpackages.gif"
+               icon="icons/full/elcl16/showpackages.png"
                label="%SelectPackagesMenu.label"
                style="radio">
             <parameter
@@ -815,7 +815,7 @@
          </command>
          <command
                commandId="org.eclipse.eclemma.ui.selectRootElements"
-               icon="icons/full/elcl16/showtypes.gif"
+               icon="icons/full/elcl16/showtypes.png"
                label="%SelectTypesMenu.label"
                style="radio">
             <parameter
@@ -914,14 +914,14 @@
          </separator>
          <command
                commandId="org.eclipse.eclemma.ui.importSession"
-               disabledIcon="icons/full/dlcl16/import.gif"
-               icon="icons/full/elcl16/import.gif"
+               disabledIcon="icons/full/dlcl16/import.png"
+               icon="icons/full/elcl16/import.png"
                style="push">
          </command>
          <command
                commandId="org.eclipse.eclemma.ui.exportSession"
-               disabledIcon="icons/full/dlcl16/export.gif"
-               icon="icons/full/elcl16/export.gif"
+               disabledIcon="icons/full/dlcl16/export.png"
+               icon="icons/full/elcl16/export.png"
                style="push">
          </command>
          <command
@@ -953,14 +953,14 @@
             locationURI="toolbar:org.eclipse.eclemma.ui.CoverageView">
          <command
                commandId="org.eclipse.eclemma.ui.relaunchSession"
-               disabledIcon="icons/full/dlcl16/relaunch.gif"
-               icon="icons/full/elcl16/relaunch.gif"
+               disabledIcon="icons/full/dlcl16/relaunch.png"
+               icon="icons/full/elcl16/relaunch.png"
                style="push">
          </command>
          <command
                commandId="org.eclipse.eclemma.ui.dumpExecutionData"
-               disabledIcon="icons/full/dlcl16/dump.gif"
-               icon="icons/full/elcl16/dump.gif"
+               disabledIcon="icons/full/dlcl16/dump.png"
+               icon="icons/full/elcl16/dump.png"
                id="org.eclipse.eclemma.ui.coverageView.dumpExecutionData"
                style="pulldown">
          </command>
@@ -982,14 +982,14 @@
          </command>
          <command
                commandId="org.eclipse.eclemma.ui.mergeSessions"
-               disabledIcon="icons/full/dlcl16/mergesessions.gif"
-               icon="icons/full/elcl16/mergesessions.gif"
+               disabledIcon="icons/full/dlcl16/mergesessions.png"
+               icon="icons/full/elcl16/mergesessions.png"
                style="push">
          </command>
          <command
                commandId="org.eclipse.eclemma.ui.selectActiveSession"
-               disabledIcon="icons/full/dlcl16/session.gif"
-               icon="icons/full/elcl16/session.gif"
+               disabledIcon="icons/full/dlcl16/session.png"
+               icon="icons/full/elcl16/session.png"
                id="org.eclipse.eclemma.ui.coverageView.sessionSelector"
                style="pulldown">
          </command>
@@ -1040,7 +1040,7 @@
          point="org.eclipse.mylyn.tasks.bugs.support">
       <product
             description="Java Code Coverage"
-            icon="eclemma32.gif"
+            icon="eclemma32.png"
             id="org.eclipse.eclemma"
             name="EclEmma"
             providerId="org.eclipse"
