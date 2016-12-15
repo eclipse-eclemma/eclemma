@@ -970,14 +970,14 @@
          </separator>
          <command
                commandId="org.eclipse.eclemma.ui.removeActiveSession"
-               disabledIcon="icons/full/dlcl16/remove.gif"
-               icon="icons/full/elcl16/remove.gif"
+               disabledIcon="IMG_ELCL_REMOVE_DISABLED"
+               icon="IMG_ELCL_REMOVE"
                style="push">
          </command>
          <command
                commandId="org.eclipse.eclemma.ui.removeAllSessions"
-               disabledIcon="icons/full/dlcl16/removeall.gif"
-               icon="icons/full/elcl16/removeall.gif"
+               disabledIcon="IMG_ELCL_REMOVEALL_DISABLED"
+               icon="IMG_ELCL_REMOVEALL"
                style="push">
          </command>
          <command
@@ -1003,7 +1003,7 @@
          </command>
          <command
                commandId="org.eclipse.eclemma.ui.linkWithSelection"
-               icon="icons/full/elcl16/linked.gif"
+               icon="IMG_ELCL_SYNCED"
                style="toggle">
          </command>
          <separator
