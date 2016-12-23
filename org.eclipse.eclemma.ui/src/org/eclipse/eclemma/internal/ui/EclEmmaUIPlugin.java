@@ -45,16 +45,16 @@ public class EclEmmaUIPlugin extends AbstractUIPlugin {
 
   // Icons used by the Plugin
 
-  public static final String ELCL_SESSION = "icons/full/elcl16/session.gif"; //$NON-NLS-1$
-  public static final String ELCL_DUMP = "icons/full/elcl16/dump.gif"; //$NON-NLS-1$
+  public static final String ELCL_SESSION = "icons/full/elcl16/session.png"; //$NON-NLS-1$
+  public static final String ELCL_DUMP = "icons/full/elcl16/dump.png"; //$NON-NLS-1$
 
-  public static final String EVIEW_COVERAGE = "icons/full/eview16/coverage.gif"; //$NON-NLS-1$
-  public static final String EVIEW_EXEC = "icons/full/eview16/exec.gif"; //$NON-NLS-1$
+  public static final String EVIEW_COVERAGE = "icons/full/eview16/coverage.png"; //$NON-NLS-1$
+  public static final String EVIEW_EXEC = "icons/full/eview16/exec.png"; //$NON-NLS-1$
 
-  public static final String OBJ_SESSION = "icons/full/obj16/session.gif"; //$NON-NLS-1$
-  public static final String OBJ_MARKERFULL = "icons/full/obj16/markerfull.gif"; //$NON-NLS-1$
-  public static final String OBJ_MARKERNO = "icons/full/obj16/markerno.gif"; //$NON-NLS-1$
-  public static final String OBJ_MARKERPARTIAL = "icons/full/obj16/markerpartial.gif"; //$NON-NLS-1$
+  public static final String OBJ_SESSION = "icons/full/elcl16/session.png"; //$NON-NLS-1$
+  public static final String OBJ_MARKERFULL = "icons/full/obj16/markerfull.png"; //$NON-NLS-1$
+  public static final String OBJ_MARKERNO = "icons/full/obj16/markerno.png"; //$NON-NLS-1$
+  public static final String OBJ_MARKERPARTIAL = "icons/full/obj16/markerpartial.png"; //$NON-NLS-1$
 
   private static final String[] OBJ_COVERAGE_OVERLAY = new String[] {
       "icons/full/ovr16/coverage00.gif", //$NON-NLS-1$
@@ -67,8 +67,8 @@ public class EclEmmaUIPlugin extends AbstractUIPlugin {
       "icons/full/ovr16/coverage07.gif" //$NON-NLS-1$
   };
 
-  public static final String WIZBAN_EXPORT_SESSION = "icons/full/wizban/export_session.gif"; //$NON-NLS-1$
-  public static final String WIZBAN_IMPORT_SESSION = "icons/full/wizban/import_session.gif"; //$NON-NLS-1$
+  public static final String WIZBAN_EXPORT_SESSION = "icons/full/wizban/export_session.png"; //$NON-NLS-1$
+  public static final String WIZBAN_IMPORT_SESSION = "icons/full/wizban/import_session.png"; //$NON-NLS-1$
 
   public static final String DGM_REDBAR = "icons/full/dgm/redbar.gif"; //$NON-NLS-1$
   public static final String DGM_GREENBAR = "icons/full/dgm/greenbar.gif"; //$NON-NLS-1$
