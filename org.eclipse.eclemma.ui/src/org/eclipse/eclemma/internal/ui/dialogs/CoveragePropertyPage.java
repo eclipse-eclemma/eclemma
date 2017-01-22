@@ -14,6 +14,7 @@ package org.eclipse.eclemma.internal.ui.dialogs;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
+import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.CellLabelProvider;
 import org.eclipse.jface.viewers.OwnerDrawLabelProvider;
@@ -77,6 +78,7 @@ public class CoveragePropertyPage extends PropertyPage {
     gd.horizontalSpan = 2;
     table.setLayoutData(gd);
 
+    Dialog.applyDialogFont(parent);
     return parent;
   }
 

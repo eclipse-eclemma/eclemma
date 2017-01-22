@@ -94,11 +94,12 @@ public class DumpExecutionDataHandler extends AbstractHandler {
     return null;
   }
 
-  private ICoverageLaunch openDialog(ExecutionEvent event,
+  public static ICoverageLaunch openDialog(ExecutionEvent event,
       List<ICoverageLaunch> launches) {
     final ListDialog dialog = new ListDialog(HandlerUtil.getActiveShell(event)) {
       protected void configureShell(Shell shell) {
         super.configureShell(shell);
+        Dialog.applyDialogFont(shell);
         ContextHelp.setHelp(shell, ContextHelp.DUMP_EXECUTION_DATA);
       }
     };

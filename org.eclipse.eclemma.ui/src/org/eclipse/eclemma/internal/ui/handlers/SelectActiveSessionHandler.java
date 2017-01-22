@@ -47,6 +47,7 @@ public class SelectActiveSessionHandler extends AbstractSessionManagerHandler {
     final ListDialog dialog = new ListDialog(HandlerUtil.getActiveShell(event)) {
       protected void configureShell(Shell shell) {
         super.configureShell(shell);
+        Dialog.applyDialogFont(shell);
         ContextHelp.setHelp(shell, ContextHelp.SELECT_ACTIVE_SESSION);
       }
     };

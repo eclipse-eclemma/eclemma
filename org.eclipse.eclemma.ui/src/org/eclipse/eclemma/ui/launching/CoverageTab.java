@@ -17,6 +17,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
 import org.eclipse.debug.ui.AbstractLaunchConfigurationTab;
+import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.swt.SWT;
@@ -54,6 +55,7 @@ public class CoverageTab extends AbstractLaunchConfigurationTab {
     parent.setLayout(layout);
     setControl(parent);
     createAnalysisScope(parent);
+    Dialog.applyDialogFont(parent);
   }
 
   private void createAnalysisScope(Composite parent) {
