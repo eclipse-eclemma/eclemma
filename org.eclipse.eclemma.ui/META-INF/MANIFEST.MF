@@ -6,7 +6,7 @@ Bundle-Version: 3.0.0.qualifier
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.eclemma.core,
- org.jacoco.core;bundle-version="[0.7.7,0.7.8)",
+ org.jacoco.core;bundle-version="[0.7.9,0.7.10)",
  org.eclipse.core.expressions,
  org.eclipse.core.runtime,
  org.eclipse.debug.ui,
