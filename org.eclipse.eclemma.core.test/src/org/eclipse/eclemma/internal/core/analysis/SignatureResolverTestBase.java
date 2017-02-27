@@ -31,12 +31,15 @@ public abstract class SignatureResolverTestBase {
 
   protected IType type;
 
+  protected SignatureResolver resolver;
+
   protected void createMethodIndex() throws JavaModelException {
     methodsByName = new HashMap<String, IMethod>();
     final IMethod[] methods = type.getMethods();
     for (int i = 0; i < methods.length; i++) {
       methodsByName.put(methods[i].getElementName(), methods[i]);
     }
+    resolver = new SignatureResolver(type);
   }
 
   private IMethod getMethod(final String name) {
@@ -48,7 +51,7 @@ public abstract class SignatureResolverTestBase {
   private void assertSignature(final String methodName, final String signature)
       throws Exception {
     final IMethod method = getMethod(methodName);
-    assertEquals(signature, SignatureResolver.getParameters(method));
+    assertEquals(signature, resolver.getParameters(method));
   }
 
   @Test
@@ -153,7 +156,8 @@ public abstract class SignatureResolverTestBase {
 
   @Test
   public void test_classTypeVariableExtends() throws Exception {
-    assertSignature("method_classTypeVariableExtends", "Ljava/lang/Comparable;");
+    assertSignature("method_classTypeVariableExtends",
+        "Ljava/lang/Comparable;");
   }
 
   @Test

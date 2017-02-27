@@ -13,14 +13,14 @@ package org.eclipse.eclemma.internal.core.analysis;
 
 import static org.junit.Assert.assertEquals;
 
+import org.eclipse.eclemma.core.JavaProjectKit;
 import org.eclipse.jdt.core.ICompilationUnit;
 import org.eclipse.jdt.core.IMethod;
 import org.eclipse.jdt.core.IPackageFragmentRoot;
+import org.eclipse.jdt.core.IType;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import org.eclipse.eclemma.core.JavaProjectKit;
 
 /**
  * Test {@link SignatureResolver} based on Java source.
@@ -49,9 +49,10 @@ public class SourceSignatureResolverTest extends SignatureResolverTestBase {
 
   @Test
   public void test_innerClassTypeVariable() throws Exception {
-    final IMethod method = type.getType("Inner").getMethods()[0];
-    assertEquals(SignatureResolver.getParameters(method),
-        "Ljava/lang/Comparable;");
+    IType inner = type.getType("Inner");
+    final IMethod method = inner.getMethods()[0];
+    SignatureResolver innerResolver = new SignatureResolver(inner);
+    assertEquals(innerResolver.getParameters(method), "Ljava/lang/Comparable;");
   }
 
 }

@@ -44,6 +44,8 @@ public class MethodLocator {
 
   private final IType type;
 
+  private final SignatureResolver resolver;
+
   /**
    * Initializes a new locator for method search within the given type.
    *
@@ -53,6 +55,7 @@ public class MethodLocator {
    */
   public MethodLocator(final IType type) throws JavaModelException {
     this.type = type;
+    this.resolver = new SignatureResolver(type);
     for (final IMethod m : type.getMethods()) {
       addToIndex(m);
     }
@@ -107,7 +110,7 @@ public class MethodLocator {
   private String createParamSignatureKey(final IMethod method)
       throws JavaModelException {
     return method.getElementName() + "#" //$NON-NLS-1$
-        + SignatureResolver.getParameters(method);
+        + resolver.getParameters(method);
   }
 
   private String createParamSignatureKey(final String name,
