@@ -26,6 +26,6 @@ Export-Package: org.eclipse.eclemma.internal.ui;x-internal:=true,
  org.eclipse.eclemma.internal.ui.dialogs;x-internal:=true,
  org.eclipse.eclemma.internal.ui.launching;x-internal:=true,
  org.eclipse.eclemma.internal.ui.wizards;x-internal:=true,
- org.eclipse.eclemma.ui.launching
+ org.eclipse.eclemma.ui.launching;x-internal:=true
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
