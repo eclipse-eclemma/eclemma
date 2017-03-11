@@ -11,6 +11,8 @@
  ******************************************************************************/
 package org.eclipse.eclemma.core;
 
+import static org.junit.Assert.assertTrue;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,8 +20,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.Reader;
-
-import junit.framework.Assert;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
@@ -211,7 +211,7 @@ public class JavaProjectKit {
     if (markers.length > 0) {
       for (int i = 0; i < markers.length; i++) {
         Integer severity = (Integer) markers[i].getAttribute(IMarker.SEVERITY);
-        Assert.assertTrue(
+        assertTrue(
             String.valueOf(markers[i].getAttribute(IMarker.MESSAGE)),
             severity.intValue() < IMarker.SEVERITY_ERROR);
       }
