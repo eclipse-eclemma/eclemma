@@ -98,7 +98,7 @@ public class ScopeViewer implements ISelectionProvider {
       return comparator.compare(getPathLabel(root1), getPathLabel(root2));
     }
 
-  };
+  }
 
   /**
    * Calculates a label for the class path of the given package fragment root.

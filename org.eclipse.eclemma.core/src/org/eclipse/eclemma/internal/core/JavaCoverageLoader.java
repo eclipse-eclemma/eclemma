@@ -93,7 +93,7 @@ public class JavaCoverageLoader {
       return family == LOADJOB;
     }
 
-  };
+  }
 
   public JavaCoverageLoader(ISessionManager sessionManager) {
     this.sessionManager = sessionManager;
