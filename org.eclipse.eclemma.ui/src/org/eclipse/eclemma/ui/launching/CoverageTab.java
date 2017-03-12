@@ -78,6 +78,7 @@ public class CoverageTab extends AbstractLaunchConfigurationTab {
     Button buttonSelectAll = createPushButton(group,
         UIMessages.SelectAllAction_label, null);
     buttonSelectAll.addSelectionListener(new SelectionAdapter() {
+      @Override
       public void widgetSelected(SelectionEvent e) {
         classesviewer.selectAll();
         setDirty(true);
@@ -89,6 +90,7 @@ public class CoverageTab extends AbstractLaunchConfigurationTab {
     Button buttonDeselectAll = createPushButton(group,
         UIMessages.DeselectAllAction_label, null);
     buttonDeselectAll.addSelectionListener(new SelectionAdapter() {
+      @Override
       public void widgetSelected(SelectionEvent e) {
         classesviewer.deselectAll();
         setDirty(true);
@@ -123,6 +125,7 @@ public class CoverageTab extends AbstractLaunchConfigurationTab {
     }
   }
 
+  @Override
   public boolean isValid(ILaunchConfiguration launchConfig) {
     return !classesviewer.getSelection().isEmpty();
   }
@@ -131,6 +134,7 @@ public class CoverageTab extends AbstractLaunchConfigurationTab {
     return UIMessages.CoverageTab_title;
   }
 
+  @Override
   public Image getImage() {
     return EclEmmaUIPlugin.getImage(EclEmmaUIPlugin.EVIEW_COVERAGE);
   }

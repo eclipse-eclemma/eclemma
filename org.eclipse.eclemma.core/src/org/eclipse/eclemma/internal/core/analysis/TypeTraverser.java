@@ -218,6 +218,7 @@ public class TypeTraverser {
       }
     }
 
+    @Override
     public String toString() {
       return typename;
     }

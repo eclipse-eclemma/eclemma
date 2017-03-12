@@ -124,6 +124,7 @@ public class SessionImportPage2 extends WizardPage {
     binariescheck = new Button(parent, SWT.CHECK);
     binariescheck.setText(UIMessages.ImportSessionPage1Binaries_label);
     binariescheck.addSelectionListener(new SelectionAdapter() {
+      @Override
       public void widgetSelected(SelectionEvent e) {
         scopeviewer.setIncludeBinaries(binariescheck.getSelection());
         update();
@@ -133,6 +134,7 @@ public class SessionImportPage2 extends WizardPage {
     Button buttonSelectAll = new Button(parent, SWT.PUSH);
     buttonSelectAll.setText(UIMessages.SelectAllAction_label);
     buttonSelectAll.addSelectionListener(new SelectionAdapter() {
+      @Override
       public void widgetSelected(SelectionEvent e) {
         scopeviewer.selectAll();
         update();
@@ -142,6 +144,7 @@ public class SessionImportPage2 extends WizardPage {
     Button buttonDeselectAll = new Button(parent, SWT.PUSH);
     buttonDeselectAll.setText(UIMessages.DeselectAllAction_label);
     buttonDeselectAll.addSelectionListener(new SelectionAdapter() {
+      @Override
       public void widgetSelected(SelectionEvent e) {
         scopeviewer.deselectAll();
         update();

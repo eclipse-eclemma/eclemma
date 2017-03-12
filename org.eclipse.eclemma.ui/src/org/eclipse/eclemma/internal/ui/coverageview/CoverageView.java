@@ -126,17 +126,20 @@ public class CoverageView extends ViewPart implements IShowInTarget {
     }
   };
 
+  @Override
   public void init(IViewSite site, IMemento memento) throws PartInitException {
     super.init(site, memento);
     settings.init(memento);
   }
 
+  @Override
   public void saveState(IMemento memento) {
     settings.storeColumnWidth(viewer);
     settings.save(memento);
     super.saveState(memento);
   }
 
+  @Override
   public void createPartControl(Composite parent) {
     ContextHelp.setHelp(parent, ContextHelp.COVERAGE_VIEW);
     Tree tree = new Tree(parent, SWT.MULTI);
@@ -237,6 +240,7 @@ public class CoverageView extends ViewPart implements IShowInTarget {
     sorter.addColumn(column4, COLUMN_TOTAL);
 
     viewer.addFilter(new ViewerFilter() {
+      @Override
       public boolean select(Viewer viewer, Object parentElement, Object element) {
         if (element == LOADING_ELEMENT) {
           return true;
@@ -333,10 +337,12 @@ public class CoverageView extends ViewPart implements IShowInTarget {
     viewer.addSelectionChangedListener(propertiesAction);
   }
 
+  @Override
   public void setFocus() {
     viewer.getTree().setFocus();
   }
 
+  @Override
   public void dispose() {
     for (IHandler h : handlers) {
       h.dispose();

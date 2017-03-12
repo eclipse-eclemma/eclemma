@@ -59,6 +59,7 @@ public class SessionImportWizard extends Wizard implements IImportWizard {
     // nothing to initialize
   }
 
+  @Override
   public void addPages() {
     page1 = new SessionImportPage1();
     addPage(page1);
@@ -66,6 +67,7 @@ public class SessionImportWizard extends Wizard implements IImportWizard {
     addPage(page2);
   }
 
+  @Override
   public boolean performFinish() {
     page1.saveWidgetValues();
     page2.saveWidgetValues();

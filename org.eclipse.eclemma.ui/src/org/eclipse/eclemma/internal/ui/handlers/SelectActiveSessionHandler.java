@@ -45,6 +45,7 @@ public class SelectActiveSessionHandler extends AbstractSessionManagerHandler {
 
   public Object execute(ExecutionEvent event) throws ExecutionException {
     final ListDialog dialog = new ListDialog(HandlerUtil.getActiveShell(event)) {
+      @Override
       protected void configureShell(Shell shell) {
         super.configureShell(shell);
         ContextHelp.setHelp(shell, ContextHelp.SELECT_ACTIVE_SESSION);

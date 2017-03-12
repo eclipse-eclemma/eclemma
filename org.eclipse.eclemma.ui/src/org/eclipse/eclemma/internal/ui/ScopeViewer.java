@@ -52,10 +52,12 @@ public class ScopeViewer implements ISelectionProvider {
 
     private ILabelProvider delegate = new WorkbenchLabelProvider();
 
+    @Override
     public Image getImage(Object element) {
       return delegate.getImage(element);
     }
 
+    @Override
     public String getText(Object element) {
       IPackageFragmentRoot root = (IPackageFragmentRoot) element;
       String projectname = root.getJavaProject().getElementName();
@@ -68,6 +70,7 @@ public class ScopeViewer implements ISelectionProvider {
       }
     }
 
+    @Override
     public void dispose() {
       delegate.dispose();
     }
@@ -79,6 +82,7 @@ public class ScopeViewer implements ISelectionProvider {
    */
   private static class PackageFragmentRootSorter extends ViewerSorter {
 
+    @Override
     public int compare(Viewer viewer, Object e1, Object e2) {
       IPackageFragmentRoot root1 = (IPackageFragmentRoot) e1;
       IPackageFragmentRoot root2 = (IPackageFragmentRoot) e2;

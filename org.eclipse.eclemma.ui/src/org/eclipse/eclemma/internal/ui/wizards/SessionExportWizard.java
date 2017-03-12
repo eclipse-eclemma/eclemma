@@ -59,11 +59,13 @@ public class SessionExportWizard extends Wizard implements IExportWizard {
   public void init(IWorkbench workbench, IStructuredSelection selection) {
   }
 
+  @Override
   public void addPages() {
     page1 = new SessionExportPage1();
     addPage(page1);
   }
 
+  @Override
   public boolean performFinish() {
     page1.saveWidgetValues();
     return createReport();

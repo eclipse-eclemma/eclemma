@@ -87,6 +87,7 @@ public class UIPreferences extends AbstractPreferenceInitializer {
     }
   };
 
+  @Override
   public void initializeDefaultPreferences() {
     IPreferenceStore pref = getPreferenceStore();
     pref.setDefault(PREF_SHOW_COVERAGE_VIEW, true);

@@ -46,6 +46,7 @@ public class CoverageAnnotation extends Annotation {
     return line;
   }
 
+  @Override
   public String getText() {
     final ICounter branches = line.getBranchCounter();
     switch (branches.getStatus()) {

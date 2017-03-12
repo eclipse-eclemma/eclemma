@@ -138,6 +138,7 @@ public class SessionExportPage1 extends WizardPage {
     browsebutton.setText(UIMessages.BrowseAction_label);
     setButtonLayoutData(browsebutton);
     browsebutton.addSelectionListener(new SelectionAdapter() {
+      @Override
       public void widgetSelected(SelectionEvent e) {
         if (getExportFormat().isFolderOutput()) {
           openFolderDialog();

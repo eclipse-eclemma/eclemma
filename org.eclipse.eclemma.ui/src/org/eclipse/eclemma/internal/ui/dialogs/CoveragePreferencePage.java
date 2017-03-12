@@ -47,6 +47,7 @@ public class CoveragePreferencePage extends FieldEditorPreferencePage
     setPreferenceStore(EclEmmaUIPlugin.getInstance().getPreferenceStore());
   }
 
+  @Override
   protected Control createContents(final Composite parent) {
     ContextHelp.setHelp(parent, ContextHelp.COVERAGE_PREFERENCES);
 
@@ -160,6 +161,7 @@ public class CoveragePreferencePage extends FieldEditorPreferencePage
     // nothing to do here
   }
 
+  @Override
   protected void createFieldEditors() {
     // we override createContents()
   }

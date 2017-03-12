@@ -461,6 +461,7 @@ public class SessionManagerTest {
       return null;
     }
 
+    @Override
     public String toString() {
       return "Session@" + System.identityHashCode(this);
     }
@@ -633,6 +634,7 @@ public class SessionManagerTest {
       l.add(session);
     }
 
+    @Override
     public boolean equals(Object obj) {
       if (obj instanceof RecordingListener) {
         return l.equals(((RecordingListener) obj).l);
@@ -641,10 +643,12 @@ public class SessionManagerTest {
       }
     }
 
+    @Override
     public int hashCode() {
       return l.hashCode();
     }
 
+    @Override
     public String toString() {
       return l.toString();
     }

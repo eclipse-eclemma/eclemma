@@ -131,6 +131,7 @@ class ExecutedClassesPage extends FormPage {
     dataTableViewer.setComparator(new ViewerComparator());
     dataTableViewer
         .setContentProvider(new AbstractExecutionDataContentProvider() {
+          @Override
           public Object[] getElements(ExecutionDataContent content) {
             return content.getExecutionData();
           }
@@ -140,6 +141,7 @@ class ExecutedClassesPage extends FormPage {
 
   private abstract static class AbstractExecutionDataColumnLabelProvider extends
       ColumnLabelProvider {
+    @Override
     public final String getText(Object element) {
       return getText((ExecutionData) element);
     }

@@ -60,6 +60,7 @@ class CoverageViewSorter extends ViewerComparator {
     sortColumn.getParent().setSortDirection(reverse ? SWT.DOWN : SWT.UP);
   }
 
+  @Override
   public int compare(Viewer viewer, Object e1, Object e2) {
     CounterEntity counters = settings.getCounters();
     ICounter c1 = CoverageTools.getCoverageInfo(e1).getCounter(counters);

@@ -52,6 +52,7 @@ public class CoveragePropertyPage extends PropertyPage {
   private static final NumberFormat COUNTER_VALUE = DecimalFormat
       .getIntegerInstance();
 
+  @Override
   protected Control createContents(Composite parent) {
     ContextHelp.setHelp(parent, ContextHelp.COVERAGE_PROPERTIES);
     noDefaultAndApplyButton();
@@ -155,6 +156,7 @@ public class CoveragePropertyPage extends PropertyPage {
         });
     viewer.setContentProvider(new ArrayContentProvider());
     viewer.addFilter(new ViewerFilter() {
+      @Override
       public boolean select(Viewer viewer, Object parentElement, Object element) {
         return ((Line) element).counter.getTotalCount() != 0;
       }

@@ -89,11 +89,13 @@ public class MergeSessionsDialog extends ListSelectionDialog {
     return sessions;
   }
 
+  @Override
   protected void configureShell(Shell shell) {
     super.configureShell(shell);
     ContextHelp.setHelp(shell, ContextHelp.MERGE_SESSIONS);
   }
 
+  @Override
   protected Label createMessageArea(Composite composite) {
     Label l = new Label(composite, SWT.NONE);
     l.setFont(composite.getFont());
@@ -112,6 +114,7 @@ public class MergeSessionsDialog extends ListSelectionDialog {
     return super.createMessageArea(composite);
   }
 
+  @Override
   protected Control createDialogArea(Composite parent) {
     Control c = super.createDialogArea(parent);
     getViewer().addCheckStateListener(new ICheckStateListener() {
@@ -121,12 +124,14 @@ public class MergeSessionsDialog extends ListSelectionDialog {
     });
     Button b1 = getButton(IDialogConstants.SELECT_ALL_ID);
     b1.addSelectionListener(new SelectionAdapter() {
+      @Override
       public void widgetSelected(SelectionEvent e) {
         updateButtonsEnableState();
       }
     });
     Button b2 = getButton(IDialogConstants.DESELECT_ALL_ID);
     b2.addSelectionListener(new SelectionAdapter() {
+      @Override
       public void widgetSelected(SelectionEvent e) {
         updateButtonsEnableState();
       }
@@ -134,6 +139,7 @@ public class MergeSessionsDialog extends ListSelectionDialog {
     return c;
   }
 
+  @Override
   protected void okPressed() {
     description = textdescr.getText().trim();
     super.okPressed();

@@ -96,6 +96,7 @@ public class EclEmmaUIPlugin extends AbstractUIPlugin {
     }
   };
 
+  @Override
   public void start(BundleContext context) throws Exception {
     super.start(context);
     CoverageTools.setPreferences(UIPreferences.CORE_PREFERENCES);
@@ -104,6 +105,7 @@ public class EclEmmaUIPlugin extends AbstractUIPlugin {
     instance = this;
   }
 
+  @Override
   public void stop(BundleContext context) throws Exception {
     instance = null;
     editorTracker.dispose();

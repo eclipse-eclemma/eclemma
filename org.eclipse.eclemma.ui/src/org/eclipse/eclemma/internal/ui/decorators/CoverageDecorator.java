@@ -71,11 +71,13 @@ public class CoverageDecorator extends BaseLabelProvider implements
         .getCoveredRatio())));
   }
 
+  @Override
   public boolean isLabelProperty(Object element, String property) {
     // coverage does not depend on IJavaElement properties
     return false;
   }
 
+  @Override
   public void dispose() {
     CoverageTools.removeJavaCoverageListener(coverageListener);
   }

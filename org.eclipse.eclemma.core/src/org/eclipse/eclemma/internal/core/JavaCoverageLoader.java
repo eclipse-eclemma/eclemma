@@ -88,6 +88,7 @@ public class JavaCoverageLoader {
       return Status.OK_STATUS;
     }
 
+    @Override
     public boolean belongsTo(Object family) {
       return family == LOADJOB;
     }

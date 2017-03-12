@@ -91,6 +91,7 @@ public class EclEmmaCorePlugin extends Plugin {
     }
   };
 
+  @Override
   public void start(BundleContext context) throws Exception {
     super.start(context);
     executionDataFiles = new ExecutionDataFiles(getStateLocation());
@@ -103,6 +104,7 @@ public class EclEmmaCorePlugin extends Plugin {
     instance = this;
   }
 
+  @Override
   public void stop(BundleContext context) throws Exception {
     instance = null;
     executionDataFiles.deleteTemporaryFiles();

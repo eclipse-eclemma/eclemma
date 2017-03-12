@@ -137,6 +137,7 @@ public class SessionImportPage1 extends WizardPage {
         .hint(convertHorizontalDLUsToPixels(IDialogConstants.BUTTON_WIDTH),
             SWT.DEFAULT).applyTo(browsebutton);
     browsebutton.addSelectionListener(new SelectionAdapter() {
+      @Override
       public void widgetSelected(SelectionEvent e) {
         openBrowseDialog();
       }

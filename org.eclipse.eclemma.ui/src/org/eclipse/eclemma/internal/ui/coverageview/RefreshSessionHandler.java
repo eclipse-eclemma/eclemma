@@ -26,6 +26,7 @@ class RefreshSessionHandler extends AbstractSessionManagerHandler {
     super(sessionManager);
   }
 
+  @Override
   public boolean isEnabled() {
     return sessionManager.getActiveSession() != null;
   }

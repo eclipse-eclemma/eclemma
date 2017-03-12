@@ -27,6 +27,7 @@ class CoveredElementsContentProvider extends WorkbenchContentProvider {
     this.settings = settings;
   }
 
+  @Override
   public Object[] getElements(Object element) {
     IJavaModelCoverage coverage = (IJavaModelCoverage) element;
     if (coverage == IJavaModelCoverage.LOADING) {
