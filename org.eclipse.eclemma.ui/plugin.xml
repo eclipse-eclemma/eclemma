@@ -96,7 +96,7 @@
       </shortcut>
       <shortcut
             label="%EclipseApplicationShortcut.label"
-            icon="$nl$/icons/full/etool16/eclipse_launch.gif"
+            icon="$nl$/icons/full/etool16/eclipse_launch.png"
             modes="coverage"
             class="org.eclipse.eclemma.ui.launching.CoverageLaunchShortcut:org.eclipse.pde.ui.runtimeWorkbenchShortcut"
             id="org.eclipse.eclemma.ui.workbenchShortcut">
@@ -138,7 +138,7 @@
       </shortcut>
       <shortcut
             class="org.eclipse.eclemma.ui.launching.CoverageLaunchShortcut:org.eclipse.swtbot.eclipse.ui.junitShortcut"
-            icon="$nl$/icons/full/etool16/swtbot_launch.gif"
+            icon="$nl$/icons/full/etool16/swtbot_launch.png"
             id="org.eclipse.eclemma.ui.SWTBotJUnitShortcut"
             label="%SWTBotJUnitShortcut.label"
             modes="coverage">
@@ -156,7 +156,7 @@
       </shortcut>
       <shortcut
             class="org.eclipse.eclemma.ui.launching.CoverageLaunchShortcut:org.eclipse.shortcut.scala"
-            icon="$nl$/icons/full/etool16/scala_launch.gif"
+            icon="$nl$/icons/full/etool16/scala_launch.png"
             id="org.eclipse.eclemma.ui.scalaShortcut"
             label="%ScalaApplicationShortcut.label"
             modes="coverage">

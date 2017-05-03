@@ -57,21 +57,21 @@ public class EclEmmaUIPlugin extends AbstractUIPlugin {
   public static final String OBJ_MARKERPARTIAL = "icons/full/obj16/markerpartial.png"; //$NON-NLS-1$
 
   private static final String[] OBJ_COVERAGE_OVERLAY = new String[] {
-      "icons/full/ovr16/coverage00.gif", //$NON-NLS-1$
-      "icons/full/ovr16/coverage01.gif", //$NON-NLS-1$
-      "icons/full/ovr16/coverage02.gif", //$NON-NLS-1$
-      "icons/full/ovr16/coverage03.gif", //$NON-NLS-1$
-      "icons/full/ovr16/coverage04.gif", //$NON-NLS-1$
-      "icons/full/ovr16/coverage05.gif", //$NON-NLS-1$
-      "icons/full/ovr16/coverage06.gif", //$NON-NLS-1$
-      "icons/full/ovr16/coverage07.gif" //$NON-NLS-1$
+      "icons/full/ovr16/coverage00.png", //$NON-NLS-1$
+      "icons/full/ovr16/coverage01.png", //$NON-NLS-1$
+      "icons/full/ovr16/coverage02.png", //$NON-NLS-1$
+      "icons/full/ovr16/coverage03.png", //$NON-NLS-1$
+      "icons/full/ovr16/coverage04.png", //$NON-NLS-1$
+      "icons/full/ovr16/coverage05.png", //$NON-NLS-1$
+      "icons/full/ovr16/coverage06.png", //$NON-NLS-1$
+      "icons/full/ovr16/coverage07.png" //$NON-NLS-1$
   };
 
   public static final String WIZBAN_EXPORT_SESSION = "icons/full/wizban/export_session.png"; //$NON-NLS-1$
   public static final String WIZBAN_IMPORT_SESSION = "icons/full/wizban/import_session.png"; //$NON-NLS-1$
 
-  public static final String DGM_REDBAR = "icons/full/dgm/redbar.gif"; //$NON-NLS-1$
-  public static final String DGM_GREENBAR = "icons/full/dgm/greenbar.gif"; //$NON-NLS-1$
+  public static final String DGM_REDBAR = "icons/full/dgm/redbar.png"; //$NON-NLS-1$
+  public static final String DGM_GREENBAR = "icons/full/dgm/greenbar.png"; //$NON-NLS-1$
 
   private static EclEmmaUIPlugin instance;
 
