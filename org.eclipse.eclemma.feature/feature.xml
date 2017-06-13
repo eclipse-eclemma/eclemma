@@ -9,7 +9,7 @@
       license-feature-version="0.0.0">
 
    <description url="http://www.eclemma.org/">
-      EclEmma Java Code Coverage for Eclipse
+      Java code coverage analysis for the Eclipse IDE based on the JaCoCo code coverage library ( http://www.jacoco.org/jacoco )
    </description>
 
    <copyright url="http://www.eclemma.org/">
