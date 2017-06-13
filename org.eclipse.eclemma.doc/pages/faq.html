@@ -86,8 +86,7 @@
   means that not all instructions and branches associated with this line have
   been executed during the coverage session. In some cases it is not obvious why
   the Java compiler creates extra byte code for a particular line of source code.
-  Such <a class="extern" href="https://github.com/jacoco/jacoco/wiki/FilteringOptions">situations</a>
-  might be filtered by future versions of JaCoCo/EclEmma.
+  Such situations might be filtered by future versions of JaCoCo and EclEmma.
 </p>
 
 <h3><a name="usage09"></a>How can I exclude test classes from analysis?</h3>
@@ -113,13 +112,13 @@
 <p>
 </p>
 
-<h3><a name="trouble02"></a>Code with exceptions shows no coverage. Why?</h3>
+<h3><a name="trouble02"></a>Source code lines with exceptions show no coverage. Why?</h3>
 <p>
-  The underlying JaCoCo code coverage library works with so called <i>probes</i>.
-  Probes are inserted into the control flow at certain positions. Code is
-  considered as executed when a subsequent probe has been executed. In case of
-  exceptions such a sequence of instructions is aborted somewhere in the middle
-  and not marked as executed.
+  The underlying JaCoCo code coverage library determines code execution with so
+  called probes. Probes are inserted into the control flow at certain positions.
+  Code is considered as executed when a subsequent probe has been executed. In
+  case of exceptions such a sequence of instructions is aborted somewhere in the
+  middle and the corresponding line of source code is not marked as covered.
 </p>
 
 <h3><a name="trouble03"></a>My application does not run with EclEmma!</h3>
@@ -145,8 +144,8 @@
   though they were executed. The reason for this is that underlying JaCoCo code
   coverage library only considers code as executed when certain probes are
   executed. For successful test cases marked with <code>@Test{expected=...}</code>
-  this is not the case. See also <a href="#trouble02">"Code with exceptions
-  shows no coverage. Why?"</a>.
+  this is not the case. See also <a href="#trouble02">"Source code lines with
+  exceptions show no coverage. Why?"</a>.
 </p>
 
 <h3><a name="trouble06">The <i>Coverage</i> view stays empty and there is no source highlighting. Why?</a></h3>
