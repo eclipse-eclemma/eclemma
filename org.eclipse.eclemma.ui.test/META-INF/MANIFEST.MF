@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: EclEmma UI Tests
 Bundle-SymbolicName: org.eclipse.eclemma.ui.test
-Bundle-Version: 3.0.0.qualifier
+Bundle-Version: 3.0.1.qualifier
 Bundle-Vendor: Eclipse EclEmma
 Fragment-Host: org.eclipse.eclemma.ui;bundle-version="[3.0.0,4.0.0)"
 Require-Bundle: org.junit;bundle-version="4.0.0",
