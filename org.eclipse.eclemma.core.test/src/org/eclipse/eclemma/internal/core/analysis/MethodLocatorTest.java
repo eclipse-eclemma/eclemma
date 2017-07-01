@@ -17,6 +17,8 @@ import static org.junit.Assert.assertNotNull;
 import org.eclipse.jdt.core.ICompilationUnit;
 import org.eclipse.jdt.core.IMethod;
 import org.eclipse.jdt.core.IPackageFragmentRoot;
+import org.eclipse.jdt.core.JavaCore;
+import org.osgi.framework.Version;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,6 +29,11 @@ import org.eclipse.eclemma.core.JavaProjectKit;
  * Tests for {@link MethodLocator}.
  */
 public class MethodLocatorTest {
+
+  /**
+   * https://bugs.eclipse.org/bugs/show_bug.cgi?id=381503
+   */
+  private static final boolean JDT_3_13 = JavaCore.getPlugin().getBundle().getVersion().compareTo(new Version("3.13.0")) >= 0;
 
   private JavaProjectKit javaProject;
 
@@ -58,18 +65,18 @@ public class MethodLocatorTest {
 
   @Test
   public void testUnambiguousConstructor() {
-    assertMethod("Lmethodlocator/Samples;.Samples()V", "<init>", "()V");
+    assertMethod(JDT_3_13 ? "Lmethodlocator/Samples;.()V" : "Lmethodlocator/Samples;.Samples()V", "<init>", "()V");
   }
 
   @Test
   public void testAmbiguousConstructor1() {
-    assertMethod("Lmethodlocator/Samples;.Samples(QString;)V", "<init>",
+    assertMethod(JDT_3_13 ? "Lmethodlocator/Samples;.(QString;)V" : "Lmethodlocator/Samples;.Samples(QString;)V", "<init>",
         "(Ljava/lang/String;)V");
   }
 
   @Test
   public void testAmbiguousConstructor2() {
-    assertMethod("Lmethodlocator/Samples;.Samples(I)V", "<init>", "(I)V");
+    assertMethod(JDT_3_13 ? "Lmethodlocator/Samples;.(I)V" : "Lmethodlocator/Samples;.Samples(I)V", "<init>", "(I)V");
   }
 
   @Test

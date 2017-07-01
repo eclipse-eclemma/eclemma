@@ -13,7 +13,10 @@ package org.eclipse.eclemma.ui;
 
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotView;
-import org.eclipse.swtbot.swt.finder.widgets.SWTBotTreeItem;
+import org.eclipse.swtbot.swt.finder.finders.UIThreadRunnable;
+import org.eclipse.swtbot.swt.finder.results.VoidResult;
+import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.PlatformUI;
 import org.junit.After;
 import org.junit.Test;
 
@@ -29,12 +32,15 @@ public class CoverageViewTest {
   @Test
   public void testImportSession() {
     // given
-    bot.menu("Window").menu("Show View").menu("Other...").click();
-    bot.shell("Show View").activate();
-
-    SWTBotTreeItem treeItem = bot.tree().getTreeItem("Java").expand();
-    treeItem.getNode("Coverage").select();
-    bot.button("OK").click();
+    UIThreadRunnable.syncExec(new VoidResult() {
+      public void run() {
+        try {
+          PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().showView("org.eclipse.eclemma.ui.CoverageView");
+        } catch (PartInitException e) {
+          e.printStackTrace();
+        }
+      }
+    });
 
     // when
     SWTBotView view = bot.viewByTitle("Coverage");
