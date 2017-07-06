@@ -108,7 +108,7 @@ public class DumpExecutionDataHandler extends AbstractHandler {
     dialog.setContentProvider(new ArrayContentProvider());
     dialog.setLabelProvider(new LaunchLabelProvider());
     dialog.setInput(launches);
-    if (dialog.open() == Dialog.OK || dialog.getResult().length == 1) {
+    if (dialog.open() == Dialog.OK && dialog.getResult().length == 1) {
       return (ICoverageLaunch) dialog.getResult()[0];
     }
     return null;
