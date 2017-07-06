@@ -43,6 +43,12 @@
               <artifactId>org.eclipse.equinox.event</artifactId>
               <version>0.0.0</version>
             </dependency>
+            <dependency>
+              <!-- Godin: This declaration is important, otherwise we will receive failure of tests on MacOS with message "Unbound classpath container" -->
+              <type>p2-installable-unit</type>
+              <artifactId>org.eclipse.jdt.feature.group</artifactId>
+              <version>0.0.0</version>
+            </dependency>
           </dependencies>
         </configuration>
       </plugin>
