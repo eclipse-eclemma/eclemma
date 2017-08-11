@@ -59,7 +59,7 @@ public class MergeSessionsDialog extends ListSelectionDialog {
    */
   public MergeSessionsDialog(Shell parent, List<ICoverageSession> sessions,
       String description) {
-    super(parent, sessions, new ArrayContentProvider(),
+    super(parent, sessions, ArrayContentProvider.getInstance(),
         new WorkbenchLabelProvider(),
         UIMessages.MergeSessionsDialogSelection_label);
     setTitle(UIMessages.MergeSessionsDialog_title);

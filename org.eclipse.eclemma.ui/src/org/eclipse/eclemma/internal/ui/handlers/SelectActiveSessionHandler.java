@@ -53,7 +53,7 @@ public class SelectActiveSessionHandler extends AbstractSessionManagerHandler {
     };
     dialog.setTitle(UIMessages.SelectActiveSessionDialog_title);
     dialog.setMessage(UIMessages.SelectActiveSessionDialog_message);
-    dialog.setContentProvider(new ArrayContentProvider());
+    dialog.setContentProvider(ArrayContentProvider.getInstance());
     dialog.setLabelProvider(new LabelProvider() {
       @Override
       public String getText(Object element) {

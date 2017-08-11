@@ -148,7 +148,7 @@ public class ScopeViewer implements ISelectionProvider {
   public ScopeViewer(Table table) {
     this.table = table;
     viewer = new CheckboxTableViewer(table);
-    viewer.setContentProvider(new ArrayContentProvider());
+    viewer.setContentProvider(ArrayContentProvider.getInstance());
     viewer.setLabelProvider(new PackageFragmentRootLabelProvider());
     viewer.setSorter(new PackageFragmentRootSorter());
     viewer.addFilter(new ViewerFilter() {

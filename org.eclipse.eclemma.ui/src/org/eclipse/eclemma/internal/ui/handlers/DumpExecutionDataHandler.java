@@ -105,7 +105,7 @@ public class DumpExecutionDataHandler extends AbstractHandler {
     };
     dialog.setTitle(UIMessages.DumpExecutionDataDialog_title);
     dialog.setMessage(UIMessages.DumpExecutionDataDialog_message);
-    dialog.setContentProvider(new ArrayContentProvider());
+    dialog.setContentProvider(ArrayContentProvider.getInstance());
     dialog.setLabelProvider(new LaunchLabelProvider());
     dialog.setInput(launches);
     if (dialog.open() == Dialog.OK && dialog.getResult().length == 1) {
