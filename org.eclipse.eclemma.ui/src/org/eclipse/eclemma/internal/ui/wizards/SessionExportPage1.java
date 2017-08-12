@@ -77,7 +77,7 @@ public class SessionExportPage1 extends WizardPage {
         .setText(UIMessages.ExportSessionPage1Sessions_label);
     sessionstable = new TableViewer(parent, SWT.BORDER);
     sessionstable.setLabelProvider(new WorkbenchLabelProvider());
-    sessionstable.setContentProvider(new ArrayContentProvider());
+    sessionstable.setContentProvider(ArrayContentProvider.getInstance());
     sessionstable.setInput(CoverageTools.getSessionManager().getSessions());
     ICoverageSession active = CoverageTools.getSessionManager()
         .getActiveSession();
@@ -101,7 +101,7 @@ public class SessionExportPage1 extends WizardPage {
     new Label(parent, SWT.NONE)
         .setText(UIMessages.ExportSessionPage1Format_label);
     formatcombo = new ComboViewer(parent, SWT.READ_ONLY);
-    formatcombo.setContentProvider(new ArrayContentProvider());
+    formatcombo.setContentProvider(ArrayContentProvider.getInstance());
     formatcombo.setLabelProvider(new LabelProvider() {
       @Override
       public String getText(Object element) {

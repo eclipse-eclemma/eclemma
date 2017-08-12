@@ -154,7 +154,7 @@ public class CoveragePropertyPage extends PropertyPage {
             cell.setText(COUNTER_VALUE.format(line.counter.getTotalCount()));
           }
         });
-    viewer.setContentProvider(new ArrayContentProvider());
+    viewer.setContentProvider(ArrayContentProvider.getInstance());
     viewer.addFilter(new ViewerFilter() {
       @Override
       public boolean select(Viewer viewer, Object parentElement, Object element) {
