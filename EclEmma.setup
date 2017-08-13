@@ -56,7 +56,11 @@
       xsi:type="setup:VariableTask"
       name="eclipse.target.platform"
       defaultValue="Oxygen"
-      storageURI="scope://Workspace"/>
+      storageURI="scope://Workspace">
+    <choice
+        value="Photon"
+        label="Eclipse Photon - 4.8"/>
+  </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
       id="org.eclipse.eclemma.git"
@@ -111,6 +115,17 @@
           name="org.eclipse.m2e.feature.feature.group"/>
       <requirement
           name="org.eclipse.mylyn.tasks.bugs"/>
+      <repositoryList
+          name="Photon">
+        <repository
+            url="http://download.eclipse.org/releases/photon"/>
+        <repository
+            url="http://download.eclipse.org/cbi/updates/license"/>
+        <repository
+            url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+        <repository
+            url="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+      </repositoryList>
       <repositoryList
           name="Oxygen">
         <repository

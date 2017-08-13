@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.6"?>
+
+<target name="eclemma-e4.8" sequenceNumber="1">
+<locations>
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.jdt.feature.group" version="3.13.0.v20170802-2000"/>
+<unit id="org.eclipse.rcp.feature.group" version="4.8.0.v20170802-2000"/>
+<unit id="org.eclipse.platform.feature.group" version="4.8.0.v20170802-2000"/>
+<repository location="http://download.eclipse.org/releases/photon/"/>
+</location>
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.objectweb.asm" version="5.2.0.v20170126-0011"/>
+<unit id="org.objectweb.asm.commons" version="5.2.0.v20170126-0011"/>
+<unit id="org.objectweb.asm.tree" version="5.2.0.v20170126-0011"/>
+<unit id="org.jacoco.agent" version="0.7.9.v20170208-1730"/>
+<unit id="org.jacoco.core" version="0.7.9.v20170208-1730"/>
+<unit id="org.jacoco.report" version="0.7.9.v20170208-1730"/>
+<unit id="org.junit" version="4.12.0.v201504281640"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+</location>
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.swtbot.eclipse.feature.group" version="0.0.0"/>
+<repository location="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+</location>
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.license.feature.group" version="0.0.0"/>
+<repository location="http://download.eclipse.org/cbi/updates/license"/>
+</location>
+</locations>
+</target>

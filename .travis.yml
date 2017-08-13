@@ -19,5 +19,7 @@ env:
     JDK=1.8
   - PLATFORM=e4.7
     JDK=1.8
+  - PLATFORM=e4.8
+    JDK=1.8
 
 script: bash .travis.sh
