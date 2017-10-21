@@ -48,6 +48,7 @@ public class SelectActiveSessionHandler extends AbstractSessionManagerHandler {
       @Override
       protected void configureShell(Shell shell) {
         super.configureShell(shell);
+        Dialog.applyDialogFont(shell);
         ContextHelp.setHelp(shell, ContextHelp.SELECT_ACTIVE_SESSION);
       }
     };

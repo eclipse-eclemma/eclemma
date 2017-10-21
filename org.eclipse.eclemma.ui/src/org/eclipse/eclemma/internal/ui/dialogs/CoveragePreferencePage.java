@@ -15,6 +15,7 @@ import org.eclipse.eclemma.internal.ui.ContextHelp;
 import org.eclipse.eclemma.internal.ui.EclEmmaUIPlugin;
 import org.eclipse.eclemma.internal.ui.UIMessages;
 import org.eclipse.eclemma.internal.ui.UIPreferences;
+import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.layout.GridDataFactory;
 import org.eclipse.jface.layout.GridLayoutFactory;
 import org.eclipse.jface.preference.BooleanFieldEditor;
@@ -64,6 +65,7 @@ public class CoveragePreferencePage extends FieldEditorPreferencePage
     createLink(result, UIMessages.CoveragePreferencesAnnotationsLink_label,
         ANNOTATIONS_PAGE);
 
+    Dialog.applyDialogFont(result);
     initialize();
     checkState();
     return result;

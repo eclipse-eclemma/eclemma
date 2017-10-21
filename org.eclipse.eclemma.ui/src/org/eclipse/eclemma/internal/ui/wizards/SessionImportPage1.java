@@ -32,6 +32,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jface.layout.GridDataFactory;
@@ -108,6 +109,7 @@ public class SessionImportPage1 extends WizardPage {
     ContextHelp.setHelp(parent, ContextHelp.SESSION_IMPORT);
     restoreWidgetValues();
     updateStatus();
+    Dialog.applyDialogFont(parent);
   }
 
   private void createFileBlock(Composite parent) {

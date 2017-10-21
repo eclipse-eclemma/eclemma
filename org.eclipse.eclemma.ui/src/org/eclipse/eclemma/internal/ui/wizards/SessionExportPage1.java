@@ -13,6 +13,7 @@ package org.eclipse.eclemma.internal.ui.wizards;
 
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ComboViewer;
@@ -91,6 +92,7 @@ public class SessionExportPage1 extends WizardPage {
     group.setText(UIMessages.ExportSessionPage1DestinationGroup_label);
     group.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
     createExportOptionsGroup(group);
+    Dialog.applyDialogFont(parent);
     setControl(parent);
     ContextHelp.setHelp(parent, ContextHelp.SESSION_EXPORT);
     restoreWidgetValues();
