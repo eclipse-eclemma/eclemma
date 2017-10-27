@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.eclipse.eclemma.core; singleton:=true
 Bundle-Version: 3.0.1.qualifier
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: org.eclipse.eclemma.core;x-friends:="org.eclipse.eclemma.ui",
+Export-Package: org.eclipse.eclemma.core;x-friends:="org.eclipse.eclemma.ui,org.eclipse.eclemma.ui.test",
  org.eclipse.eclemma.core.analysis;x-friends:="org.eclipse.eclemma.ui",
  org.eclipse.eclemma.core.launching;x-friends:="org.eclipse.eclemma.ui",
  org.eclipse.eclemma.internal.core;x-internal:=true,
