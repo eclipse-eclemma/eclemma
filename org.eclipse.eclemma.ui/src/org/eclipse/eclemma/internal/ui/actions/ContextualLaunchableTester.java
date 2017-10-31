@@ -26,7 +26,6 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.debug.core.ILaunchManager;
-
 import org.eclipse.eclemma.internal.ui.EclEmmaUIPlugin;
 
 /**
@@ -52,7 +51,11 @@ public class ContextualLaunchableTester extends PropertyTester {
     try {
       return expr.evaluate(createContext(receiver)) != EvaluationResult.FALSE;
     } catch (CoreException ce) {
-      EclEmmaUIPlugin.log(ce);
+      EclEmmaUIPlugin.getInstance().getLog()
+          .log(EclEmmaUIPlugin.errorStatus("Launch shortcut '" //$NON-NLS-1$
+              + delegateShortcutID
+              + "' enablement expression caused exception.", //$NON-NLS-1$
+              ce));
       return false;
     }
   }
