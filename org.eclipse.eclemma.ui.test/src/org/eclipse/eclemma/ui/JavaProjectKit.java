@@ -38,7 +38,7 @@ import org.eclipse.jdt.launching.IJavaLaunchConfigurationConstants;
 import org.eclipse.jdt.launching.JavaRuntime;
 
 /**
- * Utility class to setup Java projects programatically.
+ * Utility class to setup Java projects programmatically.
  * 
  * TODO get rid of duplication with org.eclipse.eclemma.core.JavaProjectKit from org.eclipse.eclemma.core.test
  */
