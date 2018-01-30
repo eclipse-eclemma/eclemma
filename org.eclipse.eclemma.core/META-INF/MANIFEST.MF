@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.eclemma.core; singleton:=true
-Bundle-Version: 3.0.2.qualifier
+Bundle-Version: 3.1.0.qualifier
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Export-Package: org.eclipse.eclemma.core;x-friends:="org.eclipse.eclemma.ui,org.eclipse.eclemma.ui.test",
@@ -15,9 +15,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.debug.core,
  org.eclipse.jdt.core,
  org.eclipse.jdt.launching,
- org.jacoco.core;bundle-version="[0.7.9,0.7.10)",
- org.jacoco.agent;bundle-version="[0.7.9,0.7.10)",
- org.jacoco.report;bundle-version="[0.7.9,0.7.10)"
+ org.jacoco.core;bundle-version="[0.8.0,0.8.1)",
+ org.jacoco.agent;bundle-version="[0.8.0,0.8.1)",
+ org.jacoco.report;bundle-version="[0.8.0,0.8.1)"
 Bundle-Activator: org.eclipse.eclemma.internal.core.EclEmmaCorePlugin
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
