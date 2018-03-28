@@ -4,9 +4,9 @@
 <target name="eclemma-e4.7" sequenceNumber="1">
 <locations>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.jdt.feature.group" version="3.13.1.v20171009-0410"/>
-<unit id="org.eclipse.rcp.feature.group" version="4.7.1.v20171009-0410"/>
-<unit id="org.eclipse.platform.feature.group" version="4.7.1.v20171009-0410"/>
+<unit id="org.eclipse.jdt.feature.group" version="3.13.3.v20180301-0715"/>
+<unit id="org.eclipse.rcp.feature.group" version="4.7.3.v20180301-0715"/>
+<unit id="org.eclipse.platform.feature.group" version="4.7.3.v20180301-0715"/>
 <repository location="http://download.eclipse.org/releases/oxygen/"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
