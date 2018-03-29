@@ -10,9 +10,12 @@
 <repository location="http://download.eclipse.org/releases/oxygen/"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.objectweb.asm" version="6.0.0.v20170929-1901"/>
-<unit id="org.objectweb.asm.commons" version="6.0.0.v20170929-1901"/>
-<unit id="org.objectweb.asm.tree" version="6.0.0.v20170929-1901"/>
+<unit id="org.objectweb.asm" version="6.0.0.v20180116-1719"/>
+<unit id="org.objectweb.asm.commons" version="6.0.0.v20180116-1719"/>
+<unit id="org.objectweb.asm.tree" version="6.0.0.v20180116-1719"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/latest-M"/>
+</location>
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.jacoco.agent" version="0.8.1.v20180328-1646"/>
 <unit id="org.jacoco.core" version="0.8.1.v20180328-1646"/>
 <unit id="org.jacoco.report" version="0.8.1.v20180328-1646"/>
