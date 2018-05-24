@@ -64,6 +64,10 @@ class AdjustedLaunchConfigurationWorkingCopy extends
     return delegate.doSave();
   }
 
+  public ILaunchConfiguration doSave(int flag) throws CoreException {
+    throw new UnsupportedOperationException();
+  }
+
   public void setAttribute(String attributeName, int value) {
     delegate.setAttribute(attributeName, value);
   }
@@ -84,6 +88,10 @@ class AdjustedLaunchConfigurationWorkingCopy extends
 
   public void setAttribute(String attributeName, boolean value) {
     delegate.setAttribute(attributeName, value);
+  }
+
+  public void setAttribute(String attributeName, Object value) {
+    throw new UnsupportedOperationException();
   }
 
   public void rename(String name) {
@@ -125,6 +133,14 @@ class AdjustedLaunchConfigurationWorkingCopy extends
 
   public ILaunchConfigurationWorkingCopy getParent() {
     return delegate.getParent();
+  }
+
+  public void copyAttributes(ILaunchConfiguration prototype) throws CoreException {
+    throw new UnsupportedOperationException();
+  }
+
+  public void setPrototype(ILaunchConfiguration prototype, boolean copy) throws CoreException {
+    throw new UnsupportedOperationException();
   }
 
 }

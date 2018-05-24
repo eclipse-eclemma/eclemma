@@ -4,9 +4,9 @@
 <target name="eclemma-e4.8" sequenceNumber="1">
 <locations>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.jdt.feature.group" version="3.14.0.v20171206-2000"/>
-<unit id="org.eclipse.rcp.feature.group" version="4.8.0.v20171206-2000"/>
-<unit id="org.eclipse.platform.feature.group" version="4.8.0.v20171206-2000"/>
+<unit id="org.eclipse.jdt.feature.group" version="3.14.0.v20180509-2000"/>
+<unit id="org.eclipse.rcp.feature.group" version="4.8.0.v20180509-2000"/>
+<unit id="org.eclipse.platform.feature.group" version="4.8.0.v20180509-2000"/>
 <repository location="http://download.eclipse.org/releases/photon/"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">

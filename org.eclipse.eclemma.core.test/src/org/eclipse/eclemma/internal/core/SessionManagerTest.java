@@ -17,6 +17,7 @@ import static org.junit.Assert.assertSame;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -486,6 +487,10 @@ public class SessionManagerTest {
     public void delete() throws CoreException {
     }
 
+    public void delete(int flag) throws CoreException {
+      throw new UnsupportedOperationException();
+    }
+
     public boolean exists() {
       return false;
     }
@@ -613,6 +618,33 @@ public class SessionManagerTest {
       return false;
     }
 
+    public ILaunchConfiguration getPrototype() throws CoreException {
+      throw new UnsupportedOperationException();
+    }
+
+    public boolean isAttributeModified(String attribute) throws CoreException {
+      throw new UnsupportedOperationException();
+    }
+
+    public boolean isPrototype() {
+      throw new UnsupportedOperationException();
+    }
+
+    public Collection<ILaunchConfiguration> getPrototypeChildren() throws CoreException {
+      throw new UnsupportedOperationException();
+    }
+
+    public int getKind() throws CoreException {
+      throw new UnsupportedOperationException();
+    }
+
+    public Set<String> getPrototypeVisibleAttributes() throws CoreException {
+      throw new UnsupportedOperationException();
+    }
+
+    public void setPrototypeAttributeVisibility(String attribute, boolean visible) throws CoreException {
+      throw new UnsupportedOperationException();
+    }
   }
 
   private static class RecordingListener implements ISessionListener {
