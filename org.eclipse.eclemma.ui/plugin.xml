@@ -204,6 +204,7 @@
                menubarPath="org.eclipse.ui.run/emptyLaunchGroup"/>
          <action
                class="org.eclipse.eclemma.internal.ui.actions.CoverageAsAction"
+               icon="$nl$/icons/full/elcl16/runcoverage.png"
                id="org.eclipse.eclemma.ui.actions.CoverageAsAction"
                label="%CoverageAsAction.label"
                menubarPath="org.eclipse.ui.run/emptyLaunchGroup"
@@ -756,6 +757,7 @@
                class="org.eclipse.eclemma.internal.ui.actions.CoverageContextualLaunchAction"
                menubarPath="additions"
                enablesFor="+"
+               icon="$nl$/icons/full/elcl16/runcoverage.png"
                id="org.eclipse.eclemma.ui.contextualLaunch.coverage.submenu">
          </action>
          <enablement>
