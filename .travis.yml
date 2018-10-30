@@ -13,15 +13,17 @@ addons:
     - metacity
 
 env:
-  - PLATFORM=e3.8
-    JDK=1.7
-  - PLATFORM=e4.6
-    JDK=1.8
-  - PLATFORM=e4.7
-    JDK=1.8
-  - PLATFORM=e4.8
-    JDK=1.8
-  - PLATFORM=e4.9
+#  - PLATFORM=e3.8
+#    JDK=1.7
+#  - PLATFORM=e4.6
+#    JDK=1.8
+#  - PLATFORM=e4.7
+#    JDK=1.8
+#  - PLATFORM=e4.8
+#    JDK=1.8
+#  - PLATFORM=e4.9
+#    JDK=1.8
+  - PLATFORM=e4.10
     JDK=1.8
 
 script: bash .travis.sh

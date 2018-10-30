@@ -283,6 +283,19 @@
         <platform-repository-url>http://download.eclipse.org/releases/2018-09/</platform-repository-url>
       </properties>
     </profile>
+    <profile>
+      <id>e4.10</id>
+      <activation>
+        <property>
+          <name>target-profile</name>
+          <value>e4.10</value>
+        </property>
+      </activation>
+      <properties>
+        <target-platform>eclemma-e4.10</target-platform>
+        <platform-repository-url>http://download.eclipse.org/releases/2018-12/</platform-repository-url>
+      </properties>
+    </profile>
 
     <profile>
       <id>explicit-target</id>
@@ -308,21 +321,25 @@
               </target>
               <ignoreTychoRepositories>true</ignoreTychoRepositories>
               <environments>
+                <!--
                 <environment>
                   <os>win32</os>
                   <ws>win32</ws>
                   <arch>x86</arch>
                 </environment>
+                -->
                 <environment>
                   <os>win32</os>
                   <ws>win32</ws>
                   <arch>x86_64</arch>
                 </environment>
+                <!--
                 <environment>
                   <os>linux</os>
                   <ws>gtk</ws>
                   <arch>x86</arch>
                 </environment>
+                -->
                 <environment>
                   <os>linux</os>
                   <ws>gtk</ws>
