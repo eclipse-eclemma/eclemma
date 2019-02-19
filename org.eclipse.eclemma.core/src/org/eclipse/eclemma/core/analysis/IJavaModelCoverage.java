@@ -93,6 +93,9 @@ public interface IJavaModelCoverage extends ICoverageNode {
       return null;
     }
 
+    public boolean containsCode() {
+      return false;
+    }
   };
 
   /**
