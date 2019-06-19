@@ -116,6 +116,17 @@
       <requirement
           name="org.eclipse.mylyn.tasks.bugs"/>
       <repositoryList
+          name="2019-06">
+        <repository
+            url="http://download.eclipse.org/releases/2019-06"/>
+        <repository
+            url="http://download.eclipse.org/cbi/updates/license"/>
+        <repository
+            url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+        <repository
+            url="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+      </repositoryList>
+      <repositoryList
           name="2019-03">
         <repository
             url="http://download.eclipse.org/releases/2019-03"/>

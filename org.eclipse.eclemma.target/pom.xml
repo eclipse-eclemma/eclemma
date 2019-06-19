@@ -87,6 +87,11 @@
                   <type>target</type>
                   <classifier>eclemma-e4.11</classifier>
                 </artifact>
+                <artifact>
+                  <file>eclemma-e4.12.target</file>
+                  <type>target</type>
+                  <classifier>eclemma-e4.12</classifier>
+                </artifact>
               </artifacts>
             </configuration>
           </execution>
