@@ -78,7 +78,7 @@
 
     <!-- SonarQube -->
     <sonar.java.source>1.5</sonar.java.source>
-    <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
+    <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../org.eclipse.eclemma.site/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     <sonar.surefire.reportsPath>../${project.artifactId}.test/target/surefire-reports/</sonar.surefire.reportsPath>
   </properties>
 
@@ -163,9 +163,8 @@
         <artifactId>jacoco-maven-plugin</artifactId>
         <configuration>
           <sessionId>${project.artifactId}</sessionId>
-          <destFile>${project.basedir}/../target/jacoco.exec</destFile>
           <includes>
-            <include>org.eclipse.eclemma.*</include>
+            <include>org/eclipse/eclemma/**</include>
           </includes>
         </configuration>
         <executions>
