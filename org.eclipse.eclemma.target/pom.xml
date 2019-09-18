@@ -92,6 +92,11 @@
                   <type>target</type>
                   <classifier>eclemma-e4.12</classifier>
                 </artifact>
+                <artifact>
+                  <file>eclemma-e4.13.target</file>
+                  <type>target</type>
+                  <classifier>eclemma-e4.13</classifier>
+                </artifact>
               </artifacts>
             </configuration>
           </execution>
