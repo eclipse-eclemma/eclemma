@@ -211,6 +211,7 @@
               </excludes>
               <lineEndings>UNIX</lineEndings>
               <trimTrailingWhitespace/>
+              <endWithNewline/>
             </format>
           </formats>
         </configuration>
