@@ -52,8 +52,8 @@ public final class EclEmmaStatus {
   }
 
   public IStatus getStatus(Object param1, Object param2, Throwable t) {
-    String m = NLS.bind(message, new Object[] { Integer.valueOf(code), param1,
-        param2 });
+    String m = NLS.bind(message,
+        new Object[] { Integer.valueOf(code), param1, param2 });
     return new Status(severity, EclEmmaCorePlugin.ID, code, m, t);
   }
 
@@ -72,8 +72,8 @@ public final class EclEmmaStatus {
   /**
    * Error while loading a coverage session.
    */
-  public static final EclEmmaStatus SESSION_LOAD_ERROR = new EclEmmaStatus(
-      5001, IStatus.ERROR, CoreMessages.StatusSESSION_LOAD_ERROR_message);
+  public static final EclEmmaStatus SESSION_LOAD_ERROR = new EclEmmaStatus(5001,
+      IStatus.ERROR, CoreMessages.StatusSESSION_LOAD_ERROR_message);
 
   /**
    * The requested launch type is not known.
@@ -138,8 +138,8 @@ public final class EclEmmaStatus {
   /**
    * Error while requesting an execution data dump.
    */
-  public static final EclEmmaStatus DUMP_REQUEST_ERROR = new EclEmmaStatus(
-      5014, IStatus.ERROR, CoreMessages.StatusDUMP_REQUEST_ERROR_message);
+  public static final EclEmmaStatus DUMP_REQUEST_ERROR = new EclEmmaStatus(5014,
+      IStatus.ERROR, CoreMessages.StatusDUMP_REQUEST_ERROR_message);
 
   /**
    * No coverage data file has been created during a coverage launch. This

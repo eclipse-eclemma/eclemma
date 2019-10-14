@@ -20,8 +20,8 @@ import org.eclipse.ui.IPropertyListener;
  * Base class for content providers for {@link ExecutionDataContent}. It handles
  * the viewer update.
  */
-abstract class AbstractExecutionDataContentProvider implements
-    IStructuredContentProvider, IPropertyListener {
+abstract class AbstractExecutionDataContentProvider
+    implements IStructuredContentProvider, IPropertyListener {
 
   private Viewer viewer;
 
@@ -30,7 +30,8 @@ abstract class AbstractExecutionDataContentProvider implements
     return getElements(content);
   }
 
-  public final void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
+  public final void inputChanged(Viewer viewer, Object oldInput,
+      Object newInput) {
     this.viewer = viewer;
     if (oldInput != null) {
       ((ExecutionDataContent) oldInput).removePropertyListener(this);

@@ -154,7 +154,8 @@ public class ScopeViewer implements ISelectionProvider {
     viewer.setSorter(new PackageFragmentRootSorter());
     viewer.addFilter(new ViewerFilter() {
       @Override
-      public boolean select(Viewer viewer, Object parentElement, Object element) {
+      public boolean select(Viewer viewer, Object parentElement,
+          Object element) {
         if (includebinaries) {
           return true;
         }
@@ -255,7 +256,8 @@ public class ScopeViewer implements ISelectionProvider {
    * @param listener
    *          listener to remove
    */
-  public void removeSelectionChangedListener(ISelectionChangedListener listener) {
+  public void removeSelectionChangedListener(
+      ISelectionChangedListener listener) {
     listeners.remove(listener);
   }
 

@@ -72,8 +72,8 @@ class ExecutedClassesPage extends FormPage {
     final Composite body = form.getBody();
     body.setLayout(new org.eclipse.swt.layout.GridLayout(1, true));
 
-    filter = toolkit.createText(body, null, SWT.SINGLE | SWT.SEARCH
-        | SWT.ICON_CANCEL);
+    filter = toolkit.createText(body, null,
+        SWT.SINGLE | SWT.SEARCH | SWT.ICON_CANCEL);
     filter.addModifyListener(new ModifyListener() {
       public void modifyText(ModifyEvent e) {
         triggerRefresh();
@@ -82,8 +82,8 @@ class ExecutedClassesPage extends FormPage {
     filter.setMessage(ExecutionDataEditorExecutedClassesPageFilter_message);
     filter.setLayoutData(new GridData(SWT.FILL, 0, true, false));
 
-    final Table dataTable = toolkit.createTable(body, SWT.VIRTUAL
-        | SWT.FULL_SELECTION | SWT.V_SCROLL | SWT.BORDER);
+    final Table dataTable = toolkit.createTable(body,
+        SWT.VIRTUAL | SWT.FULL_SELECTION | SWT.V_SCROLL | SWT.BORDER);
     dataTable.setHeaderVisible(true);
     dataTable.setLinesVisible(true);
     dataTable.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
@@ -122,8 +122,8 @@ class ExecutedClassesPage extends FormPage {
         .setLabelProvider(new ExecutedProbesLabelProvider());
     final TableColumn executedProbesColumn = executedProbesColumnViewer
         .getColumn();
-    executedProbesColumn
-        .setText(ExecutionDataEditorExecutedClassesPageColumnExecutedProbes_label);
+    executedProbesColumn.setText(
+        ExecutionDataEditorExecutedClassesPageColumnExecutedProbes_label);
     executedProbesColumn.setWidth(100);
     executedProbesColumn.setResizable(true);
 
@@ -140,8 +140,8 @@ class ExecutedClassesPage extends FormPage {
     dataTableViewer.setInput(content);
   }
 
-  private abstract static class AbstractExecutionDataColumnLabelProvider extends
-      ColumnLabelProvider {
+  private abstract static class AbstractExecutionDataColumnLabelProvider
+      extends ColumnLabelProvider {
     @Override
     public final String getText(Object element) {
       return getText((ExecutionData) element);
@@ -150,16 +150,16 @@ class ExecutedClassesPage extends FormPage {
     public abstract String getText(ExecutionData element);
   }
 
-  private static class VMNameLabelProvider extends
-      AbstractExecutionDataColumnLabelProvider {
+  private static class VMNameLabelProvider
+      extends AbstractExecutionDataColumnLabelProvider {
     @Override
     public String getText(ExecutionData element) {
       return element.getName();
     }
   }
 
-  private static class ClassIdLabelProvider extends
-      AbstractExecutionDataColumnLabelProvider {
+  private static class ClassIdLabelProvider
+      extends AbstractExecutionDataColumnLabelProvider {
     @Override
     public String getText(ExecutionData element) {
       return String.format("0x%016x", Long.valueOf(element.getId())); //$NON-NLS-1$
@@ -171,16 +171,16 @@ class ExecutedClassesPage extends FormPage {
     }
   }
 
-  private static class TotalProbesLabelProvider extends
-      AbstractExecutionDataColumnLabelProvider {
+  private static class TotalProbesLabelProvider
+      extends AbstractExecutionDataColumnLabelProvider {
     @Override
     public String getText(ExecutionData element) {
       return Integer.toString(element.getProbes().length);
     }
   }
 
-  private static class ExecutedProbesLabelProvider extends
-      AbstractExecutionDataColumnLabelProvider {
+  private static class ExecutedProbesLabelProvider
+      extends AbstractExecutionDataColumnLabelProvider {
     @Override
     public String getText(ExecutionData element) {
       int executed = 0;
@@ -210,8 +210,8 @@ class ExecutedClassesPage extends FormPage {
 
     @Override
     public IStatus runInUIThread(IProgressMonitor monitor) {
-      dataTableViewer.setFilters(new ViewerFilter[] { ExecutedClassesFilters
-          .fromPatternString(filter.getText().trim()) });
+      dataTableViewer.setFilters(new ViewerFilter[] {
+          ExecutedClassesFilters.fromPatternString(filter.getText().trim()) });
       return Status.OK_STATUS;
     }
   }

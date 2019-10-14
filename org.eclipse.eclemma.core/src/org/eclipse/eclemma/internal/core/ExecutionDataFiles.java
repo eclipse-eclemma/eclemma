@@ -63,14 +63,15 @@ public final class ExecutionDataFiles {
       throws CoreException {
     try {
       final File file = File.createTempFile("session", ".exec", folder); //$NON-NLS-1$ //$NON-NLS-2$
-      final OutputStream out = new BufferedOutputStream(new FileOutputStream(
-          file));
+      final OutputStream out = new BufferedOutputStream(
+          new FileOutputStream(file));
       final ExecutionDataWriter writer = new ExecutionDataWriter(out);
       source.accept(writer, writer);
       out.close();
       return new URLExecutionDataSource(file.toURL());
     } catch (IOException e) {
-      throw new CoreException(EclEmmaStatus.EXEC_FILE_CREATE_ERROR.getStatus(e));
+      throw new CoreException(
+          EclEmmaStatus.EXEC_FILE_CREATE_ERROR.getStatus(e));
     }
   }
 

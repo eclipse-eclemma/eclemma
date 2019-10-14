@@ -32,55 +32,56 @@ import org.junit.Test;
 
 public class ContextualLaunchableTesterTest {
 
-	private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();
+  private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();
 
-	@After
-	public void resetWorkbench() {
-		bot.resetWorkbench();
-	}
+  @After
+  public void resetWorkbench() {
+    bot.resetWorkbench();
+  }
 
-	@Test
-	public void error_message_should_contain_delegate_shortcut_id() throws Exception {
-		final LogListener logListener = new LogListener();
-		Platform.addLogListener(logListener);
+  @Test
+  public void error_message_should_contain_delegate_shortcut_id()
+      throws Exception {
+    final LogListener logListener = new LogListener();
+    Platform.addLogListener(logListener);
 
-		final String projectName = "ContextualLaunchableTesterTest";
-		new JavaProjectKit(projectName);
+    final String projectName = "ContextualLaunchableTesterTest";
+    new JavaProjectKit(projectName);
 
-		final SWTBotView view = bot.viewByTitle("Project Explorer");
-		view.show();
-		final SWTBotTree tree = view.bot().tree();
-		tree.setFocus();
-		tree.select(projectName).contextMenu("Coverage As").click();
+    final SWTBotView view = bot.viewByTitle("Project Explorer");
+    view.show();
+    final SWTBotTree tree = view.bot().tree();
+    tree.setFocus();
+    tree.select(projectName).contextMenu("Coverage As").click();
 
-		Platform.removeLogListener(logListener);
+    Platform.removeLogListener(logListener);
 
-		final IStatus actualStatus = logListener.statuses.get(1);
-		assertEquals(EclEmmaUIPlugin.ID, actualStatus.getPlugin());
-		assertEquals(
-				"Launch shortcut 'org.eclipse.eclemma.ui.ContextualLaunchableTesterTest.fakeShortcut' enablement expression caused exception.",
-				actualStatus.getMessage());
-		assertEquals(
-				"No property tester contributes a property org.eclipse.eclemma.unknownProperty to type class org.eclipse.core.internal.resources.Project",
-				actualStatus.getException().getMessage());
-	}
+    final IStatus actualStatus = logListener.statuses.get(1);
+    assertEquals(EclEmmaUIPlugin.ID, actualStatus.getPlugin());
+    assertEquals(
+        "Launch shortcut 'org.eclipse.eclemma.ui.ContextualLaunchableTesterTest.fakeShortcut' enablement expression caused exception.",
+        actualStatus.getMessage());
+    assertEquals(
+        "No property tester contributes a property org.eclipse.eclemma.unknownProperty to type class org.eclipse.core.internal.resources.Project",
+        actualStatus.getException().getMessage());
+  }
 
-	private static class LogListener implements ILogListener {
-		final List<IStatus> statuses = new ArrayList<IStatus>();
+  private static class LogListener implements ILogListener {
+    final List<IStatus> statuses = new ArrayList<IStatus>();
 
-		public synchronized void logging(IStatus status, String plugin) {
-			if (status.getSeverity() == IStatus.ERROR) {
-				statuses.add(status);
-			}
-		}
-	}
+    public synchronized void logging(IStatus status, String plugin) {
+      if (status.getSeverity() == IStatus.ERROR) {
+        statuses.add(status);
+      }
+    }
+  }
 
-	public static class FakeLaunchShortcut implements ILaunchShortcut {
-		public void launch(ISelection selection, String mode) {
-		}
+  public static class FakeLaunchShortcut implements ILaunchShortcut {
+    public void launch(ISelection selection, String mode) {
+    }
 
-		public void launch(IEditorPart editor, String mode) {
-		}
-	}
+    public void launch(IEditorPart editor, String mode) {
+    }
+  }
 
 }

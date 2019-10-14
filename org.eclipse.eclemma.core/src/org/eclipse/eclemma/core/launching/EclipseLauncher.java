@@ -38,8 +38,8 @@ public class EclipseLauncher extends CoverageLauncher {
    */
   public Set<IPackageFragmentRoot> getOverallScope(
       ILaunchConfiguration configuration) throws CoreException {
-    final IJavaModel model = JavaCore.create(ResourcesPlugin.getWorkspace()
-        .getRoot());
+    final IJavaModel model = JavaCore
+        .create(ResourcesPlugin.getWorkspace().getRoot());
     final Set<IPackageFragmentRoot> result = new HashSet<IPackageFragmentRoot>();
     for (final IJavaProject project : model.getJavaProjects()) {
       if (project.getProject().hasNature(PLUGIN_NATURE)) {

@@ -54,8 +54,7 @@ public class DefaultScopeFilter {
    * @throws CoreException
    *           may occur when accessing the Java model
    */
-  public Set<IPackageFragmentRoot> filter(
-      final Set<IPackageFragmentRoot> scope,
+  public Set<IPackageFragmentRoot> filter(final Set<IPackageFragmentRoot> scope,
       final ILaunchConfiguration configuration) throws CoreException {
     final Set<IPackageFragmentRoot> filtered = new HashSet<IPackageFragmentRoot>(
         scope);

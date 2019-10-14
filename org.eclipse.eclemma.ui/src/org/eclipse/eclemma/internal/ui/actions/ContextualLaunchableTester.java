@@ -68,7 +68,8 @@ public class ContextualLaunchableTester extends PropertyTester {
   }
 
   private Expression createEnablementExpression(String delegateShortcutID) {
-    IConfigurationElement element = findEnablementConfiguration(delegateShortcutID);
+    IConfigurationElement element = findEnablementConfiguration(
+        delegateShortcutID);
     if (element != null) {
       try {
         return ExpressionConverter.getDefault().perform(element);
@@ -84,11 +85,13 @@ public class ContextualLaunchableTester extends PropertyTester {
     IConfigurationElement[] configs = Platform.getExtensionRegistry()
         .getConfigurationElementsFor("org.eclipse.debug.ui.launchShortcuts"); //$NON-NLS-1$
     for (final IConfigurationElement config : configs) {
-      if (!delegateShortcutID.equals(config.getAttribute("id")))continue; //$NON-NLS-1$
+      if (!delegateShortcutID.equals(config.getAttribute("id"))) //$NON-NLS-1$
+        continue;
       String modes = config.getAttribute("modes"); //$NON-NLS-1$
       if (modes == null)
         continue;
-      if (!Arrays.asList(modes.split("\\W")).contains(ILaunchManager.RUN_MODE))continue; //$NON-NLS-1$
+      if (!Arrays.asList(modes.split("\\W")).contains(ILaunchManager.RUN_MODE)) //$NON-NLS-1$
+        continue;
       IConfigurationElement[] launch = config.getChildren("contextualLaunch"); //$NON-NLS-1$
       if (launch.length != 1)
         continue;

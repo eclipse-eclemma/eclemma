@@ -22,7 +22,6 @@ import org.jacoco.core.data.ExecutionDataReader;
 import org.jacoco.core.data.IExecutionDataVisitor;
 import org.jacoco.core.data.ISessionInfoVisitor;
 
-
 /**
  * {@link IExecutionDataSource} implementation based on a *.exec file obtained
  * from a URL.
@@ -45,8 +44,8 @@ public class URLExecutionDataSource implements IExecutionDataSource {
       reader.read();
       in.close();
     } catch (IOException e) {
-      throw new CoreException(EclEmmaStatus.EXEC_FILE_READ_ERROR.getStatus(url,
-          e));
+      throw new CoreException(
+          EclEmmaStatus.EXEC_FILE_READ_ERROR.getStatus(url, e));
     }
   }
 

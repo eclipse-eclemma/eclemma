@@ -154,7 +154,8 @@ public abstract class SignatureResolverTestBase {
 
   @Test
   public void test_classTypeVariableExtends() throws Exception {
-    assertSignature("method_classTypeVariableExtends", "Ljava/lang/Comparable;");
+    assertSignature("method_classTypeVariableExtends",
+        "Ljava/lang/Comparable;");
   }
 
   @Test

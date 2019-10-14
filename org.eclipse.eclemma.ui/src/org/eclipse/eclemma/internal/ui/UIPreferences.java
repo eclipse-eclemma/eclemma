@@ -62,13 +62,13 @@ public class UIPreferences extends AbstractPreferenceInitializer {
     }
 
     public boolean getDefaultScopeSourceFoldersOnly() {
-      return getPreferenceStore().getBoolean(
-          PREF_DEFAULT_SCOPE_SOURCE_FOLDERS_ONLY);
+      return getPreferenceStore()
+          .getBoolean(PREF_DEFAULT_SCOPE_SOURCE_FOLDERS_ONLY);
     }
 
     public boolean getDefaultScopeSameProjectOnly() {
-      return getPreferenceStore().getBoolean(
-          PREF_DEFAULT_SCOPE_SAME_PROJECT_ONLY);
+      return getPreferenceStore()
+          .getBoolean(PREF_DEFAULT_SCOPE_SAME_PROJECT_ONLY);
     }
 
     public String getDefaultScopeFilter() {

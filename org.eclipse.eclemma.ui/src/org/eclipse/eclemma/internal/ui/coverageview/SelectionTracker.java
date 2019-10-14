@@ -54,8 +54,8 @@ class SelectionTracker {
           return;
         }
         if (part instanceof IEditorPart) {
-          IJavaElement element = getJavaElement(((IEditorPart) part)
-              .getEditorInput());
+          IJavaElement element = getJavaElement(
+              ((IEditorPart) part).getEditorInput());
           if (element != null) {
             element = findElementAtCursor(element, selection);
             applySelection(element, false);
@@ -133,9 +133,8 @@ class SelectionTracker {
    */
   private void applySelection(IJavaElement element, boolean force) {
     currentSelection = element;
-    if (force
-        || (enabled && targetview != targetview.getSite().getPage()
-            .getActivePart())) {
+    if (force || (enabled
+        && targetview != targetview.getSite().getPage().getActivePart())) {
       target.setSelection(new StructuredSelection(element), true);
     }
   }

@@ -84,21 +84,21 @@ public class SessionExporter implements ISessionExporter {
     }
   }
 
-  private void createExecFile(IProgressMonitor monitor) throws IOException,
-      CoreException {
+  private void createExecFile(IProgressMonitor monitor)
+      throws IOException, CoreException {
     monitor.beginTask(
         NLS.bind(CoreMessages.ExportingSession_task, session.getDescription()),
         1);
-    final OutputStream out = new BufferedOutputStream(new FileOutputStream(
-        destination));
+    final OutputStream out = new BufferedOutputStream(
+        new FileOutputStream(destination));
     final ExecutionDataWriter writer = new ExecutionDataWriter(out);
     session.accept(writer, writer);
     out.close();
     monitor.done();
   }
 
-  private void createReport(IProgressMonitor monitor) throws CoreException,
-      IOException {
+  private void createReport(IProgressMonitor monitor)
+      throws CoreException, IOException {
     final int work = session.getScope().size();
     monitor.beginTask(
         NLS.bind(CoreMessages.ExportingSession_task, session.getDescription()),
@@ -107,13 +107,13 @@ public class SessionExporter implements ISessionExporter {
     final IJavaModelCoverage modelCoverage = analyzer.processSession(session,
         new SubProgressMonitor(monitor, work));
     final IReportVisitor formatter = createFormatter();
-    formatter
-        .visitInfo(analyzer.getSessionInfos(), analyzer.getExecutionData());
-    final IReportGroupVisitor modelgroup = formatter.visitGroup(session
-        .getDescription());
+    formatter.visitInfo(analyzer.getSessionInfos(),
+        analyzer.getExecutionData());
+    final IReportGroupVisitor modelgroup = formatter
+        .visitGroup(session.getDescription());
     for (IJavaProject project : modelCoverage.getProjects()) {
-      final IReportGroupVisitor projectgroup = modelgroup.visitGroup(project
-          .getElementName());
+      final IReportGroupVisitor projectgroup = modelgroup
+          .visitGroup(project.getElementName());
       for (IPackageFragmentRoot root : project.getPackageFragmentRoots()) {
         final IBundleCoverage coverage = (IBundleCoverage) modelCoverage
             .getCoverageFor(root);
@@ -162,8 +162,8 @@ public class SessionExporter implements ISessionExporter {
     }
   }
 
-  private static abstract class AbstractSourceFileLocator implements
-      ISourceFileLocator {
+  private static abstract class AbstractSourceFileLocator
+      implements ISourceFileLocator {
 
     protected final IPackageFragmentRoot root;
     private final int tabWidth;
@@ -195,13 +195,13 @@ public class SessionExporter implements ISessionExporter {
       }
     }
 
-    protected abstract ISourceReference getSourceReference(
-        IPackageFragment pkg, String sourcename) throws CoreException;
+    protected abstract ISourceReference getSourceReference(IPackageFragment pkg,
+        String sourcename) throws CoreException;
 
   }
 
-  private static class SourceFolderSourceFileLocator extends
-      AbstractSourceFileLocator {
+  private static class SourceFolderSourceFileLocator
+      extends AbstractSourceFileLocator {
 
     public SourceFolderSourceFileLocator(IPackageFragmentRoot root) {
       super(root);
@@ -215,8 +215,8 @@ public class SessionExporter implements ISessionExporter {
 
   }
 
-  private static class LibrarySourceFileLocator extends
-      AbstractSourceFileLocator {
+  private static class LibrarySourceFileLocator
+      extends AbstractSourceFileLocator {
 
     public LibrarySourceFileLocator(IPackageFragmentRoot root) {
       super(root);

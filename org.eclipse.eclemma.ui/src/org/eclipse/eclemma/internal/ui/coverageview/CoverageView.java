@@ -242,7 +242,8 @@ public class CoverageView extends ViewPart implements IShowInTarget {
 
     viewer.addFilter(new ViewerFilter() {
       @Override
-      public boolean select(Viewer viewer, Object parentElement, Object element) {
+      public boolean select(Viewer viewer, Object parentElement,
+          Object element) {
         if (element == LOADING_ELEMENT) {
           return true;
         } else {
@@ -295,23 +296,23 @@ public class CoverageView extends ViewPart implements IShowInTarget {
   private void createHandlers() {
     activateHandler(SelectRootElementsHandler.ID,
         new SelectRootElementsHandler(settings, this));
-    activateHandler(SelectCountersHandler.ID, new SelectCountersHandler(
-        settings, this));
+    activateHandler(SelectCountersHandler.ID,
+        new SelectCountersHandler(settings, this));
     activateHandler(HideUnusedElementsHandler.ID,
         new HideUnusedElementsHandler(settings, this));
-    activateHandler(IWorkbenchCommandConstants.EDIT_COPY, new CopyHandler(
-        settings, getSite().getShell().getDisplay(), viewer));
+    activateHandler(IWorkbenchCommandConstants.EDIT_COPY,
+        new CopyHandler(settings, getSite().getShell().getDisplay(), viewer));
     activateHandler(IWorkbenchCommandConstants.FILE_REFRESH,
         new RefreshSessionHandler(CoverageTools.getSessionManager()));
     activateHandler(IWorkbenchCommandConstants.NAVIGATE_COLLAPSE_ALL,
         new CollapseAllHandler(viewer));
-    activateHandler(LinkWithSelectionHandler.ID, new LinkWithSelectionHandler(
-        settings, selectiontracker));
+    activateHandler(LinkWithSelectionHandler.ID,
+        new LinkWithSelectionHandler(settings, selectiontracker));
   }
 
   private void activateHandler(String id, IHandler handler) {
-    final IHandlerService hs = (IHandlerService) getSite().getService(
-        IHandlerService.class);
+    final IHandlerService hs = (IHandlerService) getSite()
+        .getService(IHandlerService.class);
     hs.activateHandler(id, handler);
     handlers.add(handler);
   }

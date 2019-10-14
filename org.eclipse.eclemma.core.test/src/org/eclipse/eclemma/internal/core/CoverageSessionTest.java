@@ -54,9 +54,7 @@ public class CoverageSessionTest {
     javaProject = new JavaProjectKit("project");
     root1 = javaProject.createSourceFolder("src1");
     root2 = javaProject.createSourceFolder("src2");
-    configuration = DebugPlugin
-        .getDefault()
-        .getLaunchManager()
+    configuration = DebugPlugin.getDefault().getLaunchManager()
         .getLaunchConfigurationType(
             "org.eclipse.jdt.launching.localJavaApplication")
         .newInstance(javaProject.project, "test.launch");
@@ -111,8 +109,8 @@ public class CoverageSessionTest {
       public void accept(IExecutionDataVisitor executionDataVisitor,
           ISessionInfoVisitor sessionInfoVisitor) throws CoreException {
         sessionInfoVisitor.visitSessionInfo(new SessionInfo("id", 1, 2));
-        executionDataVisitor.visitClassExecution(new ExecutionData(123,
-            "MyClass", 15));
+        executionDataVisitor
+            .visitClassExecution(new ExecutionData(123, "MyClass", 15));
       }
     };
   }

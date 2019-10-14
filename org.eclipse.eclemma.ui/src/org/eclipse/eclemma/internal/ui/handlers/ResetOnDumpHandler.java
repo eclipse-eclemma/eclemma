@@ -27,8 +27,8 @@ import org.eclipse.eclemma.internal.ui.UIPreferences;
 /**
  * Handler to toggle the "reset on dump" option.
  */
-public class ResetOnDumpHandler extends AbstractHandler implements
-    IElementUpdater {
+public class ResetOnDumpHandler extends AbstractHandler
+    implements IElementUpdater {
 
   private final IPreferenceStore preferenceStore;
 
@@ -45,8 +45,8 @@ public class ResetOnDumpHandler extends AbstractHandler implements
 
   public void updateElement(UIElement element,
       @SuppressWarnings("rawtypes") Map parameters) {
-    element.setChecked(preferenceStore
-        .getBoolean(UIPreferences.PREF_RESET_ON_DUMP));
+    element.setChecked(
+        preferenceStore.getBoolean(UIPreferences.PREF_RESET_ON_DUMP));
   }
 
 }

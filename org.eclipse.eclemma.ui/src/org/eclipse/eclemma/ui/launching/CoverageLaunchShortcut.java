@@ -34,8 +34,8 @@ import org.eclipse.eclemma.internal.ui.EclEmmaUIPlugin;
  *   class="org.eclipse.eclemma.internal.ui.launching.CoverageLaunchShortcut:org.eclipse.jdt.debug.ui.localJavaShortcut"
  * </pre>
  */
-public class CoverageLaunchShortcut implements ILaunchShortcut,
-    IExecutableExtension {
+public class CoverageLaunchShortcut
+    implements ILaunchShortcut, IExecutableExtension {
 
   private String delegateId;
   private ILaunchShortcut delegate;

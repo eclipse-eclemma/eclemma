@@ -97,8 +97,8 @@ public class SessionExportWizard extends Wizard implements IExportWizard {
       final String title = UIMessages.ExportSessionErrorDialog_title;
       String msg = UIMessages.ExportSessionErrorDialog_message;
       msg = NLS.bind(msg, session.getDescription());
-      final IStatus status = EclEmmaUIPlugin.errorStatus(
-          String.valueOf(ex.getMessage()), ex);
+      final IStatus status = EclEmmaUIPlugin
+          .errorStatus(String.valueOf(ex.getMessage()), ex);
       ErrorDialog.openError(getShell(), title, msg, status);
       return false;
     }

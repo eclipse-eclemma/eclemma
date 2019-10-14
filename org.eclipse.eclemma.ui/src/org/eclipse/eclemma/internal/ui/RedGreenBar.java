@@ -51,8 +51,8 @@ public final class RedGreenBar {
 
   private static void bar(Event event, String image, int xOffset, int width) {
     final int height = event.getBounds().height - BORDER_TOP - BORDER_BOTTOM;
-    event.gc.drawImage(EclEmmaUIPlugin.getImage(image), 0, 0, 1, 10, event.x
-        + xOffset + BORDER_LEFT, event.y + BORDER_TOP, width, height);
+    event.gc.drawImage(EclEmmaUIPlugin.getImage(image), 0, 0, 1, 10,
+        event.x + xOffset + BORDER_LEFT, event.y + BORDER_TOP, width, height);
   }
 
   private static int getMaxWidth(Event event, int columnWith) {

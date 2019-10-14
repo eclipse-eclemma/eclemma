@@ -470,7 +470,8 @@ public class SessionManagerTest {
 
   }
 
-  private static class DummyLaunchConfiguration implements ILaunchConfiguration {
+  private static class DummyLaunchConfiguration
+      implements ILaunchConfiguration {
 
     public Object getAdapter(@SuppressWarnings("rawtypes") Class adapter) {
       return null;
@@ -631,7 +632,8 @@ public class SessionManagerTest {
       throw new UnsupportedOperationException();
     }
 
-    public Collection<ILaunchConfiguration> getPrototypeChildren() throws CoreException {
+    public Collection<ILaunchConfiguration> getPrototypeChildren()
+        throws CoreException {
       throw new UnsupportedOperationException();
     }
 
@@ -643,7 +645,8 @@ public class SessionManagerTest {
       throw new UnsupportedOperationException();
     }
 
-    public void setPrototypeAttributeVisibility(String attribute, boolean visible) throws CoreException {
+    public void setPrototypeAttributeVisibility(String attribute,
+        boolean visible) throws CoreException {
       throw new UnsupportedOperationException();
     }
   }

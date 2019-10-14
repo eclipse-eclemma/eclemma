@@ -35,89 +35,91 @@ import org.junit.Test;
 
 public class DumpExecutionDataTest {
 
-	private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();
+  private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();
 
-	private static ILaunch launch1;
-	private static ILaunch launch2;
+  private static ILaunch launch1;
+  private static ILaunch launch2;
 
-	@AfterClass
-	public static void resetWorkbench() {
-		bot.resetWorkbench();
-	}
+  @AfterClass
+  public static void resetWorkbench() {
+    bot.resetWorkbench();
+  }
 
-	@BeforeClass
-	public static void setup() throws Exception {
-		openCoverageView();
+  @BeforeClass
+  public static void setup() throws Exception {
+    openCoverageView();
 
-		JavaProjectKit project = new JavaProjectKit();
-		project.enableJava5();
-		final IPackageFragmentRoot root = project.createSourceFolder();
-		final IPackageFragment fragment = project.createPackage(root, "example");
-		project.createCompilationUnit(fragment, "Example.java",
-				"package example; class Example { public static void main(String[] args) throws Exception { Thread.sleep(30000); } }");
+    JavaProjectKit project = new JavaProjectKit();
+    project.enableJava5();
+    final IPackageFragmentRoot root = project.createSourceFolder();
+    final IPackageFragment fragment = project.createPackage(root, "example");
+    project.createCompilationUnit(fragment, "Example.java",
+        "package example; class Example { public static void main(String[] args) throws Exception { Thread.sleep(30000); } }");
 
-		JavaProjectKit.waitForBuild();
+    JavaProjectKit.waitForBuild();
 
-		ILaunchConfiguration launchConfiguration = project.createLaunchConfiguration("example.Example");
+    ILaunchConfiguration launchConfiguration = project
+        .createLaunchConfiguration("example.Example");
 
-		launch1 = launchConfiguration.launch(CoverageTools.LAUNCH_MODE, null);
-		launch2 = launchConfiguration.launch(CoverageTools.LAUNCH_MODE, null);
-	}
+    launch1 = launchConfiguration.launch(CoverageTools.LAUNCH_MODE, null);
+    launch2 = launchConfiguration.launch(CoverageTools.LAUNCH_MODE, null);
+  }
 
-	@Test
-	public void dumpDialog_should_abort_without_errors_when_nothing_was_selected() throws Exception {
-		final LogListener logListener = new LogListener();
-		Platform.addLogListener(logListener);
+  @Test
+  public void dumpDialog_should_abort_without_errors_when_nothing_was_selected()
+      throws Exception {
+    final LogListener logListener = new LogListener();
+    Platform.addLogListener(logListener);
 
-		SWTBotView coverageView = bot.viewByTitle("Coverage");
-		coverageView.show();
+    SWTBotView coverageView = bot.viewByTitle("Coverage");
+    coverageView.show();
 
-		coverageView.toolbarButton("Dump Execution Data").click();
-		bot.shell("Dump Execution Data").activate();
-		bot.button("Cancel").click();
+    coverageView.toolbarButton("Dump Execution Data").click();
+    bot.shell("Dump Execution Data").activate();
+    bot.button("Cancel").click();
 
-		// On Linux one element will be selected by default, however for some reason
-		// nothing is selected on Mac OS X and Windows:
-		coverageView.toolbarButton("Dump Execution Data").click();
-		bot.shell("Dump Execution Data").activate();
-		bot.button("OK").click();
+    // On Linux one element will be selected by default, however for some reason
+    // nothing is selected on Mac OS X and Windows:
+    coverageView.toolbarButton("Dump Execution Data").click();
+    bot.shell("Dump Execution Data").activate();
+    bot.button("OK").click();
 
-		Platform.removeLogListener(logListener);
+    Platform.removeLogListener(logListener);
 
-		assertEquals(0, logListener.errors);
-	}
+    assertEquals(0, logListener.errors);
+  }
 
-	@AfterClass
-	public static void terminate() throws Exception {
-		launch1.terminate();
-		launch2.terminate();
+  @AfterClass
+  public static void terminate() throws Exception {
+    launch1.terminate();
+    launch2.terminate();
 
-		final ISessionManager sessionManager = CoverageTools.getSessionManager();
-		sessionManager.removeSessionsFor(launch1);
-		sessionManager.removeSessionsFor(launch2);
-	}
+    final ISessionManager sessionManager = CoverageTools.getSessionManager();
+    sessionManager.removeSessionsFor(launch1);
+    sessionManager.removeSessionsFor(launch2);
+  }
 
-	static class LogListener implements ILogListener {
-		int errors;
+  static class LogListener implements ILogListener {
+    int errors;
 
-		public synchronized void logging(IStatus status, String plugin) {
-			if (status.getSeverity() == IStatus.ERROR) {
-				errors++;
-			}
-		}
-	}
+    public synchronized void logging(IStatus status, String plugin) {
+      if (status.getSeverity() == IStatus.ERROR) {
+        errors++;
+      }
+    }
+  }
 
-	private static void openCoverageView() {
-		UIThreadRunnable.syncExec(new VoidResult() {
-			public void run() {
-				try {
-					PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage()
-							.showView("org.eclipse.eclemma.ui.CoverageView");
-				} catch (PartInitException e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+  private static void openCoverageView() {
+    UIThreadRunnable.syncExec(new VoidResult() {
+      public void run() {
+        try {
+          PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage()
+              .showView("org.eclipse.eclemma.ui.CoverageView");
+        } catch (PartInitException e) {
+          e.printStackTrace();
+        }
+      }
+    });
+  }
 
 }

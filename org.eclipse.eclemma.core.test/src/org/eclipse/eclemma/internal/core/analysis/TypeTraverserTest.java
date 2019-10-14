@@ -78,9 +78,9 @@ public class TypeTraverserTest {
       "typetraverser/Samples$2$InnerB", //
       "typetraverser/Samples$2", //
       "typetraverser/Samples$3$InnerC", //
-      "typetraverser/Samples$3",//
-      "typetraverser/Samples$4",//
-      "typetraverser/Samples$5",//
+      "typetraverser/Samples$3", //
+      "typetraverser/Samples$4", //
+      "typetraverser/Samples$5", //
       "typetraverser/Samples$InnerA"//
   };
 

@@ -71,8 +71,8 @@ public class CoveragePropertyPage extends PropertyPage {
     Text t1 = new Text(parent, SWT.READ_ONLY | SWT.WRAP);
     t1.setText(getSessionDescription());
     t1.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false));
-    t1.setBackground(t1.getDisplay()
-        .getSystemColor(SWT.COLOR_WIDGET_BACKGROUND));
+    t1.setBackground(
+        t1.getDisplay().getSystemColor(SWT.COLOR_WIDGET_BACKGROUND));
 
     Control table = createTable(parent);
     GridData gd = new GridData(SWT.FILL, SWT.FILL, true, true);
@@ -116,8 +116,8 @@ public class CoveragePropertyPage extends PropertyPage {
           @Override
           protected void paint(Event event, Object element) {
             final Line line = (Line) element;
-            RedGreenBar
-                .draw(event, table.getColumn(1).getWidth(), line.counter);
+            RedGreenBar.draw(event, table.getColumn(1).getWidth(),
+                line.counter);
           }
 
           @Override
@@ -158,7 +158,8 @@ public class CoveragePropertyPage extends PropertyPage {
     viewer.setContentProvider(ArrayContentProvider.getInstance());
     viewer.addFilter(new ViewerFilter() {
       @Override
-      public boolean select(Viewer viewer, Object parentElement, Object element) {
+      public boolean select(Viewer viewer, Object parentElement,
+          Object element) {
         return ((Line) element).counter.getTotalCount() != 0;
       }
     });

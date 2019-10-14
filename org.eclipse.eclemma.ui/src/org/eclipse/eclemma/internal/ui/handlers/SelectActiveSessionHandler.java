@@ -45,7 +45,8 @@ public class SelectActiveSessionHandler extends AbstractSessionManagerHandler {
   }
 
   public Object execute(ExecutionEvent event) throws ExecutionException {
-    final ListDialog dialog = new ListDialog(HandlerUtil.getActiveShell(event)) {
+    final ListDialog dialog = new ListDialog(
+        HandlerUtil.getActiveShell(event)) {
       @Override
       protected void configureShell(Shell shell) {
         super.configureShell(shell);
@@ -66,8 +67,8 @@ public class SelectActiveSessionHandler extends AbstractSessionManagerHandler {
         return EclEmmaUIPlugin.getImage(EclEmmaUIPlugin.OBJ_SESSION);
       }
     });
-    dialog.setInitialElementSelections(Collections.singletonList(sessionManager
-        .getActiveSession()));
+    dialog.setInitialElementSelections(
+        Collections.singletonList(sessionManager.getActiveSession()));
     dialog.setInput(sessionManager.getSessions());
     if (dialog.open() == Dialog.OK) {
       final Object[] result = dialog.getResult();

@@ -53,8 +53,8 @@ class MaxTotalCache {
     for (Object sibling : contentProvider.getChildren(parent)) {
       final ICoverageNode coverage = CoverageTools.getCoverageInfo(sibling);
       if (coverage != null) {
-        max = Math.max(max, coverage.getCounter(settings.getCounters())
-            .getTotalCount());
+        max = Math.max(max,
+            coverage.getCounter(settings.getCounters()).getTotalCount());
       }
     }
     return max;

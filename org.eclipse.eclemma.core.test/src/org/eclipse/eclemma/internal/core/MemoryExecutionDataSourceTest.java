@@ -56,8 +56,8 @@ public class MemoryExecutionDataSourceTest {
   public void testAccept() throws Exception {
     SessionInfo info = new SessionInfo("id1", 1, 2);
     source.visitSessionInfo(info);
-    source.visitClassExecution(new ExecutionData(123, "MyClass", new boolean[] {
-        true, false }));
+    source.visitClassExecution(
+        new ExecutionData(123, "MyClass", new boolean[] { true, false }));
 
     SessionInfoStore sessionStore = new SessionInfoStore();
     ExecutionDataStore execStore = new ExecutionDataStore();
@@ -86,8 +86,8 @@ public class MemoryExecutionDataSourceTest {
     ExecutionDataWriter writer = new ExecutionDataWriter(buffer);
     SessionInfo info = new SessionInfo("id1", 1, 2);
     writer.visitSessionInfo(info);
-    writer.visitClassExecution(new ExecutionData(123, "MyClass", new boolean[] {
-        true, false }));
+    writer.visitClassExecution(
+        new ExecutionData(123, "MyClass", new boolean[] { true, false }));
     return buffer.toByteArray();
   }
 }

@@ -30,8 +30,9 @@ class ConfigurationMock implements InvocationHandler {
 
   ConfigurationMock() {
     mockResult = new Stack<Object>();
-    mock = (ILaunchConfiguration) Proxy.newProxyInstance(getClass()
-        .getClassLoader(), new Class<?>[] { ILaunchConfiguration.class }, this);
+    mock = (ILaunchConfiguration) Proxy.newProxyInstance(
+        getClass().getClassLoader(),
+        new Class<?>[] { ILaunchConfiguration.class }, this);
   }
 
   ILaunchConfiguration getMock() {

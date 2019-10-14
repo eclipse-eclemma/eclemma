@@ -144,8 +144,8 @@ public class TypeTraverser {
     processType(visitor, new BinaryTypeName(type), type, monitor);
   }
 
-  private void processType(ITypeVisitor visitor, BinaryTypeName btn,
-      IType type, IProgressMonitor monitor) throws JavaModelException {
+  private void processType(ITypeVisitor visitor, BinaryTypeName btn, IType type,
+      IProgressMonitor monitor) throws JavaModelException {
     final String binaryname = btn.toString();
     monitor.subTask(binaryname);
     visitor.visit(type, binaryname);
@@ -214,8 +214,8 @@ public class TypeTraverser {
       if (type.isAnonymous()) {
         return new BinaryTypeName(rootname, rootname + '$' + ctr.inc(), ctr);
       } else {
-        return new BinaryTypeName(rootname, typename + '$'
-            + type.getElementName(), ctr);
+        return new BinaryTypeName(rootname,
+            typename + '$' + type.getElementName(), ctr);
       }
     }
 

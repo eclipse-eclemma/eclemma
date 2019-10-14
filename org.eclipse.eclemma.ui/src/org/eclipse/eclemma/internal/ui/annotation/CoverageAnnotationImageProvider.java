@@ -24,8 +24,8 @@ import org.eclipse.eclemma.internal.ui.EclEmmaUIPlugin;
  * The annotation image is calculated dynamically as it depends on the branch
  * coverage status.
  */
-public class CoverageAnnotationImageProvider implements
-    IAnnotationImageProvider {
+public class CoverageAnnotationImageProvider
+    implements IAnnotationImageProvider {
 
   public String getImageDescriptorId(Annotation annotation) {
     if (annotation instanceof CoverageAnnotation) {

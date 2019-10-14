@@ -182,8 +182,9 @@ public class SessionManager implements ISessionManager {
         .newFile(memory);
 
     // Adopt launch configuration only if there is exactly one
-    final ILaunchConfiguration launchconfiguration = launches.size() == 1 ? launches
-        .iterator().next() : null;
+    final ILaunchConfiguration launchconfiguration = launches.size() == 1
+        ? launches.iterator().next()
+        : null;
     final ICoverageSession merged = new CoverageSession(description, scope,
         executionDataSource, launchconfiguration);
 

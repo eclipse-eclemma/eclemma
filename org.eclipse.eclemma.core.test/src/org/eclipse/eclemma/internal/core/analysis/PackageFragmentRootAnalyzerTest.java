@@ -83,8 +83,8 @@ public class PackageFragmentRootAnalyzerTest {
 
   @Test
   public void testExternalJar() throws Exception {
-    final IPackageFragmentRoot root = javaProject.createExternalJAR(
-        "testdata/bin/signatureresolver.jar", null, null);
+    final IPackageFragmentRoot root = javaProject
+        .createExternalJAR("testdata/bin/signatureresolver.jar", null, null);
 
     JavaProjectKit.waitForBuild();
 

@@ -70,8 +70,8 @@ class ExecutionDataContent {
     fireChangedEvent();
   }
 
-  private InputStream openStream(IEditorInput input) throws CoreException,
-      IOException {
+  private InputStream openStream(IEditorInput input)
+      throws CoreException, IOException {
     if (input instanceof IStorageEditorInput) {
       final IStorage storage = ((IStorageEditorInput) input).getStorage();
       return storage.getContents();

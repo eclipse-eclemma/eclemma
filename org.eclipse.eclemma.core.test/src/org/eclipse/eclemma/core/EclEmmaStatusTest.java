@@ -49,7 +49,8 @@ public class EclEmmaStatusTest {
   public void testMessage2() {
     EclEmmaStatus estatus = EclEmmaStatus.UNKOWN_LAUNCH_TYPE_ERROR;
     IStatus status = estatus.getStatus("abcdef");
-    assertEquals("Unknown launch type abcdef (code 5002).", status.getMessage());
+    assertEquals("Unknown launch type abcdef (code 5002).",
+        status.getMessage());
   }
 
   @Test

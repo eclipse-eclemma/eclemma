@@ -49,7 +49,8 @@ class CellTextConverter {
     String text = getSimpleTextForJavaElement(element);
     if (element instanceof IPackageFragmentRoot
         && ElementType.BUNDLE.equals(settings.getRootType())) {
-      text += " - " + getElementName(((IPackageFragmentRoot) element).getJavaProject()); //$NON-NLS-1$
+      text += " - " //$NON-NLS-1$
+          + getElementName(((IPackageFragmentRoot) element).getJavaProject());
     }
     return text;
   }
@@ -95,8 +96,8 @@ class CellTextConverter {
   }
 
   private ICounter getCounter(Object element) {
-    return CoverageTools.getCoverageInfo(element).getCounter(
-        settings.getCounters());
+    return CoverageTools.getCoverageInfo(element)
+        .getCounter(settings.getCounters());
   }
 
 }

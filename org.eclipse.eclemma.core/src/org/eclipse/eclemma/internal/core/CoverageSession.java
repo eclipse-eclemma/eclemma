@@ -30,7 +30,8 @@ import org.eclipse.eclemma.core.IExecutionDataSource;
 /**
  * A {@link org.eclipse.eclemma.core.ICoverageSession} implementation.
  */
-public class CoverageSession extends PlatformObject implements ICoverageSession {
+public class CoverageSession extends PlatformObject
+    implements ICoverageSession {
 
   private final String description;
   private final Set<IPackageFragmentRoot> scope;
@@ -42,8 +43,8 @@ public class CoverageSession extends PlatformObject implements ICoverageSession 
       IExecutionDataSource executionDataSource,
       ILaunchConfiguration launchconfiguration) {
     this.description = description;
-    this.scope = Collections.unmodifiableSet(new HashSet<IPackageFragmentRoot>(
-        scope));
+    this.scope = Collections
+        .unmodifiableSet(new HashSet<IPackageFragmentRoot>(scope));
     this.executionDataSource = executionDataSource;
     this.launchconfiguration = launchconfiguration;
   }
@@ -64,8 +65,7 @@ public class CoverageSession extends PlatformObject implements ICoverageSession 
 
   public void accept(IExecutionDataVisitor executionDataVisitor,
       ISessionInfoVisitor sessionInfoVisitor) throws CoreException {
-    executionDataSource.accept(executionDataVisitor,
-        sessionInfoVisitor);
+    executionDataSource.accept(executionDataVisitor, sessionInfoVisitor);
   }
 
 }

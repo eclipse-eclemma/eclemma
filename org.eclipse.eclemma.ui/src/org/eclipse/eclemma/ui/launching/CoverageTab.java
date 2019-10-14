@@ -86,8 +86,8 @@ public class CoverageTab extends AbstractLaunchConfigurationTab {
         updateLaunchConfigurationDialog();
       }
     });
-    buttonSelectAll.setLayoutData(new GridData(GridData.GRAB_HORIZONTAL
-        | GridData.HORIZONTAL_ALIGN_END));
+    buttonSelectAll.setLayoutData(
+        new GridData(GridData.GRAB_HORIZONTAL | GridData.HORIZONTAL_ALIGN_END));
     Button buttonDeselectAll = createPushButton(group,
         UIMessages.DeselectAllAction_label, null);
     buttonDeselectAll.addSelectionListener(new SelectionAdapter() {
@@ -108,8 +108,8 @@ public class CoverageTab extends AbstractLaunchConfigurationTab {
     try {
       classesviewer.setIncludeBinaries(true);
       classesviewer.setInput(ScopeUtils.getOverallScope(configuration));
-      classesviewer.setSelectedScope(ScopeUtils
-          .getConfiguredScope(configuration));
+      classesviewer
+          .setSelectedScope(ScopeUtils.getConfiguredScope(configuration));
     } catch (CoreException e) {
       EclEmmaUIPlugin.log(e);
     }
@@ -119,8 +119,8 @@ public class CoverageTab extends AbstractLaunchConfigurationTab {
 
   public void performApply(ILaunchConfigurationWorkingCopy configuration) {
     if (isDirty()) {
-      final List<String> ids = ScopeUtils.writeScope(classesviewer
-          .getSelectedScope());
+      final List<String> ids = ScopeUtils
+          .writeScope(classesviewer.getSelectedScope());
       configuration.setAttribute(
           ICoverageLaunchConfigurationConstants.ATTR_SCOPE_IDS, ids);
     }

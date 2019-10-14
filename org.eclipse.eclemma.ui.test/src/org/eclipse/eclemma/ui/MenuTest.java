@@ -22,29 +22,29 @@ import org.junit.Test;
 
 public class MenuTest {
 
-	private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();
+  private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();
 
-	@After
-	public void resetWorkbench() {
-		bot.resetWorkbench();
-	}
+  @After
+  public void resetWorkbench() {
+    bot.resetWorkbench();
+  }
 
-	/**
-	 * https://bugs.eclipse.org/bugs/show_bug.cgi?id=517712
-	 */
-	@Test
-	public void labels_should_be_consistent() {
-		bot.perspectiveByLabel("Java").activate();
-		final List<String> items = bot.menu("Run").menuItems();
+  /**
+   * https://bugs.eclipse.org/bugs/show_bug.cgi?id=517712
+   */
+  @Test
+  public void labels_should_be_consistent() {
+    bot.perspectiveByLabel("Java").activate();
+    final List<String> items = bot.menu("Run").menuItems();
 
-		assertTrue(items.contains("Run"));
-		assertTrue(items.contains("Coverage"));
+    assertTrue(items.contains("Run"));
+    assertTrue(items.contains("Coverage"));
 
-		assertTrue(items.contains("Run History"));
-		assertTrue(items.contains("Coverage History"));
+    assertTrue(items.contains("Run History"));
+    assertTrue(items.contains("Coverage History"));
 
-		assertTrue(items.contains("Run Configurations..."));
-		assertTrue(items.contains("Coverage Configurations..."));
-	}
+    assertTrue(items.contains("Run Configurations..."));
+    assertTrue(items.contains("Coverage Configurations..."));
+  }
 
 }

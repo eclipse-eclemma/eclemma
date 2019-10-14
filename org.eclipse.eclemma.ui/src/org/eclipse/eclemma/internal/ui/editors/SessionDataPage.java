@@ -62,8 +62,8 @@ class SessionDataPage extends FormPage {
     final Composite body = form.getBody();
     GridLayoutFactory.swtDefaults().applyTo(body);
 
-    final Table sessionTable = toolkit.createTable(body, SWT.FULL_SELECTION
-        | SWT.V_SCROLL | SWT.BORDER);
+    final Table sessionTable = toolkit.createTable(body,
+        SWT.FULL_SELECTION | SWT.V_SCROLL | SWT.BORDER);
     GridDataFactory.fillDefaults().grab(true, true).applyTo(sessionTable);
     sessionTable.setHeaderVisible(true);
     sessionTable.setLinesVisible(true);
@@ -106,8 +106,8 @@ class SessionDataPage extends FormPage {
     sessionTableViewer.setInput(content);
   }
 
-  private static final class SessionIdColumnLabelProvider extends
-      ColumnLabelProvider {
+  private static final class SessionIdColumnLabelProvider
+      extends ColumnLabelProvider {
 
     @Override
     public String getText(Object element) {
@@ -119,8 +119,8 @@ class SessionDataPage extends FormPage {
 
     @Override
     public String getText(Object element) {
-      return dateTimeFormat.format(new Date(((SessionInfo) element)
-          .getStartTimeStamp()));
+      return dateTimeFormat
+          .format(new Date(((SessionInfo) element).getStartTimeStamp()));
     }
   }
 
@@ -128,8 +128,8 @@ class SessionDataPage extends FormPage {
 
     @Override
     public String getText(Object element) {
-      return dateTimeFormat.format(new Date(((SessionInfo) element)
-          .getDumpTimeStamp()));
+      return dateTimeFormat
+          .format(new Date(((SessionInfo) element).getDumpTimeStamp()));
     }
   }
 

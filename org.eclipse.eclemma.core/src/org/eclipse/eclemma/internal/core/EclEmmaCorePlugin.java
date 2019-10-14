@@ -156,8 +156,8 @@ public class EclEmmaCorePlugin extends Plugin {
    *           if the status has severity error and no handler is available
    */
   private boolean showPrompt(IStatus status, Object info) throws CoreException {
-    IStatusHandler prompter = DebugPlugin.getDefault().getStatusHandler(
-        PROMPT_STATUS);
+    IStatusHandler prompter = DebugPlugin.getDefault()
+        .getStatusHandler(PROMPT_STATUS);
     if (prompter == null) {
       if (status.getSeverity() == IStatus.ERROR) {
         throw new CoreException(status);

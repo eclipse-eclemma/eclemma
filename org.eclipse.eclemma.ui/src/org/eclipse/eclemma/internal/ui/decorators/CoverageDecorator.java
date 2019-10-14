@@ -32,8 +32,8 @@ import org.eclipse.eclemma.internal.ui.UIMessages;
 /**
  * Decorator to show code coverage for Java elements.
  */
-public class CoverageDecorator extends BaseLabelProvider implements
-    ILightweightLabelDecorator {
+public class CoverageDecorator extends BaseLabelProvider
+    implements ILightweightLabelDecorator {
 
   private static final Format SUFFIX_FORMAT = new DecimalFormat(
       UIMessages.CoverageDecoratorSuffix_label);
@@ -48,8 +48,8 @@ public class CoverageDecorator extends BaseLabelProvider implements
             .getDisplay();
         display.asyncExec(new Runnable() {
           public void run() {
-            fireLabelProviderChanged(new LabelProviderChangedEvent(
-                CoverageDecorator.this));
+            fireLabelProviderChanged(
+                new LabelProviderChangedEvent(CoverageDecorator.this));
           }
         });
       }
@@ -65,11 +65,11 @@ public class CoverageDecorator extends BaseLabelProvider implements
     }
     // TODO obtain counter from preferences
     ICounter counter = coverage.getInstructionCounter();
-    ImageDescriptor overlay = EclEmmaUIPlugin.getCoverageOverlay(counter
-        .getCoveredRatio());
+    ImageDescriptor overlay = EclEmmaUIPlugin
+        .getCoverageOverlay(counter.getCoveredRatio());
     decoration.addOverlay(overlay, IDecoration.TOP_LEFT);
-    decoration.addSuffix(SUFFIX_FORMAT.format(Double.valueOf(counter
-        .getCoveredRatio())));
+    decoration.addSuffix(
+        SUFFIX_FORMAT.format(Double.valueOf(counter.getCoveredRatio())));
   }
 
   @Override

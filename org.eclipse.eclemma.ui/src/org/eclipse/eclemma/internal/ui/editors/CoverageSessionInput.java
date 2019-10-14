@@ -24,8 +24,8 @@ import org.eclipse.eclemma.internal.ui.EclEmmaUIPlugin;
  * Wrapper for a {@link ICoverageSession} instance to serve as an
  * {@link IEditorInput}.
  */
-public class CoverageSessionInput extends PlatformObject implements
-    IEditorInput {
+public class CoverageSessionInput extends PlatformObject
+    implements IEditorInput {
 
   private final ICoverageSession session;
 

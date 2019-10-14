@@ -34,7 +34,8 @@ public class MethodLocatorTest {
   /**
    * https://bugs.eclipse.org/bugs/show_bug.cgi?id=381503
    */
-  private static final boolean JDT_3_13 = JavaCore.getPlugin().getBundle().getVersion().compareTo(new Version("3.13.0")) >= 0;
+  private static final boolean JDT_3_13 = JavaCore.getPlugin().getBundle()
+      .getVersion().compareTo(new Version("3.13.0")) >= 0;
 
   private JavaProjectKit javaProject;
 
@@ -66,18 +67,22 @@ public class MethodLocatorTest {
 
   @Test
   public void testUnambiguousConstructor() {
-    assertMethod(JDT_3_13 ? "Lmethodlocator/Samples;.()V" : "Lmethodlocator/Samples;.Samples()V", "<init>", "()V");
+    assertMethod(JDT_3_13 ? "Lmethodlocator/Samples;.()V"
+        : "Lmethodlocator/Samples;.Samples()V", "<init>", "()V");
   }
 
   @Test
   public void testAmbiguousConstructor1() {
-    assertMethod(JDT_3_13 ? "Lmethodlocator/Samples;.(QString;)V" : "Lmethodlocator/Samples;.Samples(QString;)V", "<init>",
-        "(Ljava/lang/String;)V");
+    assertMethod(
+        JDT_3_13 ? "Lmethodlocator/Samples;.(QString;)V"
+            : "Lmethodlocator/Samples;.Samples(QString;)V",
+        "<init>", "(Ljava/lang/String;)V");
   }
 
   @Test
   public void testAmbiguousConstructor2() {
-    assertMethod(JDT_3_13 ? "Lmethodlocator/Samples;.(I)V" : "Lmethodlocator/Samples;.Samples(I)V", "<init>", "(I)V");
+    assertMethod(JDT_3_13 ? "Lmethodlocator/Samples;.(I)V"
+        : "Lmethodlocator/Samples;.Samples(I)V", "<init>", "(I)V");
   }
 
   @Test

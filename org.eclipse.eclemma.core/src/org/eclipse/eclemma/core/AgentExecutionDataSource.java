@@ -21,7 +21,6 @@ import org.jacoco.core.data.ISessionInfoVisitor;
 import org.jacoco.core.runtime.RemoteControlReader;
 import org.jacoco.core.runtime.RemoteControlWriter;
 
-
 /**
  * {@link IExecutionDataSource} that receives execution data from a JaCoCo agent
  * via a TCP/IP connection.
@@ -53,8 +52,8 @@ public class AgentExecutionDataSource implements IExecutionDataSource {
       reader.read();
       socket.close();
     } catch (IOException e) {
-      throw new CoreException(EclEmmaStatus.AGENT_CONNECT_ERROR.getStatus(
-          address, Integer.valueOf(port), e));
+      throw new CoreException(EclEmmaStatus.AGENT_CONNECT_ERROR
+          .getStatus(address, Integer.valueOf(port), e));
     }
   }
 

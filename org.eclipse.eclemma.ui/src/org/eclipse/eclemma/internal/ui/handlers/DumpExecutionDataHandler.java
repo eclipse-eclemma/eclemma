@@ -71,8 +71,8 @@ public class DumpExecutionDataHandler extends AbstractHandler {
   };
 
   private void fireEnablementChanged() {
-    fireHandlerChanged(new HandlerEvent(DumpExecutionDataHandler.this, true,
-        false));
+    fireHandlerChanged(
+        new HandlerEvent(DumpExecutionDataHandler.this, true, false));
   }
 
   public DumpExecutionDataHandler() {
@@ -97,7 +97,8 @@ public class DumpExecutionDataHandler extends AbstractHandler {
 
   private ICoverageLaunch openDialog(ExecutionEvent event,
       List<ICoverageLaunch> launches) {
-    final ListDialog dialog = new ListDialog(HandlerUtil.getActiveShell(event)) {
+    final ListDialog dialog = new ListDialog(
+        HandlerUtil.getActiveShell(event)) {
       @Override
       protected void configureShell(Shell shell) {
         super.configureShell(shell);

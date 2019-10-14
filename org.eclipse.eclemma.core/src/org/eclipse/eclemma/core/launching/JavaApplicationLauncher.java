@@ -35,8 +35,8 @@ public class JavaApplicationLauncher extends CoverageLauncher {
     if (project == null) {
       return Collections.emptySet();
     } else {
-      return ScopeUtils.filterJREEntries(Arrays.asList(project
-          .getAllPackageFragmentRoots()));
+      return ScopeUtils.filterJREEntries(
+          Arrays.asList(project.getAllPackageFragmentRoots()));
     }
   }
 

@@ -27,8 +27,8 @@ import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
  *
  * @see AdjustedLaunchConfiguration
  */
-class AdjustedLaunchConfigurationWorkingCopy extends
-    AdjustedLaunchConfiguration implements ILaunchConfigurationWorkingCopy {
+class AdjustedLaunchConfigurationWorkingCopy extends AdjustedLaunchConfiguration
+    implements ILaunchConfigurationWorkingCopy {
 
   private final ILaunchConfigurationWorkingCopy delegate;
   private final ILaunchConfiguration original;
@@ -136,11 +136,13 @@ class AdjustedLaunchConfigurationWorkingCopy extends
     return delegate.getParent();
   }
 
-  public void copyAttributes(ILaunchConfiguration prototype) throws CoreException {
+  public void copyAttributes(ILaunchConfiguration prototype)
+      throws CoreException {
     throw new UnsupportedOperationException();
   }
 
-  public void setPrototype(ILaunchConfiguration prototype, boolean copy) throws CoreException {
+  public void setPrototype(ILaunchConfiguration prototype, boolean copy)
+      throws CoreException {
     throw new UnsupportedOperationException();
   }
 

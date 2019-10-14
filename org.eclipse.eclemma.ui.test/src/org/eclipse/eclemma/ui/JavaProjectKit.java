@@ -40,84 +40,92 @@ import org.eclipse.jdt.launching.JavaRuntime;
 
 /**
  * Utility class to setup Java projects programmatically.
- * 
- * TODO get rid of duplication with org.eclipse.eclemma.core.JavaProjectKit from org.eclipse.eclemma.core.test
+ *
+ * TODO get rid of duplication with org.eclipse.eclemma.core.JavaProjectKit from
+ * org.eclipse.eclemma.core.test
  */
 public class JavaProjectKit {
 
-	private static final String DEFAULT_PROJECT_NAME = "UnitTestProject";
+  private static final String DEFAULT_PROJECT_NAME = "UnitTestProject";
 
-	public final IWorkspace workspace;
+  public final IWorkspace workspace;
 
-	public final IProject project;
+  public final IProject project;
 
-	public final IJavaProject javaProject;
+  public final IJavaProject javaProject;
 
-	public JavaProjectKit() throws CoreException {
-		this(DEFAULT_PROJECT_NAME);
-	}
+  public JavaProjectKit() throws CoreException {
+    this(DEFAULT_PROJECT_NAME);
+  }
 
-	public JavaProjectKit(String name) throws CoreException {
-		workspace = ResourcesPlugin.getWorkspace();
-		IWorkspaceRoot root = workspace.getRoot();
-		project = root.getProject(name);
-		project.create(null);
-		project.open(null);
-		IProjectDescription description = project.getDescription();
-		description.setNatureIds(new String[] { JavaCore.NATURE_ID });
-		project.setDescription(description, null);
-		javaProject = JavaCore.create(project);
-		javaProject.setRawClasspath(new IClasspathEntry[0], null);
-		addClassPathEntry(JavaRuntime.getDefaultJREContainerEntry());
-	}
+  public JavaProjectKit(String name) throws CoreException {
+    workspace = ResourcesPlugin.getWorkspace();
+    IWorkspaceRoot root = workspace.getRoot();
+    project = root.getProject(name);
+    project.create(null);
+    project.open(null);
+    IProjectDescription description = project.getDescription();
+    description.setNatureIds(new String[] { JavaCore.NATURE_ID });
+    project.setDescription(description, null);
+    javaProject = JavaCore.create(project);
+    javaProject.setRawClasspath(new IClasspathEntry[0], null);
+    addClassPathEntry(JavaRuntime.getDefaultJREContainerEntry());
+  }
 
-	public void enableJava5() {
-		javaProject.setOption(JavaCore.COMPILER_COMPLIANCE, JavaCore.VERSION_1_5);
-		javaProject.setOption(JavaCore.COMPILER_SOURCE, JavaCore.VERSION_1_5);
-	}
+  public void enableJava5() {
+    javaProject.setOption(JavaCore.COMPILER_COMPLIANCE, JavaCore.VERSION_1_5);
+    javaProject.setOption(JavaCore.COMPILER_SOURCE, JavaCore.VERSION_1_5);
+  }
 
-	public IPackageFragmentRoot createSourceFolder() throws CoreException {
-		IPackageFragmentRoot packageRoot = javaProject.getPackageFragmentRoot(javaProject.getResource());
-		addClassPathEntry(JavaCore.newSourceEntry(packageRoot.getPath()));
-		return packageRoot;
-	}
+  public IPackageFragmentRoot createSourceFolder() throws CoreException {
+    IPackageFragmentRoot packageRoot = javaProject
+        .getPackageFragmentRoot(javaProject.getResource());
+    addClassPathEntry(JavaCore.newSourceEntry(packageRoot.getPath()));
+    return packageRoot;
+  }
 
-	public IPackageFragment createPackage(IPackageFragmentRoot fragmentRoot, String name) throws CoreException {
-		return fragmentRoot.createPackageFragment(name, false, null);
-	}
+  public IPackageFragment createPackage(IPackageFragmentRoot fragmentRoot,
+      String name) throws CoreException {
+    return fragmentRoot.createPackageFragment(name, false, null);
+  }
 
-	public ICompilationUnit createCompilationUnit(IPackageFragment fragment, String name, String content)
-			throws JavaModelException {
-		return fragment.createCompilationUnit(name, content, false, null);
-	}
+  public ICompilationUnit createCompilationUnit(IPackageFragment fragment,
+      String name, String content) throws JavaModelException {
+    return fragment.createCompilationUnit(name, content, false, null);
+  }
 
-	public void addClassPathEntry(IClasspathEntry entry) throws CoreException {
-		IClasspathEntry[] oldEntries = javaProject.getRawClasspath();
-		IClasspathEntry[] newEntries = new IClasspathEntry[oldEntries.length + 1];
-		System.arraycopy(oldEntries, 0, newEntries, 0, oldEntries.length);
-		newEntries[oldEntries.length] = entry;
-		javaProject.setRawClasspath(newEntries, null);
-	}
+  public void addClassPathEntry(IClasspathEntry entry) throws CoreException {
+    IClasspathEntry[] oldEntries = javaProject.getRawClasspath();
+    IClasspathEntry[] newEntries = new IClasspathEntry[oldEntries.length + 1];
+    System.arraycopy(oldEntries, 0, newEntries, 0, oldEntries.length);
+    newEntries[oldEntries.length] = entry;
+    javaProject.setRawClasspath(newEntries, null);
+  }
 
-	public static void waitForBuild() throws OperationCanceledException, InterruptedException {
-		Job.getJobManager().join(ResourcesPlugin.FAMILY_AUTO_BUILD, null);
-	}
+  public static void waitForBuild()
+      throws OperationCanceledException, InterruptedException {
+    Job.getJobManager().join(ResourcesPlugin.FAMILY_AUTO_BUILD, null);
+  }
 
-
-	/**
-	 * Creates launch configuration for the type with given name.
-	 */
-	public ILaunchConfiguration createLaunchConfiguration(String mainTypeName)
-			throws Exception {
-		ILaunchConfigurationType type = DebugPlugin.getDefault().getLaunchManager()
-				.getLaunchConfigurationType(IJavaLaunchConfigurationConstants.ID_JAVA_APPLICATION);
-		ILaunchConfigurationWorkingCopy config = type.newInstance(null, mainTypeName);
-		config.setAttribute(IJavaLaunchConfigurationConstants.ATTR_PROJECT_NAME, javaProject.getElementName());
-		config.setAttribute(IJavaLaunchConfigurationConstants.ATTR_MAIN_TYPE_NAME, mainTypeName);
-		Set<String> modes = new HashSet<String>();
-		modes.add(CoverageTools.LAUNCH_MODE);
-		config.setPreferredLaunchDelegate(modes, IJavaLaunchConfigurationConstants.ID_JAVA_APPLICATION);
-		return config.doSave();
-	}
+  /**
+   * Creates launch configuration for the type with given name.
+   */
+  public ILaunchConfiguration createLaunchConfiguration(String mainTypeName)
+      throws Exception {
+    ILaunchConfigurationType type = DebugPlugin.getDefault().getLaunchManager()
+        .getLaunchConfigurationType(
+            IJavaLaunchConfigurationConstants.ID_JAVA_APPLICATION);
+    ILaunchConfigurationWorkingCopy config = type.newInstance(null,
+        mainTypeName);
+    config.setAttribute(IJavaLaunchConfigurationConstants.ATTR_PROJECT_NAME,
+        javaProject.getElementName());
+    config.setAttribute(IJavaLaunchConfigurationConstants.ATTR_MAIN_TYPE_NAME,
+        mainTypeName);
+    Set<String> modes = new HashSet<String>();
+    modes.add(CoverageTools.LAUNCH_MODE);
+    config.setPreferredLaunchDelegate(modes,
+        IJavaLaunchConfigurationConstants.ID_JAVA_APPLICATION);
+    return config.doSave();
+  }
 
 }

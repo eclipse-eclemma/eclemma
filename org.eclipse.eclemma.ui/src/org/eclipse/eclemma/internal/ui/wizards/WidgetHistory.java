@@ -170,7 +170,8 @@ public final class WidgetHistory {
    * @param combo
    *          the combo box
    */
-  public static void saveCombo(IDialogSettings settings, String key, Combo combo) {
+  public static void saveCombo(IDialogSettings settings, String key,
+      Combo combo) {
     List<String> history = new ArrayList<String>(
         Arrays.asList(combo.getItems()));
     history.remove(combo.getText());

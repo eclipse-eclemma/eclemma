@@ -91,7 +91,7 @@ public final class ScopeUtils {
       ILaunchConfiguration configuration) throws CoreException {
     ICoverageLauncher launcher = (ICoverageLauncher) configuration.getType()
         .getDelegates(Collections.singleton(CoverageTools.LAUNCH_MODE))[0]
-        .getDelegate();
+            .getDelegate();
     return launcher.getOverallScope(configuration);
   }
 
@@ -129,8 +129,8 @@ public final class ScopeUtils {
   public static Set<IPackageFragmentRoot> getWorkspaceScope()
       throws JavaModelException {
     final Set<IPackageFragmentRoot> scope = new HashSet<IPackageFragmentRoot>();
-    final IJavaModel model = JavaCore.create(ResourcesPlugin.getWorkspace()
-        .getRoot());
+    final IJavaModel model = JavaCore
+        .create(ResourcesPlugin.getWorkspace().getRoot());
     for (IJavaProject p : model.getJavaProjects()) {
       scope.addAll(Arrays.asList(p.getPackageFragmentRoots()));
     }
@@ -156,8 +156,8 @@ public final class ScopeUtils {
         filtered.add(root);
         break;
       case IClasspathEntry.CPE_CONTAINER:
-        IClasspathContainer container = JavaCore.getClasspathContainer(
-            entry.getPath(), root.getJavaProject());
+        IClasspathContainer container = JavaCore
+            .getClasspathContainer(entry.getPath(), root.getJavaProject());
         if (container != null
             && container.getKind() == IClasspathContainer.K_APPLICATION) {
           filtered.add(root);

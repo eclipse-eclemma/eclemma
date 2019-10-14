@@ -28,7 +28,8 @@ final class ExecutedClassesFilters {
     return new ViewerFilter() {
 
       @Override
-      public boolean select(Viewer viewer, Object parentElement, Object element) {
+      public boolean select(Viewer viewer, Object parentElement,
+          Object element) {
         return filterFromPatternString(pattern).select(element);
       }
     };
@@ -80,8 +81,8 @@ final class ExecutedClassesFilters {
 
     @Override
     protected String getMatchedValue(Object toTest) {
-      return String.format(
-          "0x%016x", Long.valueOf(((ExecutionData) toTest).getId())); //$NON-NLS-1$
+      return String.format("0x%016x", //$NON-NLS-1$
+          Long.valueOf(((ExecutionData) toTest).getId()));
     }
 
   }

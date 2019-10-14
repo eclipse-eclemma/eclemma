@@ -117,11 +117,11 @@ public class AgentServer extends Job {
           return Status.OK_STATUS;
         }
         dataReceived = true;
-        final CoverageSession session = new CoverageSession(
-            createDescription(), launch.getScope(), files.newFile(memory),
+        final CoverageSession session = new CoverageSession(createDescription(),
+            launch.getScope(), files.newFile(memory),
             launch.getLaunchConfiguration());
-        sessionManager.addSession(session,
-            preferences.getActivateNewSessions(), launch);
+        sessionManager.addSession(session, preferences.getActivateNewSessions(),
+            launch);
       }
     } catch (IOException e) {
       return EclEmmaStatus.EXECDATA_DUMP_ERROR.getStatus(e);

@@ -63,9 +63,8 @@ public class SessionAnalyzer {
     PERFORMANCE.startMemoryUsage();
     modelcoverage = new JavaModelCoverage();
     final Collection<IPackageFragmentRoot> roots = session.getScope();
-    monitor.beginTask(
-        NLS.bind(CoreMessages.AnalyzingCoverageSession_task,
-            session.getDescription()), 1 + roots.size());
+    monitor.beginTask(NLS.bind(CoreMessages.AnalyzingCoverageSession_task,
+        session.getDescription()), 1 + roots.size());
     executiondatastore = new ExecutionDataStore();
     sessioninfostore = new SessionInfoStore();
     session.accept(executiondatastore, sessioninfostore);
@@ -78,8 +77,8 @@ public class SessionAnalyzer {
       if (monitor.isCanceled()) {
         break;
       }
-      processPackageFragmentRoot(root, analyzer, new SubProgressMonitor(
-          monitor, 1));
+      processPackageFragmentRoot(root, analyzer,
+          new SubProgressMonitor(monitor, 1));
     }
     monitor.done();
     PERFORMANCE.stopTimer("loading " + session.getDescription()); //$NON-NLS-1$
@@ -174,8 +173,8 @@ public class SessionAnalyzer {
     public void visit(ICompilationUnit unit) throws JavaModelException {
       final String vmpackagename = unit.getParent().getElementName()
           .replace('.', '/');
-      final ISourceFileCoverage coverage = nodes.getSourceFileCoverage(
-          vmpackagename, unit.getElementName());
+      final ISourceFileCoverage coverage = nodes
+          .getSourceFileCoverage(vmpackagename, unit.getElementName());
       if (coverage != null) {
         sources.add(coverage);
         modelcoverage.putCompilationUnit(unit, coverage);

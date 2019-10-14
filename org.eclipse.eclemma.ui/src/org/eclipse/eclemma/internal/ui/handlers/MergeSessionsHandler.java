@@ -55,8 +55,8 @@ public class MergeSessionsHandler extends AbstractSessionManagerHandler {
     List<ICoverageSession> sessions = sm.getSessions();
     String descr = UIMessages.MergeSessionsDialogDescriptionDefault_value;
     descr = MessageFormat.format(descr, new Object[] { new Date() });
-    final MergeSessionsDialog d = new MergeSessionsDialog(parentShell,
-        sessions, descr);
+    final MergeSessionsDialog d = new MergeSessionsDialog(parentShell, sessions,
+        descr);
     if (d.open() == IDialogConstants.OK_ID) {
       createJob(sm, d.getSessions(), d.getDescription()).schedule();
     }

@@ -76,8 +76,8 @@ final class PackageFragementRootAnalyzer {
       cache.put(location, nodes);
       return nodes;
     } catch (Exception e) {
-      throw new CoreException(EclEmmaStatus.BUNDLE_ANALYSIS_ERROR.getStatus(
-          root.getElementName(), location, e));
+      throw new CoreException(EclEmmaStatus.BUNDLE_ANALYSIS_ERROR
+          .getStatus(root.getElementName(), location, e));
     }
   }
 
@@ -99,8 +99,8 @@ final class PackageFragementRootAnalyzer {
       cache.put(location, nodes);
       return nodes;
     } catch (Exception e) {
-      throw new CoreException(EclEmmaStatus.BUNDLE_ANALYSIS_ERROR.getStatus(
-          root.getElementName(), location, e));
+      throw new CoreException(EclEmmaStatus.BUNDLE_ANALYSIS_ERROR
+          .getStatus(root.getElementName(), location, e));
     }
   }
 

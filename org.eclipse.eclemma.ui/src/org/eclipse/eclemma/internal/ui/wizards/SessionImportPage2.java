@@ -186,10 +186,8 @@ public class SessionImportPage2 extends WizardPage {
 
   public void saveWidgetValues() {
     IDialogSettings settings = getDialogSettings();
-    settings.put(
-        STORE_SCOPE,
-        ScopeUtils.writeScope(scopeviewer.getSelectedScope()).toArray(
-            new String[0]));
+    settings.put(STORE_SCOPE, ScopeUtils
+        .writeScope(scopeviewer.getSelectedScope()).toArray(new String[0]));
     settings.put(STORE_BINARIES, binariescheck.getSelection());
   }
 

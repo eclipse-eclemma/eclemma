@@ -23,8 +23,8 @@ import org.eclipse.ui.menus.UIElement;
 /**
  * Handler to toggle hide unused types in the coverage tree.
  */
-class HideUnusedElementsHandler extends AbstractHandler implements
-    IElementUpdater {
+class HideUnusedElementsHandler extends AbstractHandler
+    implements IElementUpdater {
 
   public static final String ID = "org.eclipse.eclemma.ui.hideUnusedElements"; //$NON-NLS-1$
 

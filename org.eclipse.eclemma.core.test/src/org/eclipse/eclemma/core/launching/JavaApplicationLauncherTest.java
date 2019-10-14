@@ -104,8 +104,8 @@ public class JavaApplicationLauncherTest {
   @Test
   public void testProjectWithLibrary() throws Exception {
     IPackageFragmentRoot rootBin1 = javaProject1.createJAR(
-        "testdata/bin/signatureresolver.jar", "/sample.jar", new Path(
-            "/UnitTestProject/sample.jar"), null);
+        "testdata/bin/signatureresolver.jar", "/sample.jar",
+        new Path("/UnitTestProject/sample.jar"), null);
     JavaProjectKit.waitForBuild();
 
     ILaunchConfigurationWorkingCopy configuration = getJavaApplicationType()
@@ -138,9 +138,7 @@ public class JavaApplicationLauncherTest {
   }
 
   private ILaunchConfigurationType getJavaApplicationType() {
-    return DebugPlugin
-        .getDefault()
-        .getLaunchManager()
+    return DebugPlugin.getDefault().getLaunchManager()
         .getLaunchConfigurationType(
             "org.eclipse.jdt.launching.localJavaApplication");
   }

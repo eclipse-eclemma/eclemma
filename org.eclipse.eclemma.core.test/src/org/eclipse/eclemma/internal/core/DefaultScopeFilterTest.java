@@ -60,9 +60,7 @@ public class DefaultScopeFilterTest {
     preferences = new TestPreferences();
     filter = new DefaultScopeFilter(preferences);
 
-    configuration = DebugPlugin
-        .getDefault()
-        .getLaunchManager()
+    configuration = DebugPlugin.getDefault().getLaunchManager()
         .getLaunchConfigurationType(
             "org.eclipse.jdt.launching.localJavaApplication")
         .newInstance(javaProject1.project, "test.launch");
@@ -86,8 +84,8 @@ public class DefaultScopeFilterTest {
   public void testNoFilters() throws CoreException {
     preferences.sourceFoldersOnly = false;
     final Set<IPackageFragmentRoot> input = set(rootSrc1, rootSrc2, rootBin1);
-    final Set<IPackageFragmentRoot> output = filter
-        .filter(input, configuration);
+    final Set<IPackageFragmentRoot> output = filter.filter(input,
+        configuration);
     assertEquals(input, output);
   }
 

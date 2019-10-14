@@ -95,8 +95,8 @@ public final class SignatureResolver {
   private static final boolean resolveType(final IType scope,
       final String identifier, final StringBuilder result)
       throws JavaModelException {
-    final String[][] types = scope.resolveType(Signature
-        .getTypeErasure(identifier));
+    final String[][] types = scope
+        .resolveType(Signature.getTypeErasure(identifier));
     if (types == null || types.length != 1) {
       return false;
     }

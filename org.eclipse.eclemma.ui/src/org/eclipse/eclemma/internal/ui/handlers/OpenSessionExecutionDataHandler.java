@@ -28,8 +28,8 @@ import org.eclipse.eclemma.internal.ui.editors.ExecutionDataEditor;
 /**
  * Handler to open the execution data of the current session in an editor.
  */
-public class OpenSessionExecutionDataHandler extends
-    AbstractSessionManagerHandler {
+public class OpenSessionExecutionDataHandler
+    extends AbstractSessionManagerHandler {
 
   public OpenSessionExecutionDataHandler() {
     super(CoverageTools.getSessionManager());

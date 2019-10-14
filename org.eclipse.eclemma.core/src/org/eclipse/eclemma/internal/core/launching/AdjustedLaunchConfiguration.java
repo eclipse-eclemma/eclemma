@@ -82,7 +82,8 @@ class AdjustedLaunchConfiguration implements ILaunchConfiguration {
     return false;
   }
 
-  public ILaunchConfigurationWorkingCopy copy(String name) throws CoreException {
+  public ILaunchConfigurationWorkingCopy copy(String name)
+      throws CoreException {
     return new AdjustedLaunchConfigurationWorkingCopy(extraVMArgument,
         delegate.copy(name), null);
   }
@@ -228,7 +229,8 @@ class AdjustedLaunchConfiguration implements ILaunchConfiguration {
     throw new UnsupportedOperationException();
   }
 
-  public Collection<ILaunchConfiguration> getPrototypeChildren() throws CoreException {
+  public Collection<ILaunchConfiguration> getPrototypeChildren()
+      throws CoreException {
     throw new UnsupportedOperationException();
   }
 
@@ -240,7 +242,8 @@ class AdjustedLaunchConfiguration implements ILaunchConfiguration {
     throw new UnsupportedOperationException();
   }
 
-  public void setPrototypeAttributeVisibility(String attribute, boolean visible) throws CoreException {
+  public void setPrototypeAttributeVisibility(String attribute, boolean visible)
+      throws CoreException {
     throw new UnsupportedOperationException();
   }
 

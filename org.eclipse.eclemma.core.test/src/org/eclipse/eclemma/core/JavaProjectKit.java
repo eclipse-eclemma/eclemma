@@ -157,8 +157,8 @@ public class JavaProjectKit {
 
   public void addProjectReference(JavaProjectKit otherProject)
       throws CoreException {
-    addClassPathEntry(JavaCore.newProjectEntry(otherProject.project
-        .getFullPath()));
+    addClassPathEntry(
+        JavaCore.newProjectEntry(otherProject.project.getFullPath()));
   }
 
   public IPackageFragment createPackage(IPackageFragmentRoot fragmentRoot,
@@ -175,8 +175,8 @@ public class JavaProjectKit {
       IPackageFragmentRoot fragmentRoot, String testsrc, String path)
       throws CoreException, IOException {
     IPath typepath = new Path(path);
-    String pkgname = typepath.removeLastSegments(1).toString()
-        .replace('/', '.');
+    String pkgname = typepath.removeLastSegments(1).toString().replace('/',
+        '.');
     IPackageFragment fragment = createPackage(fragmentRoot, pkgname);
     StringBuilder sb = new StringBuilder();
     InputStream source = openTestResource(new Path(testsrc).append(typepath));
@@ -212,15 +212,14 @@ public class JavaProjectKit {
     if (markers.length > 0) {
       for (int i = 0; i < markers.length; i++) {
         Integer severity = (Integer) markers[i].getAttribute(IMarker.SEVERITY);
-        assertTrue(
-            String.valueOf(markers[i].getAttribute(IMarker.MESSAGE)),
+        assertTrue(String.valueOf(markers[i].getAttribute(IMarker.MESSAGE)),
             severity.intValue() < IMarker.SEVERITY_ERROR);
       }
     }
   }
 
-  public static void waitForBuild() throws OperationCanceledException,
-      InterruptedException {
+  public static void waitForBuild()
+      throws OperationCanceledException, InterruptedException {
     Job.getJobManager().join(ResourcesPlugin.FAMILY_AUTO_BUILD, null);
   }
 

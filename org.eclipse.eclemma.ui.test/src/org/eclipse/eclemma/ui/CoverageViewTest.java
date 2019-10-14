@@ -36,7 +36,8 @@ public class CoverageViewTest {
     UIThreadRunnable.syncExec(new VoidResult() {
       public void run() {
         try {
-          PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().showView("org.eclipse.eclemma.ui.CoverageView");
+          PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage()
+              .showView("org.eclipse.eclemma.ui.CoverageView");
         } catch (PartInitException e) {
           e.printStackTrace();
         }

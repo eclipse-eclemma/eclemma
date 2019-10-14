@@ -56,7 +56,8 @@ class CoverageViewSorter extends ViewerComparator {
     });
   }
 
-  private void setSortColumnAndDirection(TreeColumn sortColumn, boolean reverse) {
+  private void setSortColumnAndDirection(TreeColumn sortColumn,
+      boolean reverse) {
     sortColumn.getParent().setSortColumn(sortColumn);
     sortColumn.getParent().setSortDirection(reverse ? SWT.DOWN : SWT.UP);
   }

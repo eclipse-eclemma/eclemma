@@ -31,8 +31,8 @@ import org.eclipse.eclemma.internal.ui.EclEmmaUIPlugin;
  * The coverage tab group simply uses the tab group for the launch type "run"
  * and inserts the "Coverage" tab at the second position.
  */
-public class CoverageTabGroup implements ILaunchConfigurationTabGroup,
-    IExecutableExtension {
+public class CoverageTabGroup
+    implements ILaunchConfigurationTabGroup, IExecutableExtension {
 
   private static final String DELEGATE_LAUNCHMODE = ILaunchManager.RUN_MODE;
   private static final String EXPOINT_TABGROUP = "org.eclipse.debug.ui.launchConfigurationTabGroups"; //$NON-NLS-1$
@@ -98,7 +98,8 @@ public class CoverageTabGroup implements ILaunchConfigurationTabGroup,
   protected ILaunchConfigurationTab[] insertCoverageTab(
       ILaunchConfigurationTab[] delegateTabs,
       ILaunchConfigurationTab coverageTab) {
-    ILaunchConfigurationTab[] tabs = new ILaunchConfigurationTab[delegateTabs.length + 1];
+    ILaunchConfigurationTab[] tabs = new ILaunchConfigurationTab[delegateTabs.length
+        + 1];
     tabs[0] = delegateTabs[0];
     tabs[1] = coverageTab;
     System.arraycopy(delegateTabs, 1, tabs, 2, delegateTabs.length - 1);

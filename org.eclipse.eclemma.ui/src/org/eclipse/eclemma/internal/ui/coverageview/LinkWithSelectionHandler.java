@@ -25,8 +25,8 @@ import org.eclipse.ui.menus.UIElement;
  * Handle to toggle linking of the coverage view's selection with the current
  * selection in the workbench.
  */
-class LinkWithSelectionHandler extends AbstractHandler implements
-    IElementUpdater {
+class LinkWithSelectionHandler extends AbstractHandler
+    implements IElementUpdater {
 
   public static final String ID = "org.eclipse.eclemma.ui.linkWithSelection"; //$NON-NLS-1$
 

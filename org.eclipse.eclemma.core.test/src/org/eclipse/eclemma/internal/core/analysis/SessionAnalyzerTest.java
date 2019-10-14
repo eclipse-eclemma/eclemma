@@ -77,8 +77,8 @@ public class SessionAnalyzerTest {
   }
 
   @Test
-  public void testGetNameLocalLibraryInFolder() throws CoreException,
-      IOException {
+  public void testGetNameLocalLibraryInFolder()
+      throws CoreException, IOException {
     javaProject.project.getFolder("libs").create(false, true, null);
     javaProject.project.getFolder("libs/runtime").create(false, true, null);
     IPackageFragmentRoot library = javaProject.createJAR(
@@ -90,8 +90,8 @@ public class SessionAnalyzerTest {
 
   @Test
   public void testGetNameExternalLibrary() throws CoreException, IOException {
-    IPackageFragmentRoot library = javaProject.createExternalJAR(
-        "testdata/bin/signatureresolver.jar", null, null);
+    IPackageFragmentRoot library = javaProject
+        .createExternalJAR("testdata/bin/signatureresolver.jar", null, null);
 
     assertEquals(library.getElementName(), sessionAnalyzer.getName(library));
   }

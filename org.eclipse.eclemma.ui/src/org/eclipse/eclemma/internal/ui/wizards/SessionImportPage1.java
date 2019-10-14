@@ -133,10 +133,10 @@ public class SessionImportPage1 extends WizardPage {
         .applyTo(filecombo);
     browsebutton = new Button(parent, SWT.NONE);
     browsebutton.setText(BrowseAction_label);
-    GridDataFactory
-        .swtDefaults()
+    GridDataFactory.swtDefaults()
         .hint(convertHorizontalDLUsToPixels(IDialogConstants.BUTTON_WIDTH),
-            SWT.DEFAULT).applyTo(browsebutton);
+            SWT.DEFAULT)
+        .applyTo(browsebutton);
     browsebutton.addSelectionListener(new SelectionAdapter() {
       @Override
       public void widgetSelected(SelectionEvent e) {
@@ -286,8 +286,8 @@ public class SessionImportPage1 extends WizardPage {
         agentradio);
     WidgetHistory.restoreCombo(settings, STORE_FILES, filecombo);
     WidgetHistory.restoreCombo(settings, STORE_URLS, urlcombo);
-    WidgetHistory
-        .restoreText(settings, STORE_ADDRESS, addresstext, "127.0.0.1"); //$NON-NLS-1$
+    WidgetHistory.restoreText(settings, STORE_ADDRESS, addresstext,
+        "127.0.0.1"); //$NON-NLS-1$
     WidgetHistory.restoreText(settings, STORE_PORT, porttext,
         String.valueOf(AgentOptions.DEFAULT_PORT));
     WidgetHistory.restoreCheck(settings, STORE_RESET, resetcheck);

@@ -40,8 +40,8 @@ import org.eclipse.eclemma.internal.core.launching.CoverageLaunch;
  * adjust the launch configuration to inject the JaCoCo coverage agent and then
  * delegate to the corresponding launcher responsible for the "run" mode.
  */
-public abstract class CoverageLauncher implements ICoverageLauncher,
-    IExecutableExtension {
+public abstract class CoverageLauncher
+    implements ICoverageLauncher, IExecutableExtension {
 
   /** Launch mode for the launch delegates used internally. */
   public static final String DELEGATELAUNCHMODE = ILaunchManager.RUN_MODE;
@@ -90,8 +90,8 @@ public abstract class CoverageLauncher implements ICoverageLauncher,
 
     // Delegate to run mode launcher
     final AgentArgumentSupport argSupport = new AgentArgumentSupport();
-    final ILaunchConfiguration adjusted = argSupport.addArgument(
-        server.getPort(), configuration);
+    final ILaunchConfiguration adjusted = argSupport
+        .addArgument(server.getPort(), configuration);
     launchdelegate.launch(adjusted, DELEGATELAUNCHMODE, launch,
         new SubProgressMonitor(monitor, 1));
 
@@ -106,8 +106,8 @@ public abstract class CoverageLauncher implements ICoverageLauncher,
         ScopeUtils.getConfiguredScope(configuration));
   }
 
-  public boolean buildForLaunch(ILaunchConfiguration configuration,
-      String mode, IProgressMonitor monitor) throws CoreException {
+  public boolean buildForLaunch(ILaunchConfiguration configuration, String mode,
+      IProgressMonitor monitor) throws CoreException {
     if (launchdelegate2 == null) {
       return true;
     } else {
@@ -116,8 +116,8 @@ public abstract class CoverageLauncher implements ICoverageLauncher,
     }
   }
 
-  public boolean preLaunchCheck(ILaunchConfiguration configuration,
-      String mode, IProgressMonitor monitor) throws CoreException {
+  public boolean preLaunchCheck(ILaunchConfiguration configuration, String mode,
+      IProgressMonitor monitor) throws CoreException {
     if (launchdelegate2 == null) {
       return true;
     } else {
@@ -131,8 +131,8 @@ public abstract class CoverageLauncher implements ICoverageLauncher,
     if (launchdelegate2 == null) {
       return true;
     } else {
-      return launchdelegate2.finalLaunchCheck(configuration,
-          DELEGATELAUNCHMODE, monitor);
+      return launchdelegate2.finalLaunchCheck(configuration, DELEGATELAUNCHMODE,
+          monitor);
     }
   }
 

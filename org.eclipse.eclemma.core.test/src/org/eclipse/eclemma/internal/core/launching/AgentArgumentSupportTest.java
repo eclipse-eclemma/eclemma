@@ -58,9 +58,8 @@ public class AgentArgumentSupportTest {
   public void testGetArgument() throws CoreException {
     final String arg = support.getArgument(12345);
     assertTrue(arg, arg.startsWith("-javaagent:"));
-    assertTrue(
-        arg,
-        arg.endsWith("jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=12345"));
+    assertTrue(arg, arg.endsWith(
+        "jacocoagent.jar=includes=*,excludes=,exclclassloader=sun.reflect.DelegatingClassLoader,output=tcpclient,port=12345"));
   }
 
   @Test
@@ -69,8 +68,8 @@ public class AgentArgumentSupportTest {
     mock.pushResult("OTHER");
     final ILaunchConfiguration config = support.addArgument(12345,
         mock.getMock());
-    final String arg = config.getAttribute(
-        IJavaLaunchConfigurationConstants.ATTR_VM_ARGUMENTS, "");
+    final String arg = config
+        .getAttribute(IJavaLaunchConfigurationConstants.ATTR_VM_ARGUMENTS, "");
     assertTrue(arg, arg.startsWith("-javaagent:"));
     assertTrue(arg, arg.endsWith("OTHER"));
   }

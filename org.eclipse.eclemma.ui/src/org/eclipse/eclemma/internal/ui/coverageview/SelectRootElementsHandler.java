@@ -24,8 +24,8 @@ import org.jacoco.core.analysis.ICoverageNode.ElementType;
 /**
  * Handler to selects the root elements shown in the coverage tree.
  */
-class SelectRootElementsHandler extends AbstractHandler implements
-    IElementUpdater {
+class SelectRootElementsHandler extends AbstractHandler
+    implements IElementUpdater {
 
   public static final String ID = "org.eclipse.eclemma.ui.selectRootElements"; //$NON-NLS-1$
 

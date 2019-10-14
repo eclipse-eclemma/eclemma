@@ -84,8 +84,8 @@ public final class CoverageTools {
   }
 
   public static ISessionImporter getImporter() {
-    return new SessionImporter(getSessionManager(), EclEmmaCorePlugin
-        .getInstance().getExecutionDataFiles());
+    return new SessionImporter(getSessionManager(),
+        EclEmmaCorePlugin.getInstance().getExecutionDataFiles());
   }
 
   /**

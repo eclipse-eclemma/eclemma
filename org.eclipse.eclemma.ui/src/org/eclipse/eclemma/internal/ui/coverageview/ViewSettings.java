@@ -46,42 +46,42 @@ public class ViewSettings {
   private static final Map<CounterEntity, String[]> COLUMNS_HEADERS = new HashMap<ICoverageNode.CounterEntity, String[]>();
 
   static {
-    COLUMNS_HEADERS.put(CounterEntity.INSTRUCTION, new String[] {
-        UIMessages.CoverageViewColumnElement_label,
-        UIMessages.CoverageViewColumnCoverage_label,
-        UIMessages.CoverageViewColumnCoveredInstructions_label,
-        UIMessages.CoverageViewColumnMissedInstructions_label,
-        UIMessages.CoverageViewColumnTotalInstructions_label });
-    COLUMNS_HEADERS.put(CounterEntity.BRANCH, new String[] {
-        UIMessages.CoverageViewColumnElement_label,
-        UIMessages.CoverageViewColumnCoverage_label,
-        UIMessages.CoverageViewColumnCoveredBranches_label,
-        UIMessages.CoverageViewColumnMissedBranches_label,
-        UIMessages.CoverageViewColumnTotalBranches_label });
-    COLUMNS_HEADERS.put(CounterEntity.LINE, new String[] {
-        UIMessages.CoverageViewColumnElement_label,
-        UIMessages.CoverageViewColumnCoverage_label,
-        UIMessages.CoverageViewColumnCoveredLines_label,
-        UIMessages.CoverageViewColumnMissedLines_label,
-        UIMessages.CoverageViewColumnTotalLines_label });
-    COLUMNS_HEADERS.put(CounterEntity.METHOD, new String[] {
-        UIMessages.CoverageViewColumnElement_label,
-        UIMessages.CoverageViewColumnCoverage_label,
-        UIMessages.CoverageViewColumnCoveredMethods_label,
-        UIMessages.CoverageViewColumnMissedMethods_label,
-        UIMessages.CoverageViewColumnTotalMethods_label });
-    COLUMNS_HEADERS.put(CounterEntity.CLASS, new String[] {
-        UIMessages.CoverageViewColumnElement_label,
-        UIMessages.CoverageViewColumnCoverage_label,
-        UIMessages.CoverageViewColumnCoveredTypes_label,
-        UIMessages.CoverageViewColumnMissedTypes_label,
-        UIMessages.CoverageViewColumnTotalTypes_label });
-    COLUMNS_HEADERS.put(CounterEntity.COMPLEXITY, new String[] {
-        UIMessages.CoverageViewColumnElement_label,
-        UIMessages.CoverageViewColumnCoverage_label,
-        UIMessages.CoverageViewColumnCoveredComplexity_label,
-        UIMessages.CoverageViewColumnMissedComplexity_label,
-        UIMessages.CoverageViewColumnTotalComplexity_label });
+    COLUMNS_HEADERS.put(CounterEntity.INSTRUCTION,
+        new String[] { UIMessages.CoverageViewColumnElement_label,
+            UIMessages.CoverageViewColumnCoverage_label,
+            UIMessages.CoverageViewColumnCoveredInstructions_label,
+            UIMessages.CoverageViewColumnMissedInstructions_label,
+            UIMessages.CoverageViewColumnTotalInstructions_label });
+    COLUMNS_HEADERS.put(CounterEntity.BRANCH,
+        new String[] { UIMessages.CoverageViewColumnElement_label,
+            UIMessages.CoverageViewColumnCoverage_label,
+            UIMessages.CoverageViewColumnCoveredBranches_label,
+            UIMessages.CoverageViewColumnMissedBranches_label,
+            UIMessages.CoverageViewColumnTotalBranches_label });
+    COLUMNS_HEADERS.put(CounterEntity.LINE,
+        new String[] { UIMessages.CoverageViewColumnElement_label,
+            UIMessages.CoverageViewColumnCoverage_label,
+            UIMessages.CoverageViewColumnCoveredLines_label,
+            UIMessages.CoverageViewColumnMissedLines_label,
+            UIMessages.CoverageViewColumnTotalLines_label });
+    COLUMNS_HEADERS.put(CounterEntity.METHOD,
+        new String[] { UIMessages.CoverageViewColumnElement_label,
+            UIMessages.CoverageViewColumnCoverage_label,
+            UIMessages.CoverageViewColumnCoveredMethods_label,
+            UIMessages.CoverageViewColumnMissedMethods_label,
+            UIMessages.CoverageViewColumnTotalMethods_label });
+    COLUMNS_HEADERS.put(CounterEntity.CLASS,
+        new String[] { UIMessages.CoverageViewColumnElement_label,
+            UIMessages.CoverageViewColumnCoverage_label,
+            UIMessages.CoverageViewColumnCoveredTypes_label,
+            UIMessages.CoverageViewColumnMissedTypes_label,
+            UIMessages.CoverageViewColumnTotalTypes_label });
+    COLUMNS_HEADERS.put(CounterEntity.COMPLEXITY,
+        new String[] { UIMessages.CoverageViewColumnElement_label,
+            UIMessages.CoverageViewColumnCoverage_label,
+            UIMessages.CoverageViewColumnCoveredComplexity_label,
+            UIMessages.CoverageViewColumnMissedComplexity_label,
+            UIMessages.CoverageViewColumnTotalComplexity_label });
   }
 
   private static final int[] DEFAULT_COLUMNWIDTH = new int[] { 300, 80, 120,

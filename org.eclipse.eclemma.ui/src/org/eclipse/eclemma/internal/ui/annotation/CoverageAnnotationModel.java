@@ -97,8 +97,8 @@ public final class CoverageAnnotationModel implements IAnnotationModel {
     // there may be text editors without document providers (SF #1725100)
     if (provider == null)
       return;
-    IAnnotationModel model = provider.getAnnotationModel(editor
-        .getEditorInput());
+    IAnnotationModel model = provider
+        .getAnnotationModel(editor.getEditorInput());
     if (!(model instanceof IAnnotationModelExtension))
       return;
     IAnnotationModelExtension modelex = (IAnnotationModelExtension) model;
@@ -125,8 +125,8 @@ public final class CoverageAnnotationModel implements IAnnotationModel {
     // there may be text editors without document providers (SF #1725100)
     if (provider == null)
       return;
-    IAnnotationModel model = provider.getAnnotationModel(editor
-        .getEditorInput());
+    IAnnotationModel model = provider
+        .getAnnotationModel(editor.getEditorInput());
     if (!(model instanceof IAnnotationModelExtension))
       return;
     IAnnotationModelExtension modelex = (IAnnotationModelExtension) model;
@@ -245,7 +245,8 @@ public final class CoverageAnnotationModel implements IAnnotationModel {
 
   public void connect(IDocument document) {
     if (this.document != document) {
-      throw new IllegalArgumentException("Can't connect to different document."); //$NON-NLS-1$
+      throw new IllegalArgumentException(
+          "Can't connect to different document."); //$NON-NLS-1$
     }
     for (final CoverageAnnotation ca : annotations) {
       try {

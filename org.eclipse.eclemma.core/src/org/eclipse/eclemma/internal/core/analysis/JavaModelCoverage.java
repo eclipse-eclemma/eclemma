@@ -40,8 +40,8 @@ import org.eclipse.eclemma.internal.core.DebugOptions.ITracer;
  * The IJavaModelCoverage implementation maps Java elements to its corresponding
  * coverage data objects.
  */
-public class JavaModelCoverage extends CoverageNodeImpl implements
-    IJavaModelCoverage {
+public class JavaModelCoverage extends CoverageNodeImpl
+    implements IJavaModelCoverage {
 
   private static final ITracer TRACER = DebugOptions.ANALYSISTRACER;
 
@@ -148,9 +148,9 @@ public class JavaModelCoverage extends CoverageNodeImpl implements
         if (method != null) {
           coveragemap.put(method, methodCoverage);
         } else {
-          TRACER
-              .trace(
-                  "Method not found in Java model: {0}.{1}{2}", type.getFullyQualifiedName(), methodCoverage.getName(), methodCoverage.getDesc()); //$NON-NLS-1$
+          TRACER.trace("Method not found in Java model: {0}.{1}{2}", //$NON-NLS-1$
+              type.getFullyQualifiedName(), methodCoverage.getName(),
+              methodCoverage.getDesc());
         }
       }
     } catch (JavaModelException e) {
