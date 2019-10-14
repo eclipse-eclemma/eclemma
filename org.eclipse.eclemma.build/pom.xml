@@ -91,6 +91,11 @@
           <artifactId>jacoco-maven-plugin</artifactId>
           <version>${jacoco.version}</version>
         </plugin>
+        <plugin>
+          <groupId>com.diffplug.spotless</groupId>
+          <artifactId>spotless-maven-plugin</artifactId>
+          <version>1.25.1</version>
+        </plugin>
         <!-- Apache plugins -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -172,6 +177,32 @@
           <execution>
             <goals>
               <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.diffplug.spotless</groupId>
+        <artifactId>spotless-maven-plugin</artifactId>
+        <configuration>
+          <java>
+            <includes>
+              <include>src/**/*.java</include>
+            </includes>
+            <eclipse>
+              <version>4.12.0</version>
+              <file>../org.eclipse.eclemma.core/.settings/org.eclipse.jdt.core.prefs</file>
+            </eclipse>
+            <lineEndings>UNIX</lineEndings>
+            <trimTrailingWhitespace/>
+            <endWithNewline/>
+          </java>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>check</goal>
             </goals>
           </execution>
         </executions>
