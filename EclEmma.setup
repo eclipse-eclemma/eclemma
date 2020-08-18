@@ -124,7 +124,7 @@
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="2019-06">
@@ -135,7 +135,7 @@
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="2019-03">
@@ -146,7 +146,7 @@
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="2018-12">
@@ -157,7 +157,7 @@
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="2018-09">
@@ -168,7 +168,7 @@
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="Photon">
@@ -179,7 +179,7 @@
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="Oxygen">
@@ -190,7 +190,7 @@
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="Neon">
@@ -201,7 +201,7 @@
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="Mars">
@@ -212,7 +212,7 @@
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="Luna">
@@ -223,7 +223,7 @@
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="Kepler">
@@ -234,7 +234,7 @@
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="Juno">
@@ -245,7 +245,7 @@
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/latest"/>
+            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
     </targlet>
   </setupTask>
