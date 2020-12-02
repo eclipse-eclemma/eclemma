@@ -18,7 +18,7 @@
 <unit id="org.jacoco.core" version="0.8.6.v20201001-1506"/>
 <unit id="org.jacoco.report" version="0.8.6.v20201001-1506"/>
 <unit id="org.junit" version="4.12.0.v201504281640"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/S20201027182932/repository"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20201130205003/repository"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.swtbot.eclipse.feature.group" version="0.0.0"/>
