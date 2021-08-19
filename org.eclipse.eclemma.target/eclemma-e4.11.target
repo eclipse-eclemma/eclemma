@@ -7,7 +7,6 @@
 <unit id="org.eclipse.jdt.feature.group" version="3.17.0.v20190307-0500"/>
 <unit id="org.eclipse.rcp.feature.group" version="4.11.0.v20190307-0500"/>
 <unit id="org.eclipse.platform.feature.group" version="4.11.0.v20190307-0500"/>
-<unit id="org.eclipse.equinox.ds" version="1.6.0.v20190122-0806"/>
 <repository location="http://download.eclipse.org/releases/2019-03/"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
