@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: EclEmma UI Tests
 Bundle-SymbolicName: org.eclipse.eclemma.ui.test;singleton:=true
-Bundle-Version: 3.1.5.qualifier
+Bundle-Version: 3.1.6.qualifier
 Bundle-Vendor: Eclipse EclEmma
 Require-Bundle: org.junit;bundle-version="4.0.0",
  org.eclipse.swtbot.eclipse.finder;bundle-version="2.5.0",
