@@ -68,7 +68,7 @@ public final class ExecutionDataFiles {
       final ExecutionDataWriter writer = new ExecutionDataWriter(out);
       source.accept(writer, writer);
       out.close();
-      return new URLExecutionDataSource(file.toURL());
+      return new URLExecutionDataSource(file.toURI().toURL());
     } catch (IOException e) {
       throw new CoreException(
           EclEmmaStatus.EXEC_FILE_CREATE_ERROR.getStatus(e));
