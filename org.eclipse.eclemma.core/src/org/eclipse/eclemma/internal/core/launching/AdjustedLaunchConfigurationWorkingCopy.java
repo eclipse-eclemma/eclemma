@@ -12,6 +12,7 @@
  ******************************************************************************/
 package org.eclipse.eclemma.internal.core.launching;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -32,12 +33,14 @@ class AdjustedLaunchConfigurationWorkingCopy extends AdjustedLaunchConfiguration
 
   private final ILaunchConfigurationWorkingCopy delegate;
   private final ILaunchConfiguration original;
+  private final String extraVMArgument;
 
   AdjustedLaunchConfigurationWorkingCopy(String extraVMArgument,
       ILaunchConfigurationWorkingCopy delegate, ILaunchConfiguration original) {
     super(extraVMArgument, delegate);
     this.delegate = delegate;
     this.original = original;
+    this.extraVMArgument = extraVMArgument;
   }
 
   public ILaunchConfiguration getOriginal() {
@@ -55,6 +58,29 @@ class AdjustedLaunchConfigurationWorkingCopy extends AdjustedLaunchConfiguration
     throw new UnsupportedOperationException();
   }
 
+  public void setAttribute(String attributeName, String value) {
+    if (VM_ARGUMENTS_KEY.equals(attributeName)) {
+      delegate.setAttribute(attributeName, filterExtraVMArguments(value));
+    } else {
+      delegate.setAttribute(attributeName, value);
+    }
+  }
+
+  private String filterExtraVMArguments(String vmArguments) {
+    return vmArguments.replace(extraVMArgument, "").trim(); //$NON-NLS-1$
+  }
+
+  @SuppressWarnings({ "unchecked", "rawtypes" })
+  public void setAttributes(Map attributes) {
+    final Map adjustedAttributes = new HashMap(attributes);
+    if (attributes.containsKey(VM_ARGUMENTS_KEY)) {
+      adjustedAttributes.put( //
+          VM_ARGUMENTS_KEY, //
+          filterExtraVMArguments(attributes.get(VM_ARGUMENTS_KEY).toString()));
+    }
+    delegate.setAttributes(adjustedAttributes);
+  }
+
   // delegate-only methods:
 
   public boolean isDirty() {
@@ -70,10 +96,6 @@ class AdjustedLaunchConfigurationWorkingCopy extends AdjustedLaunchConfiguration
   }
 
   public void setAttribute(String attributeName, int value) {
-    delegate.setAttribute(attributeName, value);
-  }
-
-  public void setAttribute(String attributeName, String value) {
     delegate.setAttribute(attributeName, value);
   }
 
@@ -101,10 +123,6 @@ class AdjustedLaunchConfigurationWorkingCopy extends AdjustedLaunchConfiguration
 
   public void setContainer(IContainer container) {
     delegate.setContainer(container);
-  }
-
-  public void setAttributes(@SuppressWarnings("rawtypes") Map attributes) {
-    delegate.setAttributes(attributes);
   }
 
   public void setMappedResources(IResource[] resources) {

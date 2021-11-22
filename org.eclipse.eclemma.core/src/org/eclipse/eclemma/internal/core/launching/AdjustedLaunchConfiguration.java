@@ -37,7 +37,7 @@ import org.eclipse.jdt.launching.IJavaLaunchConfigurationConstants;
  */
 class AdjustedLaunchConfiguration implements ILaunchConfiguration {
 
-  private static final String KEY = IJavaLaunchConfigurationConstants.ATTR_VM_ARGUMENTS;
+  static final String VM_ARGUMENTS_KEY = IJavaLaunchConfigurationConstants.ATTR_VM_ARGUMENTS;
 
   private final ILaunchConfiguration delegate;
 
@@ -50,12 +50,13 @@ class AdjustedLaunchConfiguration implements ILaunchConfiguration {
   }
 
   public boolean hasAttribute(String attributeName) throws CoreException {
-    return KEY.equals(attributeName) || delegate.hasAttribute(attributeName);
+    return VM_ARGUMENTS_KEY.equals(attributeName) //
+        || delegate.hasAttribute(attributeName);
   }
 
   public String getAttribute(String attributeName, String defaultValue)
       throws CoreException {
-    if (KEY.equals(attributeName)) {
+    if (VM_ARGUMENTS_KEY.equals(attributeName)) {
       return getVMArguments();
     } else {
       return delegate.getAttribute(attributeName, defaultValue);
@@ -65,12 +66,12 @@ class AdjustedLaunchConfiguration implements ILaunchConfiguration {
   @SuppressWarnings({ "unchecked", "rawtypes" })
   public Map getAttributes() throws CoreException {
     final Map map = new HashMap(delegate.getAttributes());
-    map.put(KEY, getVMArguments());
+    map.put(VM_ARGUMENTS_KEY, getVMArguments());
     return map;
   }
 
   private String getVMArguments() throws CoreException {
-    final String original = delegate.getAttribute(KEY, ""); //$NON-NLS-1$
+    final String original = delegate.getAttribute(VM_ARGUMENTS_KEY, ""); //$NON-NLS-1$
     if (original.length() > 0) {
       return extraVMArgument + ' ' + original;
     } else {
