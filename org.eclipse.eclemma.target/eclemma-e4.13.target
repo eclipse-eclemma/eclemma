@@ -10,14 +10,14 @@
 <repository location="http://download.eclipse.org/releases/2019-09/"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.objectweb.asm" version="9.1.0.v20210209-1849"/>
-<unit id="org.objectweb.asm.commons" version="9.1.0.v20210209-1849"/>
-<unit id="org.objectweb.asm.tree" version="9.1.0.v20210209-1849"/>
-<unit id="org.jacoco.agent" version="0.8.7.v20210625-1418"/>
-<unit id="org.jacoco.core" version="0.8.7.v20210625-1418"/>
-<unit id="org.jacoco.report" version="0.8.7.v20210625-1418"/>
-<unit id="org.junit" version="4.12.0.v201504281640"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20210825222808/repository"/>
+<unit id="org.objectweb.asm" version="9.2.0.v20210813-1119"/>
+<unit id="org.objectweb.asm.commons" version="9.2.0.v20210813-1119"/>
+<unit id="org.objectweb.asm.tree" version="9.2.0.v20210813-1119"/>
+<unit id="org.jacoco.agent" version="0.8.8.v20220415-0921"/>
+<unit id="org.jacoco.core" version="0.8.8.v20220415-0921"/>
+<unit id="org.jacoco.report" version="0.8.8.v20220415-0921"/>
+<unit id="org.junit" version="4.13.2.v20211018-1956"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/I20220415103937/repository"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.swtbot.eclipse.feature.group" version="0.0.0"/>
