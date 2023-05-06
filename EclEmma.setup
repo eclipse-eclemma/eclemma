@@ -122,6 +122,8 @@
         <repository
             url="http://download.eclipse.org/cbi/updates/license"/>
         <repository
+            url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
+        <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
             url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
@@ -132,6 +134,8 @@
             url="http://download.eclipse.org/releases/2019-06"/>
         <repository
             url="http://download.eclipse.org/cbi/updates/license"/>
+        <repository
+            url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -144,6 +148,8 @@
         <repository
             url="http://download.eclipse.org/cbi/updates/license"/>
         <repository
+            url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
+        <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
             url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
@@ -154,6 +160,8 @@
             url="http://download.eclipse.org/releases/2018-12"/>
         <repository
             url="http://download.eclipse.org/cbi/updates/license"/>
+        <repository
+            url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -166,6 +174,8 @@
         <repository
             url="http://download.eclipse.org/cbi/updates/license"/>
         <repository
+            url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
+        <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
             url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
@@ -176,6 +186,8 @@
             url="http://download.eclipse.org/releases/photon"/>
         <repository
             url="http://download.eclipse.org/cbi/updates/license"/>
+        <repository
+            url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -188,6 +200,8 @@
         <repository
             url="http://download.eclipse.org/cbi/updates/license"/>
         <repository
+            url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
+        <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
             url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
@@ -198,6 +212,8 @@
             url="http://download.eclipse.org/releases/neon"/>
         <repository
             url="http://download.eclipse.org/cbi/updates/license"/>
+        <repository
+            url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -210,6 +226,8 @@
         <repository
             url="http://download.eclipse.org/cbi/updates/license"/>
         <repository
+            url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
+        <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
             url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
@@ -220,6 +238,8 @@
             url="http://download.eclipse.org/releases/luna"/>
         <repository
             url="http://download.eclipse.org/cbi/updates/license"/>
+        <repository
+            url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -232,6 +252,8 @@
         <repository
             url="http://download.eclipse.org/cbi/updates/license"/>
         <repository
+            url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
+        <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
             url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
@@ -242,6 +264,8 @@
             url="http://download.eclipse.org/releases/juno"/>
         <repository
             url="http://download.eclipse.org/cbi/updates/license"/>
+        <repository
+            url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
             url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
