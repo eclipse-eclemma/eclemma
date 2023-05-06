@@ -69,7 +69,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <tycho.version>1.6.0</tycho.version>
+    <tycho.version>2.7.5</tycho.version>
+    <tycho.executionEnvironment></tycho.executionEnvironment>
     <tycho.scmUrl>scm:git:https://github.com/eclipse/eclemma.git</tycho.scmUrl>
 
     <orbit-repository-url>http://download.eclipse.org/tools/orbit/downloads/latest-I/</orbit-repository-url>
@@ -237,6 +238,7 @@
       </activation>
       <properties>
         <target-platform>eclemma-e3.8</target-platform>
+        <tycho.executionEnvironment>JavaSE-1.6</tycho.executionEnvironment>
         <platform-repository-url>http://download.eclipse.org/releases/juno/</platform-repository-url>
       </properties>
     </profile>
@@ -250,6 +252,7 @@
       </activation>
       <properties>
         <target-platform>eclemma-e4.3</target-platform>
+        <tycho.executionEnvironment>JavaSE-1.6</tycho.executionEnvironment>
         <platform-repository-url>http://download.eclipse.org/releases/kepler/</platform-repository-url>
       </properties>
     </profile>
@@ -263,6 +266,7 @@
       </activation>
       <properties>
         <target-platform>eclemma-e4.4</target-platform>
+        <tycho.executionEnvironment>JavaSE-1.7</tycho.executionEnvironment>
         <platform-repository-url>http://download.eclipse.org/releases/luna/</platform-repository-url>
       </properties>
     </profile>
@@ -276,6 +280,7 @@
       </activation>
       <properties>
         <target-platform>eclemma-e4.5</target-platform>
+        <tycho.executionEnvironment>JavaSE-1.7</tycho.executionEnvironment>
         <platform-repository-url>http://download.eclipse.org/releases/mars/</platform-repository-url>
       </properties>
     </profile>
@@ -289,6 +294,7 @@
       </activation>
       <properties>
         <target-platform>eclemma-e4.6</target-platform>
+        <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>http://download.eclipse.org/releases/neon/</platform-repository-url>
       </properties>
     </profile>
@@ -302,6 +308,7 @@
       </activation>
       <properties>
         <target-platform>eclemma-e4.7</target-platform>
+        <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>http://download.eclipse.org/releases/oxygen/</platform-repository-url>
       </properties>
     </profile>
@@ -315,6 +322,7 @@
       </activation>
       <properties>
         <target-platform>eclemma-e4.8</target-platform>
+        <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>http://download.eclipse.org/releases/photon/</platform-repository-url>
       </properties>
     </profile>
@@ -328,6 +336,7 @@
       </activation>
       <properties>
         <target-platform>eclemma-e4.9</target-platform>
+        <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>http://download.eclipse.org/releases/2018-09/</platform-repository-url>
       </properties>
     </profile>
@@ -341,6 +350,7 @@
       </activation>
       <properties>
         <target-platform>eclemma-e4.10</target-platform>
+        <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>http://download.eclipse.org/releases/2018-12/</platform-repository-url>
       </properties>
     </profile>
@@ -354,6 +364,7 @@
       </activation>
       <properties>
         <target-platform>eclemma-e4.11</target-platform>
+        <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>http://download.eclipse.org/releases/2019-03/</platform-repository-url>
       </properties>
     </profile>
@@ -367,6 +378,7 @@
       </activation>
       <properties>
         <target-platform>eclemma-e4.12</target-platform>
+        <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>http://download.eclipse.org/releases/2019-06/</platform-repository-url>
       </properties>
     </profile>
@@ -380,6 +392,7 @@
       </activation>
       <properties>
         <target-platform>eclemma-e4.13</target-platform>
+        <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>http://download.eclipse.org/releases/2019-09/</platform-repository-url>
       </properties>
     </profile>
@@ -407,6 +420,7 @@
                 </artifact>
               </target>
               <ignoreTychoRepositories>true</ignoreTychoRepositories>
+              <executionEnvironment>${tycho.executionEnvironment}</executionEnvironment>
               <environments>
                 <environment>
                   <os>win32</os>
