@@ -118,158 +118,158 @@
       <repositoryList
           name="2019-09">
         <repository
-            url="http://download.eclipse.org/releases/2019-09"/>
+            url="https://download.eclipse.org/releases/2019-09"/>
         <repository
-            url="http://download.eclipse.org/cbi/updates/license"/>
+            url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
             url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
-            url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+            url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
+            url="https://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="2019-06">
         <repository
-            url="http://download.eclipse.org/releases/2019-06"/>
+            url="https://download.eclipse.org/releases/2019-06"/>
         <repository
-            url="http://download.eclipse.org/cbi/updates/license"/>
+            url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
             url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
-            url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+            url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
+            url="https://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="2019-03">
         <repository
-            url="http://download.eclipse.org/releases/2019-03"/>
+            url="https://download.eclipse.org/releases/2019-03"/>
         <repository
-            url="http://download.eclipse.org/cbi/updates/license"/>
+            url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
             url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
-            url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+            url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
+            url="https://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="2018-12">
         <repository
-            url="http://download.eclipse.org/releases/2018-12"/>
+            url="https://download.eclipse.org/releases/2018-12"/>
         <repository
-            url="http://download.eclipse.org/cbi/updates/license"/>
+            url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
             url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
-            url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+            url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
+            url="https://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="2018-09">
         <repository
-            url="http://download.eclipse.org/releases/2018-09"/>
+            url="https://download.eclipse.org/releases/2018-09"/>
         <repository
-            url="http://download.eclipse.org/cbi/updates/license"/>
+            url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
             url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
-            url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+            url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
+            url="https://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="Photon">
         <repository
-            url="http://download.eclipse.org/releases/photon"/>
+            url="https://download.eclipse.org/releases/photon"/>
         <repository
-            url="http://download.eclipse.org/cbi/updates/license"/>
+            url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
             url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
-            url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+            url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
+            url="https://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="Oxygen">
         <repository
-            url="http://download.eclipse.org/releases/oxygen"/>
+            url="https://download.eclipse.org/releases/oxygen"/>
         <repository
-            url="http://download.eclipse.org/cbi/updates/license"/>
+            url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
             url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
-            url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+            url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
+            url="https://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="Neon">
         <repository
-            url="http://download.eclipse.org/releases/neon"/>
+            url="https://download.eclipse.org/releases/neon"/>
         <repository
-            url="http://download.eclipse.org/cbi/updates/license"/>
+            url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
             url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
-            url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+            url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
+            url="https://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="Mars">
         <repository
-            url="http://download.eclipse.org/releases/mars"/>
+            url="https://download.eclipse.org/releases/mars"/>
         <repository
-            url="http://download.eclipse.org/cbi/updates/license"/>
+            url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
             url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
-            url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+            url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
+            url="https://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="Luna">
         <repository
-            url="http://download.eclipse.org/releases/luna"/>
+            url="https://download.eclipse.org/releases/luna"/>
         <repository
-            url="http://download.eclipse.org/cbi/updates/license"/>
+            url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
             url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
-            url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+            url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
+            url="https://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="Kepler">
         <repository
-            url="http://download.eclipse.org/releases/kepler"/>
+            url="https://download.eclipse.org/releases/kepler"/>
         <repository
-            url="http://download.eclipse.org/cbi/updates/license"/>
+            url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
             url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
-            url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+            url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
+            url="https://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
       <repositoryList
           name="Juno">
         <repository
-            url="http://download.eclipse.org/releases/juno"/>
+            url="https://download.eclipse.org/releases/juno"/>
         <repository
-            url="http://download.eclipse.org/cbi/updates/license"/>
+            url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
             url="https://download.eclipse.org/oomph/simrel-maven/2023-06"/>
         <repository
-            url="http://download.eclipse.org/tools/orbit/downloads/latest-I"/>
+            url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
+            url="https://download.eclipse.org/technology/swtbot/releases/2.8.0"/>
       </repositoryList>
     </targlet>
   </setupTask>
