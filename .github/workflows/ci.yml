@@ -11,11 +11,9 @@ jobs:
         with:
           distribution: temurin
           java-version: 11
-      - run: sudo apt-get update && sudo apt-get install metacity
       - name: Build
         run: |
           export DISPLAY=:99.0
           Xvfb :99 &
           sleep 5
-          metacity --sm-disable --replace 2> metacity.err &
           mvn -V -B -e verify -Pe4.12 -Dtycho.executionEnvironment=JavaSE-11 -DskipUITests=false
