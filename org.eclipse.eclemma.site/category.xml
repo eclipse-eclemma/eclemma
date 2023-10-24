@@ -8,4 +8,10 @@
          Java code coverage analysis for the Eclipse IDE based on the JaCoCo code coverage library ( http://www.jacoco.org/jacoco )
       </description>
    </category-def>
+   <bundle id="org.jacoco.agent" version="0.0.0"/>
+   <bundle id="org.jacoco.core" version="0.0.0"/>
+   <bundle id="org.jacoco.report" version="0.0.0"/>
+   <bundle id="org.objectweb.asm" version="0.0.0"/>
+   <bundle id="org.objectweb.asm.commons" version="0.0.0"/>
+   <bundle id="org.objectweb.asm.tree" version="0.0.0"/>
 </site>
