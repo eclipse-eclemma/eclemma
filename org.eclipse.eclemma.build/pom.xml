@@ -480,6 +480,20 @@
         <platform-repository-url>https://download.eclipse.org/releases/2021-03/</platform-repository-url>
       </properties>
     </profile>
+    <profile>
+      <id>e4.20</id>
+      <activation>
+        <property>
+          <name>target-profile</name>
+          <value>e4.20</value>
+        </property>
+      </activation>
+      <properties>
+        <target-platform>eclemma-e4.20</target-platform>
+        <tycho.executionEnvironment>JavaSE-11</tycho.executionEnvironment>
+        <platform-repository-url>https://download.eclipse.org/releases/2021-06/</platform-repository-url>
+      </properties>
+    </profile>
 
     <profile>
       <id>explicit-target</id>
