@@ -36,7 +36,7 @@
         <configuration>
           <useUIHarness>true</useUIHarness>
           <useUIThread>false</useUIThread>
-          <skipExec>${skipUITests}</skipExec>
+          <skipTests>${skipUITests}</skipTests>
           <dependencies>
             <dependency>
               <!-- workaround for missing dependency in org.eclipse.e4.ui.services: https://bugs.eclipse.org/462862 -->
