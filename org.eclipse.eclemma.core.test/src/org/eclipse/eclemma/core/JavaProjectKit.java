@@ -129,11 +129,9 @@ public class JavaProjectKit {
     IFile jarfile = project.getFile(jarpath);
     InputStream source = openTestResource(new Path(jarsrc));
     jarfile.create(source, true, null);
-    IPackageFragmentRoot packageRoot = javaProject
-        .getPackageFragmentRoot(jarfile);
-    addClassPathEntry(JavaCore.newLibraryEntry(packageRoot.getPath(),
+    addClassPathEntry(JavaCore.newLibraryEntry(jarfile.getFullPath(),
         sourceAttachmentPath, sourceAttachmentRootPath));
-    return packageRoot;
+    return javaProject.getPackageFragmentRoot(jarfile);
   }
 
   public IPackageFragmentRoot createExternalJAR(String jarsrc,
