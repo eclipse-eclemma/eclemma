@@ -35,7 +35,11 @@ public class ExportImportTest {
     treeItem.getNode("Coverage Session").select();
     bot.button("Next >").click();
 
-    bot.text(" Please select an existing execution data file.");
+    if (UiTestUtils.TITLE_AREA_DIALOG_USES_LABEL) {
+      bot.label(" Please select an existing execution data file.");
+    } else {
+      bot.text(" Please select an existing execution data file.");
+    }
   }
 
   @Test
@@ -47,7 +51,11 @@ public class ExportImportTest {
     treeItem.getNode("Coverage Session").select();
     bot.button("Next >").click();
 
-    bot.text(" No coverage session available for export.");
+    if (UiTestUtils.TITLE_AREA_DIALOG_USES_LABEL) {
+      bot.label(" No coverage session available for export.");
+    } else {
+      bot.text(" No coverage session available for export.");
+    }
   }
 
 }

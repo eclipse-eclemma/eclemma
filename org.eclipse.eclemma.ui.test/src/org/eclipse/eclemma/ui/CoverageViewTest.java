@@ -50,7 +50,11 @@ public class CoverageViewTest {
 
     // then
     bot.shell("Import").activate();
-    bot.text(" Please select an existing execution data file.");
+    if (UiTestUtils.TITLE_AREA_DIALOG_USES_LABEL) {
+      bot.label(" Please select an existing execution data file.");
+    } else {
+      bot.text(" Please select an existing execution data file.");
+    }
   }
 
 }
