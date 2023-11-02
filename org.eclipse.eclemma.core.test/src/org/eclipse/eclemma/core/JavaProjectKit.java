@@ -50,7 +50,7 @@ import org.eclipse.jdt.launching.JavaRuntime;
 import org.eclipse.eclemma.internal.core.EclEmmaCorePlugin;
 
 /**
- * Utility class to setup Java projects programatically.
+ * Utility class to setup Java projects programmatically.
  */
 public class JavaProjectKit {
 
