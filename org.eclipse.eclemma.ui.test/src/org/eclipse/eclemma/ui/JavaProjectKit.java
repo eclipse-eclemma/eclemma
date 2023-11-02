@@ -110,8 +110,8 @@ public class JavaProjectKit {
   /**
    * Creates launch configuration for the type with given name.
    */
-  public ILaunchConfiguration createLaunchConfiguration(String mainTypeName)
-      throws Exception {
+  public ILaunchConfiguration createLaunchConfiguration(String mainTypeName,
+      String args) throws Exception {
     ILaunchConfigurationType type = DebugPlugin.getDefault().getLaunchManager()
         .getLaunchConfigurationType(
             IJavaLaunchConfigurationConstants.ID_JAVA_APPLICATION);
@@ -121,6 +121,8 @@ public class JavaProjectKit {
         javaProject.getElementName());
     config.setAttribute(IJavaLaunchConfigurationConstants.ATTR_MAIN_TYPE_NAME,
         mainTypeName);
+    config.setAttribute(
+        IJavaLaunchConfigurationConstants.ATTR_PROGRAM_ARGUMENTS, args);
     Set<String> modes = new HashSet<String>();
     modes.add(CoverageTools.LAUNCH_MODE);
     config.setPreferredLaunchDelegate(modes,

@@ -14,6 +14,8 @@ package org.eclipse.eclemma.ui;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.File;
+
 import org.eclipse.core.runtime.ILogListener;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Platform;
@@ -38,7 +40,9 @@ public class DumpExecutionDataTest {
   private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();
 
   private static ILaunch launch1;
+  private static String terminate1;
   private static ILaunch launch2;
+  private static String terminate2;
 
   @AfterClass
   public static void resetWorkbench() {
@@ -53,16 +57,27 @@ public class DumpExecutionDataTest {
     project.enableJava5();
     final IPackageFragmentRoot root = project.createSourceFolder();
     final IPackageFragment fragment = project.createPackage(root, "example");
-    project.createCompilationUnit(fragment, "Example.java",
-        "package example; class Example { public static void main(String[] args) throws Exception { Thread.sleep(30000); } }");
-
+    project.createCompilationUnit(fragment, "Example.java", "package example;" //
+        + "import java.io.File;" //
+        + "class Example {" //
+        + "  public static void main(String[] args) throws Exception {" //
+        + "    File termFile = new File(args[0]);" //
+        + "    while (!termFile.exists()) {" //
+        + "      Thread.sleep(100);" //
+        + "    }" //
+        + "  }" //
+        + "}");
     JavaProjectKit.waitForBuild();
 
-    ILaunchConfiguration launchConfiguration = project
-        .createLaunchConfiguration("example.Example");
+    terminate1 = project.project.getLocation().toString() + "/terminate1";
+    ILaunchConfiguration launchConfiguration1 = project
+        .createLaunchConfiguration("example.Example", terminate1);
+    launch1 = launchConfiguration1.launch(CoverageTools.LAUNCH_MODE, null);
 
-    launch1 = launchConfiguration.launch(CoverageTools.LAUNCH_MODE, null);
-    launch2 = launchConfiguration.launch(CoverageTools.LAUNCH_MODE, null);
+    terminate2 = project.project.getLocation().toString() + "/terminate2";
+    ILaunchConfiguration launchConfiguration2 = project
+        .createLaunchConfiguration("example.Example", terminate2);
+    launch2 = launchConfiguration2.launch(CoverageTools.LAUNCH_MODE, null);
   }
 
   @Test
@@ -91,8 +106,11 @@ public class DumpExecutionDataTest {
 
   @AfterClass
   public static void terminate() throws Exception {
-    launch1.terminate();
-    launch2.terminate();
+    new File(terminate1).createNewFile();
+    new File(terminate2).createNewFile();
+    while (!launch1.isTerminated() || !launch2.isTerminated()) {
+      Thread.sleep(100);
+    }
 
     final ISessionManager sessionManager = CoverageTools.getSessionManager();
     sessionManager.removeSessionsFor(launch1);
