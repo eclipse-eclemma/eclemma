@@ -69,7 +69,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <tycho.version>2.7.5</tycho.version>
+    <tycho.version>3.0.5</tycho.version>
     <tycho.executionEnvironment></tycho.executionEnvironment>
     <tycho.scmUrl>scm:git:https://github.com/eclipse/eclemma.git</tycho.scmUrl>
 
