@@ -91,7 +91,7 @@ public final class ScopeUtils {
       ILaunchConfiguration configuration) throws CoreException {
     ICoverageLauncher launcher = (ICoverageLauncher) configuration.getType()
         .getDelegates(Collections.singleton(CoverageTools.LAUNCH_MODE))[0]
-            .getDelegate();
+        .getDelegate();
     return launcher.getOverallScope(configuration);
   }
 
