@@ -22,4 +22,4 @@ jobs:
             export DISPLAY=:99.0
             Xvfb $DISPLAY &
           fi
-          mvn -V -B -e verify -Pe4.12 -Dtycho.executionEnvironment=JavaSE-17 -DskipUITests=false
+          mvn -V -B -e verify -Pe4.12 -Dtycho.executionEnvironment=JavaSE-17 -DskipUITests=false -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
