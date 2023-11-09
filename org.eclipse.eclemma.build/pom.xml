@@ -95,7 +95,7 @@
         <plugin>
           <groupId>com.diffplug.spotless</groupId>
           <artifactId>spotless-maven-plugin</artifactId>
-          <version>1.25.1</version>
+          <version>2.40.0</version>
         </plugin>
         <!-- Apache plugins -->
         <plugin>
@@ -191,7 +191,7 @@
               <include>src/**/*.java</include>
             </includes>
             <eclipse>
-              <version>4.12.0</version>
+              <version>4.29</version>
               <file>../org.eclipse.eclemma.core/.settings/org.eclipse.jdt.core.prefs</file>
             </eclipse>
             <lineEndings>UNIX</lineEndings>
