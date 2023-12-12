@@ -17,7 +17,7 @@
   <parent>
     <groupId>org.eclipse.eclemma</groupId>
     <artifactId>org.eclipse.eclemma.build</artifactId>
-    <version>3.1.8-SNAPSHOT</version>
+    <version>3.1.9-SNAPSHOT</version>
     <relativePath>../org.eclipse.eclemma.build</relativePath>
   </parent>
 
