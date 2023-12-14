@@ -573,7 +573,7 @@
   <setupTask
       xsi:type="setup:EclipseIniTask"
       option="-Doomph.redirection.eclemma.git"
-      value="=https://raw.githubusercontent.com/eclipse/eclemma/master/EclEmma.setup->${org.eclipse.eclemma.git.location|uri}/EclEmma.setup"
+      value="=https://raw.githubusercontent.com/eclipse-eclemma/eclemma/master/EclEmma.setup->${org.eclipse.eclemma.git.location|uri}/EclEmma.setup"
       vm="true">
     <description>Set an Oomph redirection system property to redirect the logical location of this setup to its physical location in the Git clone.</description>
   </setupTask>
