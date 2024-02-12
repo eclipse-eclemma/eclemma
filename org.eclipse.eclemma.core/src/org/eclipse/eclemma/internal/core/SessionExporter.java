@@ -170,8 +170,8 @@ public class SessionExporter implements ISessionExporter {
 
     public AbstractSourceFileLocator(IPackageFragmentRoot root) {
       this.root = root;
-      final Map<?, ?> options = root.getJavaProject().getOptions(true);
-      this.tabWidth = IndentManipulation.getTabWidth(options);
+      this.tabWidth = IndentManipulation
+          .getTabWidth(root.getJavaProject().getOptions(true));
     }
 
     public final int getTabWidth() {
