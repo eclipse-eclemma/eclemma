@@ -25,6 +25,7 @@ import org.eclipse.eclemma.internal.ui.EclEmmaUIPlugin;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
 import org.eclipse.swtbot.eclipse.finder.widgets.SWTBotView;
+import org.eclipse.swtbot.swt.finder.widgets.SWTBotMenu;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotTree;
 import org.eclipse.ui.IEditorPart;
 import org.junit.After;
@@ -52,7 +53,14 @@ public class ContextualLaunchableTesterTest {
     view.show();
     final SWTBotTree tree = view.bot().tree();
     tree.setFocus();
-    tree.select(projectName).contextMenu("Coverage As").click();
+    SWTBotMenu menu = tree.select(projectName).contextMenu("Coverage As");
+    menu.click();
+
+    // Since
+    // https://github.com/eclipse-platform/eclipse.platform/commit/494483ea135ec22a0327ec4c9500c693555d710f
+    // calculation of ContextualLaunchAction::isApplicable happens
+    // asynchronously, so need to wait for the appearance of the menu
+    menu.menu("Coverage Configurations...");
 
     Platform.removeLogListener(logListener);
 
