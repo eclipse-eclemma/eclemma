@@ -17,7 +17,7 @@
   <groupId>org.eclipse.eclemma</groupId>
   <artifactId>org.eclipse.eclemma.build</artifactId>
   <packaging>pom</packaging>
-  <version>3.1.9-SNAPSHOT</version>
+  <version>3.1.10-SNAPSHOT</version>
 
   <name>EclEmma</name>
   <description>Java Code Coverage for Eclipse</description>
