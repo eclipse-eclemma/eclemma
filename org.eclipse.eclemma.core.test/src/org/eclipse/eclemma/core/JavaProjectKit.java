@@ -46,6 +46,7 @@ import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jdt.launching.JavaRuntime;
+import org.osgi.framework.Version;
 
 import org.eclipse.eclemma.internal.core.EclEmmaCorePlugin;
 
@@ -53,6 +54,9 @@ import org.eclipse.eclemma.internal.core.EclEmmaCorePlugin;
  * Utility class to setup Java projects programmatically.
  */
 public class JavaProjectKit {
+
+  private static final boolean JDT_3_39 = JavaCore.getPlugin().getBundle()
+      .getVersion().compareTo(new Version("3.39.0")) >= 0;
 
   private static final String DEFAULT_PROJECT_NAME = "UnitTestProject";
 
@@ -80,9 +84,12 @@ public class JavaProjectKit {
     addClassPathEntry(JavaRuntime.getDefaultJREContainerEntry());
   }
 
-  public void enableJava5() {
-    javaProject.setOption(JavaCore.COMPILER_COMPLIANCE, JavaCore.VERSION_1_5);
-    javaProject.setOption(JavaCore.COMPILER_SOURCE, JavaCore.VERSION_1_5);
+  public void enableJava() {
+    final String lowestSupportedJavaVersion = JDT_3_39 ? JavaCore.VERSION_1_8
+        : JavaCore.VERSION_1_5;
+    javaProject.setOption(JavaCore.COMPILER_COMPLIANCE,
+        lowestSupportedJavaVersion);
+    javaProject.setOption(JavaCore.COMPILER_SOURCE, lowestSupportedJavaVersion);
   }
 
   public IFolder setDefaultOutputLocation(String foldername)
