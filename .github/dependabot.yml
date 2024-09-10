@@ -1,6 +1,23 @@
 version: 2
+registries:
+  eclipse:
+    type: maven-repository
+    url: https://repo.eclipse.org/content/repositories/cbi-releases/
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+    labels:
+      - "dependencies"
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+    allow:
+      - dependency-name: "org.eclipse.cbi.maven.plugins:*"
+      - dependency-name: "org.apache.maven.plugins:*"
+      - dependency-name: "org.codehaus.mojo:*"
+      - dependency-name: "com.diffplug.spotless:*"
