@@ -54,7 +54,7 @@ public class DumpExecutionDataTest {
     openCoverageView();
 
     JavaProjectKit project = new JavaProjectKit();
-    project.enableJava5();
+    project.enableJava();
     final IPackageFragmentRoot root = project.createSourceFolder();
     final IPackageFragment fragment = project.createPackage(root, "example");
     project.createCompilationUnit(fragment, "Example.java", "package example;" //

@@ -33,7 +33,7 @@ public class BinarySignatureResolverTest extends SignatureResolverTestBase {
   @Before
   public void setup() throws Exception {
     javaProject = new JavaProjectKit();
-    javaProject.enableJava5();
+    javaProject.enableJava();
     final IPackageFragmentRoot root = javaProject.createJAR(
         "testdata/bin/signatureresolver.jar", "/signatureresolver.jar",
         new Path("/UnitTestProject/signatureresolver.jar"), null);

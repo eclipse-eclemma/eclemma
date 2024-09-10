@@ -44,7 +44,7 @@ public class MethodLocatorTest {
   @Before
   public void setup() throws Exception {
     javaProject = new JavaProjectKit();
-    javaProject.enableJava5();
+    javaProject.enableJava();
     final IPackageFragmentRoot root = javaProject.createSourceFolder("src");
     final ICompilationUnit compilationUnit = javaProject.createCompilationUnit(
         root, "testdata/src", "methodlocator/Samples.java");
