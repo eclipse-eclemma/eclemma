@@ -6,6 +6,7 @@ registries:
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
+    registries: "*"
     schedule:
       interval: "weekly"
     labels:
