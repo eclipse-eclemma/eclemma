@@ -562,15 +562,6 @@
     </workingSet>
   </setupTask>
   <setupTask
-      xsi:type="mylyn:MylynQueriesTask"
-      repositoryURL="https://bugs.eclipse.org/bugs"
-      userID="${bugzilla.id}"
-      password="${eclipse.user.password}">
-    <query summary="EclEmma"
-        url="https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;list_id=16508371&amp;product=Eclemma"/>
-    <description>Bugzilla Queries for EclEmma</description>
-  </setupTask>
-  <setupTask
       xsi:type="mylyn:MylynBuildsTask"
       serverURL="https://hudson.eclipse.org/eclemma"
       userID="${bugzilla.id}"
