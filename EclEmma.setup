@@ -563,12 +563,12 @@
   </setupTask>
   <setupTask
       xsi:type="mylyn:MylynBuildsTask"
-      serverURL="https://hudson.eclipse.org/eclemma"
+      serverURL="https://ci.eclipse.org/eclemma"
       userID="${bugzilla.id}"
       password="${eclipse.user.password}">
     <buildPlan
-        name="master"/>
-    <description>Hudson Builds for EclEmma</description>
+        name="main"/>
+    <description>Jenkins Builds for EclEmma</description>
   </setupTask>
   <setupTask
       xsi:type="setup:EclipseIniTask"
