@@ -118,7 +118,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
-          <version>1.9.1</version>
+          <version>3.6.0</version>
         </plugin>
         <!-- Tycho plugins -->
         <plugin>
