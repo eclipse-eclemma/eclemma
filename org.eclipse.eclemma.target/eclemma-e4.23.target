@@ -10,13 +10,13 @@
 <repository location="https://download.eclipse.org/releases/2022-03/"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.objectweb.asm" version="9.7.0"/>
-<unit id="org.objectweb.asm.commons" version="9.7.0"/>
-<unit id="org.objectweb.asm.tree" version="9.7.0"/>
-<unit id="org.jacoco.agent" version="0.8.12.202403310830"/>
-<unit id="org.jacoco.core" version="0.8.12.202403310830"/>
-<unit id="org.jacoco.report" version="0.8.12.202403310830"/>
-<repository location="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+<unit id="org.objectweb.asm" version="9.8.0"/>
+<unit id="org.objectweb.asm.commons" version="9.8.0"/>
+<unit id="org.objectweb.asm.tree" version="9.8.0"/>
+<unit id="org.jacoco.agent" version="0.8.13.202504020838"/>
+<unit id="org.jacoco.core" version="0.8.13.202504020838"/>
+<unit id="org.jacoco.report" version="0.8.13.202504020838"/>
+<repository location="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.junit" version="4.13.2.v20211018-1956"/>
