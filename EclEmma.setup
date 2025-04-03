@@ -122,7 +122,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -135,7 +135,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -148,7 +148,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -161,7 +161,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -174,7 +174,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -187,7 +187,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -200,7 +200,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -213,7 +213,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -226,7 +226,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -239,7 +239,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -252,7 +252,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -265,7 +265,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -278,7 +278,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -291,7 +291,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -304,7 +304,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -317,7 +317,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -330,7 +330,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -343,7 +343,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -356,7 +356,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -369,7 +369,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -382,7 +382,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -395,7 +395,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -408,7 +408,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -421,7 +421,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -434,7 +434,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -447,7 +447,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -460,7 +460,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -473,7 +473,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -486,7 +486,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -499,7 +499,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -512,7 +512,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -525,7 +525,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -538,7 +538,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -551,7 +551,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
@@ -564,7 +564,7 @@
         <repository
             url="https://download.eclipse.org/cbi/updates/license"/>
         <repository
-            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2024-06"/>
+            url="https://download.eclipse.org/tools/orbit/simrel/maven-osgi/2025-06"/>
         <repository
             url="https://download.eclipse.org/tools/orbit/downloads/latest-I"/>
         <repository
