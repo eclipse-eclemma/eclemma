@@ -15,9 +15,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.debug.core,
  org.eclipse.jdt.core,
  org.eclipse.jdt.launching,
- org.jacoco.core;bundle-version="[0.8.13,0.8.14)",
- org.jacoco.agent;bundle-version="[0.8.13,0.8.14)",
- org.jacoco.report;bundle-version="[0.8.13,0.8.14)"
+ org.jacoco.core;bundle-version="[0.8.14,0.8.15)",
+ org.jacoco.agent;bundle-version="[0.8.14,0.8.15)",
+ org.jacoco.report;bundle-version="[0.8.14,0.8.15)"
 Bundle-Activator: org.eclipse.eclemma.internal.core.EclEmmaCorePlugin
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
