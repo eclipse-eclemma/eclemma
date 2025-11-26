@@ -7,7 +7,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-22.04, windows-2022, macos-13]
+        include:
+          - os: ubuntu-22.04
+            eclipse: 4.12
+          - os: windows-2022
+            eclipse: 4.12
+          - os: macos-15-intel
+            eclipse: 4.22
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
@@ -22,4 +28,4 @@ jobs:
             export DISPLAY=:99.0
             Xvfb $DISPLAY &
           fi
-          ./mvnw -V -B -e verify -Pe4.12 -Dtycho.executionEnvironment=JavaSE-17 -DskipUITests=false --no-transfer-progress
+          ./mvnw -V -B -e verify -Pe${{ matrix.eclipse }} -Dtycho.executionEnvironment=JavaSE-17 -DskipUITests=false --no-transfer-progress
