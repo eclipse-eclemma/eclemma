@@ -7,14 +7,28 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-22.04, windows-2022, macos-13]
+        include:
+          - os: ubuntu-22.04
+            eclipse: 4.12
+            java: 17
+          - os: windows-2022
+            eclipse: 4.12
+            java: 17
+          - os: macos-15-intel
+            # Even if our tests pass on macOS 15 with some older Eclipse versions
+            # 4.35 is the first that explicitly targets macOS 15 - see
+            # https://eclipse.dev/eclipse/development/plans.html?file=plans/eclipse_project_plan_4_35.xml
+            # https://eclipse.dev/eclipse/development/plans.html?file=plans/eclipse_project_plan_4_34.xml
+            eclipse: 4.35
+            java: 21
+    name: Eclipse ${{ matrix.eclipse }}, Java ${{ matrix.java }}, ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
       - uses: actions/setup-java@dded0888837ed1f317902acf8a20df0ad188d165 # v5.0.0
         with:
           distribution: temurin
-          java-version: 17
+          java-version: ${{ matrix.java }}
       - name: Build
         shell: bash
         run: |
@@ -22,4 +36,4 @@ jobs:
             export DISPLAY=:99.0
             Xvfb $DISPLAY &
           fi
-          ./mvnw -V -B -e verify -Pe4.12 -Dtycho.executionEnvironment=JavaSE-17 -DskipUITests=false --no-transfer-progress
+          ./mvnw -V -B -e verify -Pe${{ matrix.eclipse }} -Dtycho.executionEnvironment=JavaSE-${{ matrix.java }} -DskipUITests=false --no-transfer-progress
