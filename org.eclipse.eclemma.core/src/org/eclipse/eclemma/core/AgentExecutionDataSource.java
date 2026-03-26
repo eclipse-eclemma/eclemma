@@ -12,6 +12,7 @@
  ******************************************************************************/
 package org.eclipse.eclemma.core;
 
+import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.net.Socket;
 
@@ -45,7 +46,7 @@ public class AgentExecutionDataSource implements IExecutionDataSource {
       final RemoteControlWriter writer = new RemoteControlWriter(
           socket.getOutputStream());
       final RemoteControlReader reader = new RemoteControlReader(
-          socket.getInputStream());
+          new BufferedInputStream(socket.getInputStream()));
       reader.setExecutionDataVisitor(executionDataVisitor);
       reader.setSessionInfoVisitor(sessionInfoVisitor);
       writer.visitDumpCommand(true, reset);
