@@ -12,6 +12,7 @@
  ******************************************************************************/
 package org.eclipse.eclemma.internal.core.launching;
 
+import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -109,7 +110,7 @@ public class AgentServer extends Job {
       final Socket socket = serverSocket.accept();
       writer = new RemoteControlWriter(socket.getOutputStream());
       final RemoteControlReader reader = new RemoteControlReader(
-          socket.getInputStream());
+          new BufferedInputStream(socket.getInputStream()));
       while (true) {
         final MemoryExecutionDataSource memory = new MemoryExecutionDataSource();
         memory.readFrom(reader);
