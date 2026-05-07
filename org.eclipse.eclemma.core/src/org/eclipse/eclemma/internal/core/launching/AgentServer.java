@@ -108,7 +108,10 @@ public class AgentServer extends Job {
   protected IStatus run(IProgressMonitor monitor) {
     try {
       final Socket socket = serverSocket.accept();
-      writer = new RemoteControlWriter(socket.getOutputStream());
+      writer = new RemoteControlWriter(
+          // BufferedOutputStream will not improve performance here
+          // while will add memory overhead because commands are short
+          socket.getOutputStream());
       final RemoteControlReader reader = new RemoteControlReader(
           new BufferedInputStream(socket.getInputStream()));
       while (true) {

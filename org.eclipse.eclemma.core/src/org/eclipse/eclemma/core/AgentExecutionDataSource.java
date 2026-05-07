@@ -44,6 +44,8 @@ public class AgentExecutionDataSource implements IExecutionDataSource {
     try {
       final Socket socket = new Socket(address, port);
       final RemoteControlWriter writer = new RemoteControlWriter(
+          // BufferedOutputStream will not improve performance here
+          // while will add memory overhead because commands are short
           socket.getOutputStream());
       final RemoteControlReader reader = new RemoteControlReader(
           new BufferedInputStream(socket.getInputStream()));
