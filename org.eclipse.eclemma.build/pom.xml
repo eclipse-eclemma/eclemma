@@ -71,7 +71,7 @@
 
     <orbit-repository-url>https://download.eclipse.org/tools/orbit/downloads/latest-I/</orbit-repository-url>
 
-    <jacoco.version>0.8.14</jacoco.version>
+    <jacoco.version>0.8.15</jacoco.version>
     <tycho.testArgLine>-Xmx800m</tycho.testArgLine>
 
     <!-- SonarQube -->
@@ -102,7 +102,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
-          <version>3.10.0</version>
+          <version>3.11.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -112,7 +112,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-toolchains-plugin</artifactId>
-          <version>3.2.0</version>
+          <version>3.3.0</version>
         </plugin>
         <!-- Mojo plugins -->
         <plugin>
@@ -793,6 +793,20 @@
         <target-platform>eclemma-e4.40</target-platform>
         <tycho.executionEnvironment>JavaSE-17</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2026-06/</platform-repository-url>
+      </properties>
+    </profile>
+    <profile>
+      <id>e4.41</id>
+      <activation>
+        <property>
+          <name>target-profile</name>
+          <value>e4.41</value>
+        </property>
+      </activation>
+      <properties>
+        <target-platform>eclemma-e4.41</target-platform>
+        <tycho.executionEnvironment>JavaSE-17</tycho.executionEnvironment>
+        <platform-repository-url>https://download.eclipse.org/releases/2026-09/</platform-repository-url>
       </properties>
     </profile>
 
