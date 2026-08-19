@@ -12,6 +12,7 @@
  ******************************************************************************/
 package org.eclipse.eclemma.internal.core.launching;
 
+import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -107,9 +108,12 @@ public class AgentServer extends Job {
   protected IStatus run(IProgressMonitor monitor) {
     try {
       final Socket socket = serverSocket.accept();
-      writer = new RemoteControlWriter(socket.getOutputStream());
+      writer = new RemoteControlWriter(
+          // BufferedOutputStream will not improve performance here
+          // while will add memory overhead because commands are short
+          socket.getOutputStream());
       final RemoteControlReader reader = new RemoteControlReader(
-          socket.getInputStream());
+          new BufferedInputStream(socket.getInputStream()));
       while (true) {
         final MemoryExecutionDataSource memory = new MemoryExecutionDataSource();
         memory.readFrom(reader);
