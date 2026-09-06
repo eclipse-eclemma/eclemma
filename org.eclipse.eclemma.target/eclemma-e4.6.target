@@ -13,6 +13,7 @@
 <unit id="org.objectweb.asm" version="9.10.1"/>
 <unit id="org.objectweb.asm.commons" version="9.10.1"/>
 <unit id="org.objectweb.asm.tree" version="9.10.1"/>
+<unit id="org.objectweb.asm.util" version="9.10.1"/>
 <unit id="org.jacoco.agent" version="0.8.15.202606040825"/>
 <unit id="org.jacoco.core" version="0.8.15.202606040825"/>
 <unit id="org.jacoco.report" version="0.8.15.202606040825"/>
